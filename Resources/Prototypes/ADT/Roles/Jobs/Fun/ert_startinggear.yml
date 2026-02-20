@@ -10,8 +10,8 @@
     neck: ClothingNeckMantleERTLeader
     outerClothing: ClothingOuterArmorBulletproof
     id: ERTLeaderPDA
-    ears: SD_ClothingHeadsetAltSpecCom # Helix-Tweak
-    belt: ClothingBeltAssault
+    ears: SD_ClothingHeadsetAltSpecCom
+    belt: ClothingBeltMilitaryWebbing
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: PhoneInstrument
     underwearb: ADTClothingUnderwearBottomBriefsWhite
@@ -52,9 +52,8 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTLeader
     id: ERTLeaderPDA
-    neck: ClothingNeckMantleERTLeader
-    ears: SD_ClothingHeadsetAltSpecCom # Helix-Tweak
-    belt: ClothingBeltAssault
+    ears: ClothingNeckMantleERTLeader
+    belt: SD_ClothingHeadsetAltSpecCom
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: ADTBaseUplinkBOBERT
     underwearb: ADTClothingUnderwearBottomBriefsWhite
@@ -97,9 +96,8 @@
     mask: ClothingMaskGasERT
     outerClothing: ADTClothingOuterERTRiotHardsuit
     id: ERTLeaderPDA
-    neck: ClothingNeckMantleERTLeader
-    ears: SD_ClothingHeadsetAltSpecCom # Helix-Tweak
-    belt: ClothingBeltAssault
+    ears: ClothingNeckMantleERTLeader
+    belt: SD_ClothingHeadsetAltSpecCom
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: FlashlightSeclite
     underwearb: ADTClothingUnderwearBottomBriefsWhite
@@ -247,8 +245,8 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterArmorBulletproof
     id: ERTSecurityPDA
-    ears: SD_ClothingHeadsetAltSpecCom # Helix-Tweak
-    belt: ClothingBeltAssault
+    ears: SD_ClothingHeadsetAltSpecCom
+    belt: ClothingBeltMilitaryWebbing
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: ADTWeaponPistolDesertEagle
     underwearb: ADTClothingUnderwearBottomBriefsWhite
@@ -276,8 +274,8 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitERTSecurity
     id: ERTSecurityPDA
-    ears: SD_ClothingHeadsetAltSpecCom # Helix-Tweak
-    belt: ClothingBeltAssault
+    ears: SD_ClothingHeadsetAltSpecCom
+    belt: ClothingBeltMilitaryWebbing
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: ADTBaseUplinkBOBERT
     underwearb: ADTClothingUnderwearBottomBriefsWhite
@@ -304,8 +302,8 @@
     gloves: ClothingHandsGlovesCombat
     outerClothing: ADTClothingOuterERTRiotHardsuit
     id: ERTSecurityPDA
-    ears: SD_ClothingHeadsetAltSpecCom # Helix-Tweak
-    belt: ClothingBeltAssault
+    ears: SD_ClothingHeadsetAltSpecCom
+    belt: ClothingBeltMilitaryWebbing
     pocket1: DoubleEmergencyOxygenTankFilled
     pocket2: FlashlightSeclite
     underwearb: ADTClothingUnderwearBottomBriefsWhite

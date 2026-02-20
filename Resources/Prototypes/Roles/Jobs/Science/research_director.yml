@@ -4,14 +4,18 @@
   description: job-description-rd
   playTimeTracker: JobResearchDirector
   requirements:
-  - !type:RoleTimeRequirement
-    role: JobScientist
-    time: 18000 #5 hrs
-  - !type:DepartmentTimeRequirement
-    department: Science
-    time: 36000 #10 hrs
-  - !type:AgeRequirement # Hellix-Tweak
-    requiredAge: 40
+    #- !type:RoleTimeRequirement
+    #  role: JobScientist
+    #  time: 5h
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 10h # ADT-Tweak
+    - !type:AgeRequirement # Hellix-Tweak
+      requiredAge: 40
+    - !type:TraitsRequirement #Corvax-TraitsRequirement
+      inverted: true
+      traits:
+      - Muted
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"

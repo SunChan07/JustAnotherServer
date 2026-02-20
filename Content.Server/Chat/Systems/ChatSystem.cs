@@ -23,6 +23,7 @@ using Content.Shared.Mobs.Systems;
 using Content.Shared.Players;
 using Content.Shared.Players.RateLimiting;
 using Content.Shared.Radio;
+using Content.Shared.Station.Components;
 using Content.Shared.Whitelist;
 using Robust.Server.Player;
 using Robust.Shared.Audio;
@@ -66,16 +67,15 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
     [Dependency] private readonly ReplacementAccentSystem _wordreplacement = default!;
-    [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
     [Dependency] private readonly LanguageSystem _language = default!;  // ADT Languages
 
-
-    public const int VoiceRange = 10; // how far voice goes in world units
-    public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
-    public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units
-    public const int AntiGhostRange = 2;
-    public const string DefaultAnnouncementSound = "/Audio/ADT/Announcements/announce_dig.ogg"; // ADT-Tweak: замена звука оповещения на ADT версию
+    // Corvax-TTS-Start: Moved from Server to Shared
+    // public const int VoiceRange = 10; // how far voice goes in world units
+    // public const int WhisperClearRange = 2; // how far whisper goes while still being understandable, in world units
+    // public const int WhisperMuffledRange = 5; // how far whisper goes at all, in world units
+    // Corvax-TTS-End
+    public readonly SoundSpecifier DefaultAnnouncementSound = new SoundPathSpecifier("/Audio/ADT/Announcements/announce_dig.ogg"); // ADT-Tweak: замена звука оповещения на ADT версию
     public const string CentComAnnouncementSound = "/Audio/ADT/Announcements/announce_dig.ogg"; // ADT-Tweak: замена звука CentComm на ADT версию
 
     private bool _loocEnabled = true;
@@ -86,7 +86,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     public override void Initialize()
     {
         base.Initialize();
-        CacheEmotes();
+
         Subs.CVar(_configurationManager, CCVars.LoocEnabled, OnLoocEnabledChanged, true);
         Subs.CVar(_configurationManager, CCVars.DeadLoocEnabled, OnDeadLoocEnabledChanged, true);
         Subs.CVar(_configurationManager, CCVars.CritLoocEnabled, OnCritLoocEnabledChanged, true);
@@ -138,24 +138,16 @@ public sealed partial class ChatSystem : SharedChatSystem
         }
     }
 
-    /// <summary>
-    ///     Sends an in-character chat message to relevant clients.
-    /// </summary>
-    /// <param name="source">The entity that is speaking</param>
-    /// <param name="message">The message being spoken or emoted</param>
-    /// <param name="desiredType">The chat type</param>
-    /// <param name="hideChat">Whether or not this message should appear in the chat window</param>
-    /// <param name="hideLog">Whether or not this message should appear in the adminlog window</param>
-    /// <param name="shell"></param>
-    /// <param name="player">The player doing the speaking</param>
-    /// <param name="nameOverride">The name to use for the speaking entity. Usually this should just be modified via <see cref="TransformSpeakerNameEvent"/>. If this is set, the event will not get raised.</param>
-    public void TrySendInGameICMessage(
+    /// <inheritdoc />
+    public override void TrySendInGameICMessage(
         EntityUid source,
         string message,
         InGameICChatType desiredType,
-        bool hideChat, bool hideLog = false,
+        bool hideChat,
+        bool hideLog = false,
         IConsoleShell? shell = null,
-        ICommonSession? player = null, string? nameOverride = null,
+        ICommonSession? player = null,
+        string? nameOverride = null,
         bool checkRadioPrefix = true,
         bool ignoreActionBlocker = false,
         LanguagePrototype? language = null) // ADT Languages
@@ -163,18 +155,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         TrySendInGameICMessage(source, message, desiredType, hideChat ? ChatTransmitRange.HideChat : ChatTransmitRange.Normal, hideLog, shell, player, nameOverride, checkRadioPrefix, ignoreActionBlocker, language);  // ADT Languages
     }
 
-    /// <summary>
-    ///     Sends an in-character chat message to relevant clients.
-    /// </summary>
-    /// <param name="source">The entity that is speaking</param>
-    /// <param name="message">The message being spoken or emoted</param>
-    /// <param name="desiredType">The chat type</param>
-    /// <param name="range">Conceptual range of transmission, if it shows in the chat window, if it shows to far-away ghosts or ghosts at all...</param>
-    /// <param name="shell"></param>
-    /// <param name="player">The player doing the speaking</param>
-    /// <param name="nameOverride">The name to use for the speaking entity. Usually this should just be modified via <see cref="TransformSpeakerNameEvent"/>. If this is set, the event will not get raised.</param>
-    /// <param name="ignoreActionBlocker">If set to true, action blocker will not be considered for whether an entity can send this message.</param>
-    public void TrySendInGameICMessage(
+    /// <inheritdoc />
+    public override void TrySendInGameICMessage(
         EntityUid source,
         string message,
         InGameICChatType desiredType,
@@ -252,7 +234,7 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         // ADT Alternative speech start
         var altEv = new AlternativeSpeechEvent(sanitizedMessage, false, desiredType);
-        if (TryProccessRadioMessage(source, sanitizedMessage, out var altSpeechRadioResult, out _, true))
+        if (TryProcessRadioMessage(source, sanitizedMessage, out var altSpeechRadioResult, out _, true))
         {
             altEv.Radio = true;
             altEv.Message = altSpeechRadioResult;
@@ -280,7 +262,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         // This message may have a radio prefix, and should then be whispered to the resolved radio channel
         if (checkRadioPrefix && (language ?? _language.GetCurrentLanguage(source)).LanguageType is Generic gen) // ADT Tweaked
         {
-            if (TryProccessRadioMessage(source, sanitizedMessage, out var modMessage, out var channel)) // Accent fix
+            if (TryProcessRadioMessage(source, message, out var modMessage, out var channel))
             {
                 SendEntityWhisper(source, modMessage, range, channel, nameOverride, hideLog, ignoreActionBlocker);
                 return;
@@ -305,7 +287,8 @@ public sealed partial class ChatSystem : SharedChatSystem
         }
     }
 
-    public void TrySendInGameOOCMessage(
+    /// <inheritdoc />
+    public override void TrySendInGameOOCMessage(
         EntityUid source,
         string message,
         InGameOOCChatType type,
@@ -354,42 +337,29 @@ public sealed partial class ChatSystem : SharedChatSystem
 
     #region Announcements
 
-    /// <summary>
-    /// Dispatches an announcement to all.
-    /// </summary>
-    /// <param name="message">The contents of the message</param>
-    /// <param name="sender">The sender (Communications Console in Communications Console Announcement)</param>
-    /// <param name="playSound">Play the announcement sound</param>
-    /// <param name="colorOverride">Optional color for the announcement message</param>
-    public void DispatchGlobalAnnouncement(
+    /// <inheritdoc />
+    public override void DispatchGlobalAnnouncement(
         string message,
-        string sender = "Central Command",
+        string? sender = null,
         bool playSound = true,
         SoundSpecifier? announcementSound = null,
         Color? colorOverride = null
         )
     {
+        sender ??= Loc.GetString("chat-manager-sender-announcement");
+
         var wrappedMessage = Loc.GetString("chat-manager-sender-announcement-wrap-message", ("sender", sender), ("message", FormattedMessage.EscapeText(message)));
         _chatManager.ChatMessageToAll(ChatChannel.Radio, message, wrappedMessage, default, false, true, colorOverride);
         if (playSound)
         {
             if (sender == Loc.GetString("admin-announce-announcer-default")) announcementSound = new SoundPathSpecifier(CentComAnnouncementSound); // Corvax-Announcements: Support custom alert sound from admin panel
-            _audio.PlayGlobal(announcementSound == null ? DefaultAnnouncementSound : _audio.ResolveSound(announcementSound), Filter.Broadcast(), true, AudioParams.Default.WithVolume(-2f));
+            _audio.PlayGlobal(announcementSound ?? DefaultAnnouncementSound, Filter.Broadcast(), true, AudioParams.Default.WithVolume(-2f));
         }
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Global station announcement from {sender}: {message}");
     }
 
-    /// <summary>
-    /// Dispatches an announcement to players selected by filter.
-    /// </summary>
-    /// <param name="filter">Filter to select players who will recieve the announcement</param>
-    /// <param name="message">The contents of the message</param>
-    /// <param name="source">The entity making the announcement (used to determine the station)</param>
-    /// <param name="sender">The sender (Communications Console in Communications Console Announcement)</param>
-    /// <param name="playDefaultSound">Play the announcement sound</param>
-    /// <param name="announcementSound">Sound to play</param>
-    /// <param name="colorOverride">Optional color for the announcement message</param>
-    public void DispatchFilteredAnnouncement(
+    /// <inheritdoc />
+    public override void DispatchFilteredAnnouncement(
         Filter filter,
         string message,
         EntityUid? source = null,
@@ -404,27 +374,22 @@ public sealed partial class ChatSystem : SharedChatSystem
         _chatManager.ChatMessageToManyFiltered(filter, ChatChannel.Radio, message, wrappedMessage, source ?? default, false, true, colorOverride);
         if (playSound)
         {
-            _audio.PlayGlobal(announcementSound?.ToString() ?? DefaultAnnouncementSound, filter, true, AudioParams.Default.WithVolume(-2f));
+            _audio.PlayGlobal(announcementSound ?? DefaultAnnouncementSound, filter, true, AudioParams.Default.WithVolume(-2f));
         }
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Station Announcement from {sender}: {message}");
     }
 
-    /// <summary>
-    /// Dispatches an announcement on a specific station
-    /// </summary>
-    /// <param name="source">The entity making the announcement (used to determine the station)</param>
-    /// <param name="message">The contents of the message</param>
-    /// <param name="sender">The sender (Communications Console in Communications Console Announcement)</param>
-    /// <param name="playDefaultSound">Play the announcement sound</param>
-    /// <param name="colorOverride">Optional color for the announcement message</param>
-    public void DispatchStationAnnouncement(
+    /// <inheritdoc />
+    public override void DispatchStationAnnouncement(
         EntityUid source,
         string message,
-        string sender = "Central Command",
+        string? sender = null,
         bool playDefaultSound = true,
         SoundSpecifier? announcementSound = null,
         Color? colorOverride = null)
     {
+        sender ??= Loc.GetString("chat-manager-sender-announcement");
+
         var wrappedMessage = Loc.GetString("chat-manager-sender-announcement-wrap-message", ("sender", sender), ("message", FormattedMessage.EscapeText(message)));
         var station = _stationSystem.GetOwningStation(source);
 
@@ -442,7 +407,7 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         if (playDefaultSound)
         {
-            _audio.PlayGlobal(announcementSound?.ToString() ?? DefaultAnnouncementSound, filter, true, AudioParams.Default.WithVolume(-2f));
+            _audio.PlayGlobal(announcementSound ?? DefaultAnnouncementSound, filter, true, AudioParams.Default.WithVolume(-2f));
         }
 
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Station Announcement on {station} from {sender}: {message}");
@@ -499,7 +464,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             RaiseLocalEvent(source, nameEv);
             name = nameEv.VoiceName;
             // Check for a speech verb override
-            if (nameEv.SpeechVerb != null && _prototypeManager.TryIndex(nameEv.SpeechVerb, out var proto))
+            if (nameEv.SpeechVerb != null && _prototypeManager.Resolve(nameEv.SpeechVerb, out var proto))
                 speech = proto;
         }
 
@@ -518,7 +483,7 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         if (language.LanguageType.RaiseEvent)
         {
-            var ev = new EntitySpokeEvent(source, resultMessage, language, null, null);  // ADT message => resultMessage
+            var ev = new EntitySpokeEvent(source, resultMessage, message, language, null, null);  // ADT message => resultMessage
             RaiseLocalEvent(source, ev, true);
         }
         // ADT Languages end
@@ -613,7 +578,7 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         if (language.LanguageType.RaiseEvent)   // ADT Tweaked
         {
-            var ev = new EntitySpokeEvent(source, resultMessage, language, channel, resultObfMessage, true);
+            var ev = new EntitySpokeEvent(source, resultMessage, message, language, channel, resultObfMessage);
             RaiseLocalEvent(source, ev, true);
         }
 
@@ -636,7 +601,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             }
     }
 
-    private void SendEntityEmote(
+    protected override void SendEntityEmote(
         EntityUid source,
         string action,
         ChatTransmitRange range,

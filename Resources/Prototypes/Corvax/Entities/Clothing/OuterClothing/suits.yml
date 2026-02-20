@@ -1,4 +1,3 @@
-﻿
 - type: entity
   parent: ClothingOuterStorageBase # ADT-Tweak: карманы
   id: ClothingOuterAerostaticBomberJacket
@@ -31,6 +30,13 @@
     sprite: Corvax/Clothing/OuterClothing/Coats/atmos_overalls.rsi
   - type: Clothing
     sprite: Corvax/Clothing/OuterClothing/Coats/atmos_overalls.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-unshaded
+        shader: unshaded
+      - state: equipped-OUTERCLOTHING-unshaded
+        shader: shaded
   # Helix-Tweak-Start
   - type: Armor
     modifiers:

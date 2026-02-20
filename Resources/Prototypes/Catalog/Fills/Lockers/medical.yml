@@ -171,21 +171,22 @@
   components:
   - type: StorageFill
     contents:
-      # Helix-Tweak-Start
-      # - id: ADTClothingModsuitBackMedical #ADT tweak
+      - id: ClothingOuterCoatParamedicWB
+      - id: ClothingHeadHatParamedicsoft
+      #ADT-Tweak-Start
+      - id: ADTClothingHeadHatsParamedicBeret
+      - id: ADTHighVoltageDefibrillator
+      - id: OxygenTankFilled
+      - id: ClothingMaskBreathMedical
+      #ADT-Tweak-End
       - id: ClothingOuterHardsuitVoidParamed
-      # - id: ClothingOuterCoatParamedicWB
-      # - id: ClothingHeadHatParamedicsoft
-      - id: ADTClothingHeadHatsParamedicBeret # ADT tweak
-      - id: ADTHighVoltageDefibrillator # ADT Tweak
-      # - id: ClothingOuterWinterPara
-      # - id: ClothingUniformJumpsuitParamedic
-      # - id: ClothingUniformJumpskirtParamedic
-      # - id: ClothingEyesHudMedical
-      # - id: ClothingHandsGlovesLatex
-      # - id: ClothingHeadsetMedical
-      # - id: ClothingMaskSterile
-      # Helix-Tweak-End
+      - id: ClothingOuterWinterPara
+      - id: ClothingUniformJumpsuitParamedic
+      - id: ClothingUniformJumpskirtParamedic
+      - id: ClothingEyesHudMedical
+      - id: ClothingHandsGlovesLatex
+      - id: ClothingHeadsetMedical
+      - id: ClothingMaskSterile
       - id: HandheldGPSBasic
       - id: MedkitFilled
         prob: 0.3
@@ -201,3 +202,13 @@
       - id: MedkitCombatFilled
         prob: 0.25
     # Helix-Tweak-End
+  #ADT-Tweak-Start
+  - type: UserInterface
+    interfaces:
+      enum.SuitStorageUiKey.Key:
+        type: SuitStorageBoundUserInterface
+  - type: SuitStorage
+    options:
+    - ADTClothingModsuitBackMedical
+    - ClothingOuterHardsuitVoidParamed
+  #ADT-Tweak-End
