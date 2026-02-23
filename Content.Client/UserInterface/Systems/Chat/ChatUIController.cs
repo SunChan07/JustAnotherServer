@@ -541,7 +541,7 @@ public sealed partial class ChatUIController : UIController
             FilterableChannels |= ChatChannel.Whisper;
             FilterableChannels |= ChatChannel.Radio;
             FilterableChannels |= ChatChannel.Emotes;
-            FilterableChannels |= ChatChannel.AntiGhost; //SD-Tweak Я хочу кушать пожалуйста дайте мне хотя-бы батон хлеба я так заебался уафуауаааааааааааа
+            FilterableChannels |= ChatChannel.AntiGhost; //SD-Tweak
             FilterableChannels |= ChatChannel.Notifications;
 
             // Can only send local / radio / emote when attached to a non-ghost entity.

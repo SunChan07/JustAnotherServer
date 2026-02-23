@@ -12,8 +12,6 @@ using Content.Shared.Verbs;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
-using Content.Server._SD.GameTicking.Components; // Helix-tweak
-using Content.Server._SD.GameTicking.Rules; // Helix-tweak
 
 namespace Content.Server.Administration.Systems;
 
@@ -33,11 +31,6 @@ public sealed partial class AdminVerbSystem
     private static readonly EntProtoId DefaultChangelingRule = "ChangelingGameRule";
     private static readonly EntProtoId ParadoxCloneRuleId = "ParadoxCloneSpawn";
     private static readonly ProtoId<StartingGearPrototype> PirateGearId = "PirateGear";
-
-    private static readonly EntProtoId ParadoxCloneRuleId = "ParadoxCloneSpawn";
-    // ADT-Changeling-Tweak-Start
-    private readonly EntProtoId DefaultChangelingRule = "ChangelingGameRule";
-    // ADT-Changeling-Tweak-End
 
 
     // All antag verbs have names so invokeverb works.
@@ -233,20 +226,5 @@ public sealed partial class AdminVerbSystem
 
         if (HasComp<HumanoidAppearanceComponent>(args.Target)) // only humanoids can be cloned
             args.Verbs.Add(paradox);
-
-        var armsDealerName = Loc.GetString("admin-verb-make-arms-dealer");
-        Verb armsDealer = new()
-        {
-            Text = armsDealerName,
-            Category = VerbCategory.Antag,
-            Icon = new SpriteSpecifier.Rsi(new ResPath("/Textures/Objects/Weapons/Guns/Pistols/mk58.rsi"), "icon"),
-            Act = () =>
-            {
-                _antag.ForceMakeAntag<ArmsDealerRuleComponent>(targetPlayer, DefaultArmsDealerRule);
-            },
-            Impact = LogImpact.High,
-            Message = string.Join(": ", armsDealerName, Loc.GetString("admin-verb-make-arms-dealer")),
-        };
-        args.Verbs.Add(armsDealer);
     }
 }

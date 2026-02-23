@@ -662,7 +662,7 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         if (checkEmote)
             TryEmoteChatInput(source, action);
-        SendInVoiceRange(ChatChannel.AntiGhost, action, wrappedMessage, wrappedMessage, source, ChatTransmitRange.NoGhosts, author, ignoreLanguage: true, voiceRangeOverride: AntiGhostRange);
+            // SendInVoiceRange(ChatChannel.AntiGhost, action, wrappedMessage, wrappedMessage, source, ChatTransmitRange.NoGhosts, author, ignoreLanguage: true, voiceRangeOverride: AntiGhostRange);
             if (name != Name(source))
                 _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Hidden Emote from {ToPrettyString(source):user} as {name}: {action}");
             else
@@ -789,14 +789,15 @@ public sealed partial class ChatSystem : SharedChatSystem
     /// <summary>
     ///     Sends a chat message to the given players in range of the source entity.
     /// </summary>
-    public void SendInVoiceRange(ChatChannel channel, string message, string wrappedMessage, string wrappedLanguageMessage, EntityUid source, ChatTransmitRange range, NetUserId? author = null, ProtoId<LanguagePrototype>? language = null, bool ignoreLanguage = false, float voiceRangeOverride = VoiceRange)  // ADT Languages
+    public void SendInVoiceRange(ChatChannel channel, string message, string wrappedMessage, string wrappedLanguageMessage, EntityUid source, ChatTransmitRange range, NetUserId? author = null, ProtoId<LanguagePrototype>? language = null, bool ignoreLanguage = false)  // ADT Languages
     {
         // ADT Languages start
         var lang = language != null ? _prototypeManager.Index(language.Value) : _language.GetCurrentLanguage(source);
 
-        foreach (var (session, data) in GetRecipients(source, voiceRangeOverride))
+        foreach (var (session, data) in GetRecipients(source, VoiceRange))
         {
             EntityUid listener;
+
             if (session.AttachedEntity is not { Valid: true } playerEntity)
                 continue;
             listener = session.AttachedEntity.Value;
@@ -1056,94 +1057,3 @@ public sealed partial class ChatSystem : SharedChatSystem
 public record ExpandICChatRecipientsEvent(EntityUid Source, float VoiceRange, Dictionary<ICommonSession, ChatSystem.ICChatRecipientData> Recipients)
 {
 }
-
-/// <summary>
-///     Raised broadcast in order to transform speech.transmit
-/// </summary>
-public sealed class TransformSpeechEvent : EntityEventArgs
-{
-    public EntityUid Sender;
-    public string Message;
-
-    public TransformSpeechEvent(EntityUid sender, string message)
-    {
-        Sender = sender;
-        Message = message;
-    }
-}
-
-public sealed class CheckIgnoreSpeechBlockerEvent : EntityEventArgs
-{
-    public EntityUid Sender;
-    public bool IgnoreBlocker;
-
-    public CheckIgnoreSpeechBlockerEvent(EntityUid sender, bool ignoreBlocker)
-    {
-        Sender = sender;
-        IgnoreBlocker = ignoreBlocker;
-    }
-}
-
-/// <summary>
-///     Raised on an entity when it speaks, either through 'say' or 'whisper'.
-/// </summary>
-public sealed class EntitySpokeEvent : EntityEventArgs
-{
-    public readonly EntityUid Source;
-    public readonly string Message;
-    public readonly string? ObfuscatedMessage; // not null if this was a whisper
-    /// <summary>
-    ///     If the entity was trying to speak into a radio, this was the channel they were trying to access. If a radio
-    ///     message gets sent on this channel, this should be set to null to prevent duplicate messages.
-    /// </summary>
-    public RadioChannelPrototype? Channel;
-    public readonly LanguagePrototype Language;
-    public readonly bool Whisper;
-
-    public EntitySpokeEvent(EntityUid source, string message, LanguagePrototype language, RadioChannelPrototype? channel, string? obfuscatedMessage, bool whisper = false)
-    {
-        Source = source;
-        Message = message;
-        Channel = channel;
-        ObfuscatedMessage = obfuscatedMessage;
-        Language = language;
-        Whisper = whisper;
-    }
-}
-
-/// <summary>
-///     InGame IC chat is for chat that is specifically ingame (not lobby) but is also in character, i.e. speaking.
-/// </summary>
-// ReSharper disable once InconsistentNaming
-public enum InGameICChatType : byte
-{
-    Speak,
-    Emote,
-    AntiGhost,
-    Whisper
-}
-
-/// <summary>
-///     InGame OOC chat is for chat that is specifically ingame (not lobby) but is OOC, like deadchat or LOOC.
-/// </summary>
-public enum InGameOOCChatType : byte
-{
-    Looc,
-    Dead
-}
-
-// ADT - moved to shared
-// /// <summary>
-// ///     Controls transmission of chat.
-// /// </summary>
-// public enum ChatTransmitRange : byte
-// {
-//     /// Acts normal, ghosts can hear across the map, etc.
-//     Normal,
-//     /// Normal but ghosts are still range-limited.
-//     GhostRangeLimit,
-//     /// Hidden from the chat window.
-//     HideChat,
-//     /// Ghosts can't hear or see it at all. Regular players can if in-range.
-//     NoGhosts
-// }

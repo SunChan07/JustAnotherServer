@@ -1,3 +1,4 @@
+// using Content.Server.Damage.Systems;
 // using Content.Shared.Damage.Components;
 // using Content.Shared.Damage.Systems;
 // using Content.Shared.EntityEffects;
@@ -17,7 +18,7 @@
 //     {
 //         if (args.EntityManager.TryGetComponent(args.TargetEntity, out StaminaComponent? stamina))
 //         {
-//             var total = args.EntityManager.System<SharedStaminaSystem>().GetStaminaDamage(args.TargetEntity, stamina);
+//             var total = args.EntityManager.System<StaminaSystem>().GetStaminaDamage(args.TargetEntity, stamina);
 //             if (total > Min && total < Max)
 //                 return true;
 //         }

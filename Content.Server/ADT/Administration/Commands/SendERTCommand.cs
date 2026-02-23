@@ -229,7 +229,7 @@ public sealed class SendERTCommand : IConsoleCommand
         ╔════════════════════════════════════╗
         ║   Schrödinger's Cat Code   🐾      ║
         ║   /\_/\\                           ║
-        ║  ( o.o )  Meow! тут был Шут        ║
+        ║  ( o.o )  Meow!                    ║
         ║   > ^ <                            ║
         ╚════════════════════════════════════╝
 

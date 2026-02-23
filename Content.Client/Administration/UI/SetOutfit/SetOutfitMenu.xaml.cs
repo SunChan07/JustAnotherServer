@@ -44,7 +44,7 @@ namespace Content.Client.Administration.UI.SetOutfit
         {
             if (TargetEntityId == null || _selectedOutfit == null)
                 return;
-            var command = $"setoutfit {TargetEntityId} {_selectedOutfit.ID} {DoSpecial}"; // Helix
+            var command = $"setoutfit {TargetEntityId} {_selectedOutfit.ID}";
             _consoleHost.ExecuteCommand(command);
             Close();
         }

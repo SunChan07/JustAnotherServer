@@ -33,27 +33,33 @@
 //             var comparison = new DamageSpecifier(Damage);
 //             foreach (var group in protoManager.EnumeratePrototypes<DamageGroupPrototype>())
 //             {
-//                 // Calculate requested threshold for this group as a sum of requested types within it
-//                 var requestedGroup = FixedPoint2.Zero;
+//                 // Greedily revert the split and check; Quickly skip when not relevant
+//                 var lowestDamage = FixedPoint2.MaxValue;
 //                 foreach (var damageType in group.DamageTypes)
 //                 {
-//                     if (comparison.DamageDict.TryGetValue(damageType, out var value) && value > FixedPoint2.Zero)
-//                         requestedGroup += value;
+//                     if (comparison.DamageDict.TryGetValue(damageType, out var value))
+//                         lowestDamage = value < lowestDamage ? value : lowestDamage;
+//                     else
+//                     {
+//                         lowestDamage = FixedPoint2.Zero;
+//                         break;
+//                     }
 //                 }
-//                 if (requestedGroup == FixedPoint2.Zero)
+//                 if (lowestDamage == FixedPoint2.MaxValue || lowestDamage == FixedPoint2.Zero)
 //                     continue;
-
-//                 if (damage.Damage.TryGetDamageInGroup(group, out var total) && total >= requestedGroup)
+//                 var groupDamage = lowestDamage * group.DamageTypes.Count;
+//                 if (MathF.Abs(groupDamage.Float() - MathF.Round(groupDamage.Float())) < 0.02)
+//                     groupDamage = MathF.Round(groupDamage.Float()); // otherwise brutes split unevenly
+//                 if (damage.Damage.TryGetDamageInGroup(group, out var total) && total > groupDamage)
 //                     return !Inverse;
-
-//                 // Remove this group's requested values from further consideration
+//                 // we finished comparing this group, remove future interferences
 //                 foreach (var damageType in group.DamageTypes)
 //                 {
-//                     if (!comparison.DamageDict.TryGetValue(damageType, out var value) || value == FixedPoint2.Zero)
-//                         continue;
-
-//                     comparison.DamageDict[damageType] -= value;
-//                     if (MathF.Abs(comparison.DamageDict[damageType].Float() - MathF.Round(comparison.DamageDict[damageType].Float())) < 0.02)
+//                     comparison.DamageDict[damageType] -= lowestDamage;
+//                     // not a fan, but it's needed
+//                     if (MathF.Abs(comparison.DamageDict[damageType].Float()
+//                         - MathF.Round(comparison.DamageDict[damageType].Float()))
+//                         < 0.02)
 //                         comparison.DamageDict[damageType] = MathF.Round(comparison.DamageDict[damageType].Float());
 //                 }
 //                 comparison.ClampMin(0);
@@ -72,30 +78,35 @@
 //         var comparison = new DamageSpecifier(Damage);
 //         foreach (var group in prototype.EnumeratePrototypes<DamageGroupPrototype>())
 //         {
-//             // Sum requested amounts for types within this group
-//             var requestedGroup = FixedPoint2.Zero;
+//             var lowestDamage = FixedPoint2.MaxValue;
 //             foreach (var damageType in group.DamageTypes)
 //             {
-//                 if (comparison.DamageDict.TryGetValue(damageType, out var value) && value > FixedPoint2.Zero)
-//                     requestedGroup += value;
+//                 if (comparison.DamageDict.TryGetValue(damageType, out var value))
+//                     lowestDamage = value < lowestDamage ? value : lowestDamage;
+//                 else
+//                 {
+//                     lowestDamage = FixedPoint2.Zero;
+//                     break;
+//                 }
 //             }
-//             if (requestedGroup == FixedPoint2.Zero)
+//             if (lowestDamage == FixedPoint2.MaxValue || lowestDamage == FixedPoint2.Zero)
 //                 continue;
-
-//             damages.Add(
+//             var groupDamage = lowestDamage * group.DamageTypes.Count;
+//             if (MathF.Abs(groupDamage.Float() - MathF.Round(groupDamage.Float())) < 0.02)
+//                 groupDamage = MathF.Round(groupDamage.Float());
+//             if (groupDamage > 0)
+//                 damages.Add(
 //                 Loc.GetString("health-change-display",
 //                     ("kind", group.LocalizedName),
-//                     ("amount", MathF.Abs(requestedGroup.Float())),
+//                     ("amount", MathF.Abs(groupDamage.Float())),
 //                     ("deltasign", 1))
-//             );
-
+//                 );
 //             foreach (var damageType in group.DamageTypes)
 //             {
-//                 if (!comparison.DamageDict.TryGetValue(damageType, out var value) || value == FixedPoint2.Zero)
-//                     continue;
-
-//                 comparison.DamageDict[damageType] -= value;
-//                 if (MathF.Abs(comparison.DamageDict[damageType].Float() - MathF.Round(comparison.DamageDict[damageType].Float())) < 0.02)
+//                 comparison.DamageDict[damageType] -= lowestDamage;
+//                 if (MathF.Abs(comparison.DamageDict[damageType].Float()
+//                         - MathF.Round(comparison.DamageDict[damageType].Float()))
+//                         < 0.02)
 //                     comparison.DamageDict[damageType] = MathF.Round(comparison.DamageDict[damageType].Float());
 //             }
 //             comparison.ClampMin(0);

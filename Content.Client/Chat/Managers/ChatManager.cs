@@ -92,10 +92,8 @@ internal sealed class ChatManager : IChatManager
 
             default:
                 throw new ArgumentOutOfRangeException(nameof(channel), channel, null);
-
         }
     }
-
 
 // ADT-CollectiveMind-Tweak-Start
     public void UpdatePermissions()
