@@ -1,21 +1,21 @@
-using Content.Shared.Whitelist;
-using Robust.Shared.GameStates;
+// using Content.Shared.Whitelist;
+// using Robust.Shared.GameStates;
 
-namespace Content.Shared._SD.RMC.Synth;
+// namespace Content.Shared._SD.RMC.Synth;
 
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
-[Access(typeof(SharedSynthSystem))]
-public sealed partial class UseOnSynthBlockedComponent : Component
-{
-    [DataField]
-    public LocId Popup = "rmc-species-synth-defib-attempt";
+// [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+// [Access(typeof(SharedSynthSystem))]
+// public sealed partial class UseOnSynthBlockedComponent : Component
+// {
+//     [DataField]
+//     public LocId Popup = "rmc-species-synth-defib-attempt";
 
-    [DataField, AutoNetworkedField]
-    public bool Reversed = false;
+//     [DataField, AutoNetworkedField]
+//     public bool Reversed = false;
 
-    [DataField, AutoNetworkedField]
-    public EntityWhitelist? Whitelist;
+//     [DataField, AutoNetworkedField]
+//     public EntityWhitelist? Whitelist;
 
-    [DataField, AutoNetworkedField]
-    public EntityWhitelist? Blacklist;
-}
+//     [DataField, AutoNetworkedField]
+//     public EntityWhitelist? Blacklist;
+// }
