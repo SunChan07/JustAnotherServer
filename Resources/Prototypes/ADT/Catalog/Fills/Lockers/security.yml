@@ -29,7 +29,6 @@
       - id: BoxBodyBag
       - id: ChemistryBottleEpinephrine
         amount: 1
-      - id: BrigmedHypo
       - id: ADTHandheldCrewMonitorBrigmedic
   - type: UserInterface
     interfaces:
@@ -80,4 +79,4 @@
       - id: ADTBookSRPsec
       - id: ADTBookSRPmed
       - id: ADTBookPCDsec
-      - id: BrigmedHypo
+

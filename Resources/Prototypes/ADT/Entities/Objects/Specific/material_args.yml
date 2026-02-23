@@ -248,7 +248,7 @@
     - type: SpawnItemsOnUse
       items:
       - id: Ash
-      sound:
+      sound: 
         path: /Audio/Items/Lighters/lighter3.ogg
     - type: AddComponentsOnUse
       components:

@@ -10,8 +10,6 @@
     - !type:DepartmentTimeRequirement
       department: Science
       time: 10h # ADT-Tweak
-    - !type:AgeRequirement # Hellix-Tweak
-      requiredAge: 40
     - !type:TraitsRequirement #Corvax-TraitsRequirement
       inverted: true
       traits:

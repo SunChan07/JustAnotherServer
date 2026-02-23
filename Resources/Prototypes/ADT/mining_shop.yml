@@ -126,8 +126,8 @@
   - id: ADTModsuitModDrill
     price: 1000
   - id: ADTModsuitModStorageLarge
-    price: 500
-
+    price: 500 
+    
 - type: miningShopSection
   id: Upgrades
   name: Улучшения

@@ -7,7 +7,7 @@
       sprite: ADT/Interface/Actions/shadekin.rsi
       state: teleport
     itemIconStyle: BigAction
-    useDelay: 3
+    useDelay: 12
   - type: TargetAction
     range: 7
     deselectOnMiss: false

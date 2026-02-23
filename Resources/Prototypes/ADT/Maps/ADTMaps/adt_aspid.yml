@@ -21,7 +21,7 @@
           availableJobs:
             # centcomm specialsts
             ADTBlueShieldOfficer: [ 1, 1 ] #ADT-Roles
-            # ADTCentcomConsultant: [ 1, 1 ] # SD-Tweak #ADT-Roles
+            # ADTCentcomConsultant: [ 1, 1 ] #ADT-Roles # Убрано по голосованию
             # command
             Captain: [ 1, 1 ]
             #service
@@ -59,7 +59,6 @@
             Warden: [ 1, 1 ]
             ADTSeniorOfficer: [ 1, 1 ] # ADT-Roles
             ADTCorrectionsOfficer: [ 1, 1 ] # ADT-Roles
-            Pilot: [1, 1]
             #Lawyer: [ 1, 1 ] # Corvax-IAA
             SecurityCadet: [ 1, 1 ]
             Detective: [ 1, 1 ]
@@ -77,7 +76,7 @@
             # juridical
             Lawyer: [ 1, 1 ]
             IAA: [ 1, 1 ]
-            # Magistrat: [ 1, 1 ] #ADT-Roles # Hellix-Tweak
+            # Magistrat: [ 1, 1 ] #ADT-Roles
             #silicon
             StationAi: [ 1, 1 ]
             Borg: [ 1, 2 ]

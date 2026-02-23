@@ -15,8 +15,6 @@
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 10h # ADT-Tweak 10h
-    - !type:AgeRequirement # Hellix-Tweak
-      requiredAge: 32
 #    - !type:OverallPlaytimeRequirement
 #      time: 144000 #40 hrs
     - !type:TraitsRequirement #Corvax-TraitsRequirement

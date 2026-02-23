@@ -53,8 +53,6 @@
     - id: Pirates # ADT tweak pirates
     - id: MorphSpawn #ADT tweak morph
     - id: VoxRaidersEvent # ADT tweak vox-raiders
-    - id: SuperHeroEvent # ADT tweak heros
-    - id: ReplicatorSpawn # SD-Edit
     # - id: IanHeroEvent # ADT tweak heros
     - !type:NestedSelector
       tableId: DerelictBorgEventTable

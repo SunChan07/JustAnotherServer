@@ -3,7 +3,6 @@
   name: job-name-ADTBlueShieldOfficer
   description: job-description-ADTBlueShieldOfficer
   playTimeTracker: JobADTBlueShieldOfficer
-  whitelisted: true # Hellix-Tweak
   requirements:
     - !type:RoleTimeRequirement
       role: JobCaptain
@@ -15,7 +14,7 @@
       role: JobChiefMedicalOfficer
       time: 18000 #5 hrs
     - !type:AgeRequirement
-      requiredAge: 26 # Hellix-Tweak
+      requiredAge: 21
     - !type:SpeciesRequirement
       inverted: true
       species:

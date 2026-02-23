@@ -63,24 +63,6 @@
           type: [ Resomi ]
       # End ADT tweak
       # Convert Oxygen into CO2.
-      - !type:Oxygenate
-        conditions:
-        - !type:OrganType
-          type: Animal
-      - !type:Oxygenate
-        conditions:
-        - !type:OrganType
-          type: Rat
-      - !type:Oxygenate
-        conditions:
-        - !type:OrganType
-          type: Plant
-      # Start SD tweak
-      - !type:Oxygenate
-        conditions:
-        - !type:OrganType
-          type: Aegi
-      # End SD tweak
       - !type:ModifyLungGas
         conditions:
         - !type:MetabolizerTypeCondition

@@ -27,11 +27,11 @@
       coefficients:
         Blunt: 0.7 # ADT-Tweak 0.9 -> 0.7
         Slash: 0.9
-        Piercing: 0.9
+        Piercing: 0.9   
         # ADT-Tweak-Start
         Heat: 0.4       # 0.8 -> 0.4
         Radiation: 0.4  # 0.5 -> 0.4
-        Caustic: 0.5    #  -> Caustic: 0.5
+        Caustic: 0.5    #  -> Caustic: 0.5 
         # ADT-Tweak-End
   - type: ClothingSpeedModifier
     walkModifier: 0.7
@@ -650,7 +650,7 @@
         Heat: 0.6
         Radiation: 0.3
         Caustic: 0.3
-  - type: ClothingSpeedModifier
+  - type: ClothingSpeedModifier 
     walkModifier: 1
     sprintModifier: 1
   # ADT-Tweak-End
@@ -830,7 +830,7 @@
 # Start ADT Tweak
   - type: StaminaResistance
     damageCoefficient: 0.15
-# End ADT Tweak
+# End ADT Tweak 
   - type: ClothingSpeedModifier
     walkModifier: 0.65
     sprintModifier: 0.65
@@ -905,7 +905,7 @@
     damageCoefficient: 0.2
   - type: Armor
     modifiers:
-      coefficients:
+      coefficients: 
         Blunt: 0.95
         Slash: 0.95
         Piercing: 1
@@ -1123,18 +1123,16 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.1
+        Blunt: 0.1 #best armor in the game
         Slash: 0.1
         Piercing: 0.1
         Heat: 0.1
         Radiation: 0.1
         Caustic: 0.1
-    staminaModifier: 0.1
   - type: ClothingSpeedModifier
     walkModifier: 1.0
     sprintModifier: 1.0
   - type: HeldSpeedModifier
-  - type: DNALocker
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitDeathsquad
   # ADT-Tweak-start
@@ -1143,11 +1141,6 @@
     - type: SupermatterImmune
   - type: SupermatterImmune
   # ADT-Tweak-end
-  # SD-tweak start
-  - type: Tag
-    tags:
-    - SD_CombatHarness
-  # SD-tweak end
 
 #CBURN Hardsuit
 - type: entity

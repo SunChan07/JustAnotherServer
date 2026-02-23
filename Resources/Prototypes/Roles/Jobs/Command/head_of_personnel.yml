@@ -16,11 +16,9 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 2.5h # ADT-Tweak 2.5h
-    - !type:DepartmentTimeRequirement
-      department: Command
-      time: 2.5h
-    - !type:AgeRequirement # Hellix-Tweak
-      requiredAge: 20
+#    - !type:DepartmentTimeRequirement
+#      department: Command
+#      time: 2.5h
     - !type:OverallPlaytimeRequirement
       time: 50h # Corvax-RoleTime
     - !type:TraitsRequirement #Corvax-TraitsRequirement

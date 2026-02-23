@@ -650,7 +650,6 @@
     Telecrystal: 5 # ADT-Tweak 6>4
   categories:
   - UplinkChemicals
-  - UplinkContractor # SD
 
 - type: listing
   id: UplinkHypoDart
@@ -712,7 +711,6 @@
     Telecrystal: 5 # ADT-Tweak 6>4
   categories:
   - UplinkChemicals
-  - UplinkContractor # SD
 
 - type: listing
   id: UplinkCombatMedkit
@@ -970,7 +968,6 @@
     Telecrystal: 4
   categories:
   - UplinkDisruption
-  - UplinkContractor
 
 - type: listing
   id: UplinkEmag
@@ -984,7 +981,6 @@
     Telecrystal: 3 # ADT-Tweak
   categories:
   - UplinkDisruption
-  - UplinkContractor
 
 - type: listing
   id: UplinkRadioJammer
@@ -1035,7 +1031,6 @@
     Telecrystal: 1
   categories:
   - UplinkDisruption
-  - UplinkContractor
 
 - type: listing
   id: UplinkSlipocalypseClusterSoap
@@ -1273,7 +1268,7 @@
   productEntity: ReinforcementRadioSyndicateNukeops
   icon: { sprite: ADT/Objects/Devices/communication.rsi, state: old-radio-nukeop } # ADT-tweak: Objects/Devices/communication.rsi --> ADT/Objects/Devices/communication.rsi
   cost:
-    Telecrystal: 30 #ADT_Tweak - подкрепление стоит дешево, но поступает без своего аплинка # Helix-tweak: Вы чё блять охуели с ебаниной своей совсем??
+    Telecrystal: 16 #ADT_Tweak - подкрепление стоит дешево, но поступает без своего аплинка
   categories:
   - UplinkAllies
   conditions:
@@ -1416,7 +1411,6 @@
     Telecrystal: 4 # ADT-Tweak 5>4
   categories:
     - UplinkImplants
-    - UplinkContractor
 
 - type: listing
   id: UplinkScramImplanter
@@ -1580,7 +1574,6 @@
     Telecrystal: 4
   categories:
   - UplinkImplants
-  - UplinkContractor
 
 
 # Wearables
@@ -1644,7 +1637,6 @@
     Telecrystal: 3 # ADT-Tweak 4>3
   categories:
     - UplinkWearables
-    - UplinkContractor
 
 - type: listing
   id: UplinkClothingNoSlipsShoes
@@ -2291,15 +2283,15 @@
   - UplinkPointless
 
 - type: listing
-  id: UplinkClothingOuterVestSyndReflect
-  name: uplink-reflector-vest-name
-  description: uplink-reflector-vest-desc
-  productEntity: ClothingOuterVestSyndReflect
+  id: UplinkSmugglerSatchel
+  name: uplink-smuggler-satchel-name
+  description: uplink-smuggler-satchel-desc
+  productEntity: ClothingBackpackSatchelSmugglerUnanchored
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 6
+    Telecrystal: 1
   cost:
-    Telecrystal: 4
+    Telecrystal: 2
   categories:
   - UplinkDeception
 

@@ -13,14 +13,10 @@
   access:
   - Service
   - Maintenance
-  # SD tweak start, даем понять сервису его правильное место
-  # - Bar
-  # - Kitchen
-  extendedAccess:
-  - Hydroponics
   - Bar
   - Kitchen
-  # SD tweak end
+  extendedAccess:
+  - Hydroponics
 
 - type: startingGear
   id: ServiceWorkerGear

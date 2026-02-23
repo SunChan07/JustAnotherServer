@@ -14,64 +14,35 @@
   - CentralCommand
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm, RadioImplantCentcomm, FreedomImplant, DeathAcidifierImplant ]
-  - !type:AddComponentSpecial
-    components:
-    - type: DeathSquadMember
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
 
 - type: startingGear
   id: DeathSquadGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitDeathSquad
-    back: ClothingDeathSquadronBackpack
+    back: ClothingBackpackDeathSquad
     mask: ClothingMaskGasDeathSquad
-    eyes: ClothingEyesGlassesDeathSquad # SD tweak
-    ears: SD_ClothingHeadsetAltSpecCom # Helix-Tweak
+    eyes: ClothingEyesHudSecurity
+    ears: ClothingHeadsetAltCentCom
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitDeathsquad
-    shoes: ClothingShoesBootsMagDeathsquad # SD tweak
+    shoes: ADTClothingShoesBootsMagERT #ADT tweak
     id: DeathsquadPDA
-    pocket1: EnergySwordDouble
-    pocket2: DoubleEmergencyOxygenTankFilled
-    belt: ClothingBeltAssault
+    pocket1: EnergySword
+    pocket2: EnergyShield
+    belt: ClothingBeltMilitaryWebbingMedFilled
   storage:
     back:
-    - ADTWeaponRifleTAR60SF
-    - ADTMagazineRifleAR12
-    - ADTMagazineRifleAR12
-    - ADTMagazineRifleAR12
-    - ADTMagazineRifleAR12
-    - MagazineBoxRifleBig
+    - WeaponPulsePistol
     - WeaponRevolverMatebaAP
     - SpeedLoaderMagnumAP
     - SpeedLoaderMagnumAP
     - BoxFlashbang
     - ToolDebug # spanish army knife
     - WelderExperimental
-    - C4
-    - C4
-    - JawsOfLife
-    - BoxMRE
-    - ADTAttachmentVerticalGrip
-    - ADTAttachmentAntiLyingWarrior
-    - ADTAttachmentMagneticHarness
-    - DefibrillatorCompact
-    - PowerCellHyper
-    - HandheldCrewMonitor
-    - PinpointerNuclear
-    - HandheldGPSBasic
-    - HandHeldMassScanner
-    - ADTCqcManual
-    belt:
-    - ADTCombatHypospray
-    - WeaponTaser
-    - ADTCrisisAutoInjector
-    - Handcuffs
-    - Handcuffs
-    - ChemistryBottleOmnizine
-    - ChemistryBottleOmnizine
-    - ChemistryBottleEphedrine
-    - ChemistryBottleEphedrine
+    - Hypospray
+    - DeathAcidifierImplanter # crew will try to steal their amazing hardsuits
+    - FreedomImplanter
   inhand:
   - WeaponPulseRifle
 

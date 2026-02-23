@@ -76,13 +76,6 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Human ]
-      # Start SD tweak
-      - !type:Oxygenate
-        factor: 8
-        conditions:
-        - !type:OrganType
-          type: Aegi
-      # End SD tweak
       - !type:Oxygenate
         factor: 8
         conditions:
@@ -159,18 +152,6 @@
             min: 3
         walkSpeedModifier: 1.35
         sprintSpeedModifier: 1.35
-        statusLifetime: 64
-        walkSpeedModifier: 1.5
-        sprintSpeedModifier: 1.5
-      - !type:GenericStatusEffect
-        conditions:
-          - !type:ReagentThreshold
-            reagent: Nitrium
-            min: 6
-        key: StaminaModifier
-        component: StaminaModifier
-        time: 3
-        type: add
       - !type:GenericStatusEffect
         conditions:
           - !type:ReagentCondition
@@ -184,24 +165,16 @@
           - !type:ReagentCondition
             reagent: Nitrium
             min: 6
-        key: StaminaModifier
-        component: StaminaModifier
+        key: KnockedDown
         time: 3
-        type: Add
+        type: Remove
       - !type:GenericStatusEffect
         conditions:
           - !type:ReagentCondition
             reagent: Nitrium
             min: 6
-        key: KnockedDown
-        time: 3
-        type: Remove
-      - !type:ModifyStatusEffect
-        conditions:
-          - !type:ReagentCondition
-            reagent: Nitrium
-            min: 6
-        effectProto: StatusEffectForcedSleeping
+        key: ForcedSleep
+        component: ForcedSleeping
         time: 15
         type: Remove
       - !type:HealthChange
@@ -212,7 +185,7 @@
         ignoreResistances: true
         damage:
           types:
-            Poison: 1
+            Poison: 0.05
 
 - type: reagent
   id: Healium
@@ -226,18 +199,14 @@
   metabolisms:
     Gas:
       effects:
-      - !type:ModifyStatusEffect # SD-fix
+      - !type:GenericStatusEffect
         conditions:
         - !type:ReagentCondition
           reagent: Healium
           min: 1
         key: ForcedSleep
         component: ForcedSleeping
-        effectProto: StatusEffectForcedSleeping # SD-fix
-        time: 1 # SD-fix
         type: Add
-      - !type:ModifyBleedAmount # SD-tweak
-        amount: -1 # SD-tweak
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition

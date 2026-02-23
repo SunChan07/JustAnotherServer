@@ -1,9 +1,8 @@
 # Да тут везде нужно ставить ADT-Tweak.. Увы..
-# SD тоже...
 - type: marking
   id: GauzeLefteyePatch
   bodyPart: Eyes
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Arachnid, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:
@@ -17,7 +16,7 @@
 - type: marking
   id: GauzeLefteyePad
   bodyPart: Eyes
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:
@@ -31,7 +30,7 @@
 - type: marking
   id: GauzeRighteyePatch
   bodyPart: Eyes
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Arachnid, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:
@@ -45,7 +44,7 @@
 - type: marking
   id: GauzeRighteyePad
   bodyPart: Eyes
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:
@@ -59,7 +58,7 @@
 - type: marking
   id: GauzeBlindfold
   bodyPart: Eyes
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Arachnid, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:
@@ -73,7 +72,7 @@
 - type: marking
   id: GauzeShoulder
   bodyPart: Chest
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:
@@ -87,7 +86,7 @@
 - type: marking
   id: GauzeStomach
   bodyPart: Chest
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:
@@ -101,7 +100,7 @@
 - type: marking
   id: GauzeUpperArmRight
   bodyPart: RArm
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:
@@ -115,7 +114,7 @@
 - type: marking
   id: GauzeLowerArmRight
   bodyPart: RArm, RHand
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:
@@ -129,7 +128,7 @@
 - type: marking
   id: GauzeLeftArm
   bodyPart: LArm, LHand
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:
@@ -143,7 +142,7 @@
 - type: marking
   id: GauzeLowerLegLeft
   bodyPart: LFoot
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Arachnid] # ADT-Tweak
   coloring:
     default:
@@ -157,7 +156,7 @@
 - type: marking
   id: GauzeUpperLegLeft
   bodyPart: LLeg
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid] # ADT-Tweak
   coloring:
     default:
@@ -171,7 +170,7 @@
 - type: marking
   id: GauzeUpperLegRight
   bodyPart: RLeg
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid] # ADT-Tweak
   coloring:
     default:
@@ -185,7 +184,7 @@
 - type: marking
   id: GauzeLowerLegRight
   bodyPart: RFoot
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Arachnid] # ADT-Tweak
   coloring:
     default:
@@ -199,7 +198,7 @@
 - type: marking
   id: GauzeBoxerWrapRight
   bodyPart: RHand
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:
@@ -213,7 +212,7 @@
 - type: marking
   id: GauzeBoxerWrapLeft
   bodyPart: LHand
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:
@@ -227,7 +226,7 @@
 - type: marking
   id: GauzeHead
   bodyPart: Head
-  markingCategory: Overlay
+  markingCategory: OverlayBandage # ADT-Tweak
   speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, Moth, VulpkaninSpecies] # ADT-Tweak
   coloring:
     default:

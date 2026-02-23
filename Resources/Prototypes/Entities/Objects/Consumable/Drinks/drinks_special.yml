@@ -29,7 +29,7 @@
       drink:
         reagents:
         - ReagentId: Ice
-          Quantity: 50 # SD-tweak Кувшины вместо абуза ведёрок для льда
+          Quantity: 200
   - type: Sprite
     sprite: Objects/Consumable/Drinks/icebucket.rsi
     state: icon

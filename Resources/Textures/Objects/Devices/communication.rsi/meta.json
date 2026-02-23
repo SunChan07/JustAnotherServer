@@ -97,17 +97,6 @@
     },
     {
       "name": "old-radio-borg-assault"
-    },
-    {
-      "name": "svo",
-      "delays": [
-        [
-        0.2,
-        0.2,
-        0.2,
-        0.2
-        ]
-      ]
     }
   ]
 }

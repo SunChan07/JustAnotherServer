@@ -459,7 +459,6 @@
         visualType: Small
         messages: [ "medicine-effect-usual" ]
         probability: 0.05
-
 #Сульфадиазин серебра
 - type: reagent
   id: ADTSilverSulfadiazine

@@ -239,7 +239,6 @@
     - ADTBeltManipulatorPack
     #ADT-tweak-end
     - ADTBluespaceCrystalTech #ADT Tweak
-    - SDPointsMinerPack #SD Tweak
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - SecurityAmmo
@@ -556,9 +555,6 @@
     - EmptyMedkitsStatic
     - SurgeryStatic
     - ADTMedicalMiscStaticPack # ADT-Tweak
-    # SD tweak start
-    - MedicalPatchesStatic
-    # SD tweak end
     dynamicPacks:
     - Chemistry
     #ADT-Tweak Start

@@ -2,7 +2,7 @@
   id: ADT_Fland
   mapName: 'Fland Installation'
   mapPath: /Maps/ADTMaps/ADTStations/adt_fland.yml
-  minPlayers: 35
+  minPlayers: 60
   stations:
     ADT_Fland:
       stationProto: StandardNanotrasenStation
@@ -19,7 +19,7 @@
         - type: StationJobs
           availableJobs:
             #centcom specialists
-            # ADTCentcomConsultant: [ 1, 1 ] # SD-Tweak #ADT-Roles
+            # ADTCentcomConsultant: [ 1, 1 ] #ADT-Roles # Убрано по голосованию
             ADTBlueShieldOfficer: [ 1, 1 ] #ADT-Roles
             # command
             Captain: [ 1, 1 ]
@@ -61,7 +61,6 @@
             Brigmedic: [ 1, 1 ] #ADT-Roles
             ADTSeniorOfficer: [ 1, 1 ] # ADT-Roles
             ADTCorrectionsOfficer: [ 1, 1 ] # ADT-Roles
-            Pilot: [1, 1]
             #Lawyer: [ 2, 2 ] # Corvax-IAA
             #supply
             Quartermaster: [ 1, 1 ]
@@ -75,7 +74,7 @@
             # juridical
             Lawyer: [ 1, 1 ]
             IAA: [ 1, 1 ]
-            # Magistrat: [ 1, 1 ] #ADT-Roles # Hellix-Tweak
+            # Magistrat: [ 1, 1 ] #ADT-Roles
             #silicon
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]

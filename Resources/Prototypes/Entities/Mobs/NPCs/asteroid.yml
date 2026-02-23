@@ -48,7 +48,6 @@
         Base: goliath
       Dead:
         Base: goliath_dead
-    # bloodReagent: DryableBlood
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.00
     baseSprintSpeed : 2.50 #ADT‑Tweak
@@ -103,8 +102,6 @@
     - id: MaterialBones1
       maxAmount: 5
     # ADT tweak end
-    - id: RandomGoliathLootSpawner
-      amount: 1
   - type: Fauna # ADT tweak
   - type: AshStormImmune # ADT tweak
 

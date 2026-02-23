@@ -164,7 +164,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: BatteryMechAmmoProvider
-    proto: SDBulletDisabler # SD-Tweak
+    proto: BulletDisabler
     fireCost: 10
 
 - type: entity

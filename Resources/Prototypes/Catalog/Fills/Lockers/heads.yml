@@ -63,7 +63,6 @@
     - id: SpaceCash1000
     - id: WeaponDisabler
     - id: ClothingEyesGlassesCommand
-    - id: FoodSnackLollypopWrappedCaptain # SD tweak
     - id: HeadSkeleton # A skull to accompany your skeleton crew
       conditions:
       - !type:PlayerCountCondition
@@ -215,10 +214,6 @@
     - id: ADTBookSRPeng
     - id: ADTBookPCDcmd
     - id: ADTtelescopicBaton
-    # ADT-WikiBooks-End
-    - id: AtmoTechCartridge # SD Elven Atmos
-    - id: SD_ClothingHandsGlovesCE # Helix-Tweak
-    # # ADT-Economy-Start
     - id: ADTEngineeringBudgetCard
     - id: ADTEngineeringBudgetPinPaper
     # # ADT-Tweak-End

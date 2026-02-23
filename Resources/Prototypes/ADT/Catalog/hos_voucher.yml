@@ -27,26 +27,3 @@
     state: bat_on
   content:
   - ADTTacticBat
-
-
-# sd-tweak start
-
-- type: thiefBackpackSet
-  id: WeaponHoSDragon
-  name: hos-voucher-dragon
-  description: hos-voucher-dragon-description
-  sprite:
-    sprite: SD/Objects/Specific/martial_arts.rsi
-    state: dragon
-  content:
-  - SDDragonManual
-
-- type: thiefBackpackSet
-  id: WeaponHoSEnergyShotgun
-  name: hos-voucher-shotgun
-  description: hos-voucher-shotgun-description
-  sprite:
-    sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
-    state: base
-  content:
-  - WeaponEnergyShotgun

@@ -15,8 +15,6 @@
       time: 10h
     - !type:OverallPlaytimeRequirement
       time: 144000 #40 hrs
-    - !type:AgeRequirement # Hellix-Tweak
-      requiredAge: 20
       #ADT tweak start
     - !type:SpeciesRequirement
       inverted: true

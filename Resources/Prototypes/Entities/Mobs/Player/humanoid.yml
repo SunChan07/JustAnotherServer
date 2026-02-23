@@ -67,7 +67,6 @@
     - Resomi
     - Dwarf
     - IPC
-    - Aegi # SD tweak
     - DraskSpecies # ADT-Tweak-end
   components:
     - type: GhostRole
@@ -538,7 +537,6 @@
     - Resomi
     - Dwarf
     - IPC
-    - Aegi # SD tweak
     - DraskSpecies # ADT-Tweak-end
   id: CBURNAgent
   parent: EventHumanoidCentcomm
@@ -591,7 +589,6 @@
     - Resomi
     - Dwarf
     - IPC
-    - Aegi # SD tweak
     - DraskSpecies # ADT-Tweak-end
   parent: EventHumanoidMindShielded
   components:

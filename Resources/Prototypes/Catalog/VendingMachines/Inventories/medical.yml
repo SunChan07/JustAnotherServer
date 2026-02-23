@@ -35,9 +35,7 @@
     HandheldHealthAnalyzer: 3
     # ADT tweak start
     Gauze: 5
-    ADTPatchPackFilled: 3 # SD tweak
-    MedicalPatchPrefilledBicaridine: 3  #SD tweak
-    MedicalPatchPrefilledDermaline: 3   #SD tweak
+    ADTPatchPackFilled: 3
     Brutepack: 4
     Ointment: 4
     ADTAntibioticOintment: 4
@@ -55,8 +53,6 @@
     SyringeIpecac: 1
     ClothingEyesHudMedical: 2
     ClothingEyesEyepatchHudMedical: 2
-    FoodSnackLollypopWrapped: 5 # SD tweak
-    FoodSnackLollypopWrappedTricordrazine: 3 # SD tweak
   contrabandInventory:
     PillCanisterRandom: 3
     PillSpaceDrugs: 3
@@ -65,9 +61,7 @@
   emaggedInventory:
     ADTMorphineBottle: 1
     ADTOmnizineBottle: 1
-    FoodSnackLollypopWrappedLexorin: 3 # SD tweak
-    FoodSnackLollypopWrappedMysteryEvil: 5 # SD tweak
-  # ADTPatchHonk: 3 SD tweak
+    ADTPatchHonk: 3
   # ADT tweak End
 
 - type: vendingMachineInventory
