@@ -5,9 +5,9 @@
   description: idi nahui.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Shoes/tacticalmaid.rsi
+    sprite: _SD/Clothing/Shoes/tacticalmaid.rsi
   - type: Clothing
-    sprite: SD/Clothing/Shoes/tacticalmaid.rsi
+    sprite: _SD/Clothing/Shoes/tacticalmaid.rsi
 
 - type: entity
   parent: ClothingShoesBootsJack
@@ -16,9 +16,9 @@
   description: You got that swagger. You're the drippiest guy in the department. You also probably have an energy knife in one of those shoes.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Shoes/jordans.rsi
+    sprite: _SD/Clothing/Shoes/jordans.rsi
   - type: Clothing
-    sprite: SD/Clothing/Shoes/jordans.rsi
+    sprite: _SD/Clothing/Shoes/jordans.rsi
 
 - type: entity
   parent: ClothingShoesBase
@@ -27,9 +27,9 @@
   description: You got some swag right there. Wait, how do they glow? What does "Pu-238" mean???
   components:
   - type: Sprite
-    sprite: SD/Clothing/Shoes/glow_shoes.rsi
+    sprite: _SD/Clothing/Shoes/glow_shoes.rsi
   - type: Clothing
-    sprite: SD/Clothing/Shoes/glow_shoes.rsi
+    sprite: _SD/Clothing/Shoes/glow_shoes.rsi
 
 - type: entity
   parent: ClothingShoesBase
@@ -38,6 +38,6 @@
   description: It falls down...
   components:
   - type: Sprite
-    sprite: SD/Clothing/Shoes/maddogshoes.rsi
+    sprite: _SD/Clothing/Shoes/maddogshoes.rsi
   - type: Clothing
-    sprite: SD/Clothing/Shoes/maddogshoes.rsi
+    sprite: _SD/Clothing/Shoes/maddogshoes.rsi

@@ -1,7 +1,7 @@
 - type: cargoProduct
   id: SDBusinessMoneyMiner
   icon:
-    sprite: SD/Structures/Machines/moneyminer.rsi
+    sprite: _SD/Structures/Machines/moneyminer.rsi
     state: icon
   product: SDMoneyMinerFlatpack
   cost: 100000

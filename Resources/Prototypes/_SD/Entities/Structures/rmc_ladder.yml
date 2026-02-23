@@ -13,7 +13,7 @@
   - type: Clickable
   - type: InteractionOutline
   - type: Sprite
-    sprite: SD/Entities/Structures/ladder.rsi
+    sprite: _SD/Entities/Structures/ladder.rsi
     drawdepth: WallTops
     state: ladderdown
   - type: PlacementReplacement

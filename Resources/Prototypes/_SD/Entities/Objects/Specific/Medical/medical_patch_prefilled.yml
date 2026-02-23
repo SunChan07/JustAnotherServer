@@ -6,7 +6,7 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: SD/Objects/Medical/medical_patch.rsi
+    sprite: _SD/Objects/Medical/medical_patch.rsi
     layers:
       - state: GenericPatchSmall
       - state: GenericPatchSmall-1

@@ -1,7 +1,7 @@
 - type: gameMap
   id: SD_Joule
   mapName: 'Joule Station'
-  mapPath: /Maps/SDMaps/SDStations/SD_Joule.yml
+  mapPath: /Maps/_SDMaps/SDStations/SD_Joule.yml
   minPlayers: 5 #
   stations:
     SD_Joule:

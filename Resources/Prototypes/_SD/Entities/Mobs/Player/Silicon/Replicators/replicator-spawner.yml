@@ -21,7 +21,7 @@
     sprite: Markers/jobs.rsi
     layers:
       - state: green
-      - sprite: SD/Mobs/Replicator/replicator.rsi
+      - sprite: _SD/Mobs/Replicator/replicator.rsi
         state: icon
 
 - type: entity
@@ -47,4 +47,4 @@
     volume: +2
     range: 2
     sound:
-      path: /Audio/SD/Ambience/replicator_ambiance.ogg
+      path: /Audio/_SD/Ambience/replicator_ambiance.ogg

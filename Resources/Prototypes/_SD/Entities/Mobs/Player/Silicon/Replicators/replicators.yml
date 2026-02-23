@@ -35,7 +35,7 @@
   - type: Sprite
     granularLayersRendering: true
     drawdepth: Mobs
-    sprite: SD/Mobs/Replicator/replicator.rsi
+    sprite: _SD/Mobs/Replicator/replicator.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: alive
@@ -163,7 +163,7 @@
   - type: Sprite
     granularLayersRendering: true
     drawdepth: SmallMobs
-    sprite: SD/Mobs/Replicator/replicator.rsi
+    sprite: _SD/Mobs/Replicator/replicator.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: alive_spore
@@ -236,7 +236,7 @@
   - type: Sprite
     granularLayersRendering: true
     drawdepth: SmallMobs
-    sprite: SD/Mobs/Replicator/replicator.rsi
+    sprite: _SD/Mobs/Replicator/replicator.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: alive
@@ -276,7 +276,7 @@
   - type: Sprite
     granularLayersRendering: true
     drawdepth: Mobs
-    sprite: SD/Mobs/Replicator/replicator.rsi
+    sprite: _SD/Mobs/Replicator/replicator.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: alive_level2
@@ -327,7 +327,7 @@
   - type: Sprite
     granularLayersRendering: true
     drawdepth: Mobs
-    sprite: SD/Mobs/Replicator/replicator.rsi
+    sprite: _SD/Mobs/Replicator/replicator.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: alive_level2alt
@@ -376,7 +376,7 @@
   - type: Sprite
     granularLayersRendering: true
     drawdepth: Mobs
-    sprite: SD/Mobs/Replicator/replicator.rsi
+    sprite: _SD/Mobs/Replicator/replicator.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: alive_level3

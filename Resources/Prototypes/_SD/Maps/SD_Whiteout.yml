@@ -1,7 +1,7 @@
 - type: gameMap
   id: SD_Whiteout
   mapName: 'Whiteout'
-  mapPath: /Maps/SDMaps/SDStations/SD_Whiteout.yml
+  mapPath: /Maps/_SDMaps/SDStations/SD_Whiteout.yml
   maxRandomOffset: 0
   randomRotation: false
   minPlayers: 5

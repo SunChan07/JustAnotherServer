@@ -12,14 +12,14 @@
     baseWalk: 0.7
     baseSprint: 0.7
   - type: Sprite
-    sprite: SD/Objects/Weapons/Guns/ml66a.rsi
+    sprite: _SD/Objects/Weapons/Guns/ml66a.rsi
     layers:
     - state: base
       map: [ "enum.GunVisualLayers.Base" ]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: SD/Objects/Weapons/Guns/ml66a.rsi
+    sprite: _SD/Objects/Weapons/Guns/ml66a.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -79,7 +79,7 @@
   suffix: Deathsquad only
   components:
   - type: Sprite
-    sprite: SD/Objects/Weapons/Guns/ml79a.rsi
+    sprite: _SD/Objects/Weapons/Guns/ml79a.rsi
     layers:
     - state: base
       map: [ "enum.GunVisualLayers.Base" ]

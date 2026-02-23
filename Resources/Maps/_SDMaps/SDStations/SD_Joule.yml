@@ -78316,13 +78316,6 @@ entities:
     - type: Transform
       pos: -4.4806004,31.510696
       parent: 2
-- proto: DrinkKvasBottleFull
-  entities:
-  - uid: 10981
-    components:
-    - type: Transform
-      pos: 23.416622,12.691626
-      parent: 2
 - proto: DrinkManlyDorfGlass
   entities:
   - uid: 10982
@@ -110557,47 +110550,6 @@ entities:
     components:
     - type: Transform
       pos: -32.5,21.5
-      parent: 2
-- proto: OrganAegiBrain
-  entities:
-  - uid: 15507
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -26.241734,-15.366823
-      parent: 2
-- proto: OrganAegiEars
-  entities:
-  - uid: 15508
-    components:
-    - type: Transform
-      pos: 19.5,-30.5
-      parent: 2
-- proto: OrganAegiEyes
-  entities:
-  - uid: 15509
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -26.543423,-15.497283
-      parent: 2
-  - uid: 15510
-    components:
-    - type: Transform
-      pos: -18.208736,61.50451
-      parent: 2
-  - uid: 15511
-    components:
-    - type: Transform
-      pos: 28.40156,49.41435
-      parent: 2
-- proto: OrganAegiLiver
-  entities:
-  - uid: 15512
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -26.680256,-15.2554455
       parent: 2
 - proto: OrganHumanHeart
   entities:

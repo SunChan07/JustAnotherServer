@@ -11,7 +11,7 @@
 #   femaleFirstNames: names_aegi_first_female
 #   maleLastNames: names_aegi_last
 #   femaleLastNames: names_aegi_last
-#   description: "/ServerInfo/SD/SpeciesDescriptions/Aegi.xml"
+#   description: "/ServerInfo/_SD/SpeciesDescriptions/Aegi.xml"
 #   pros:
 #     - Слегка быстрее перемещаются без гравитации из-за развитого вестибулярного аппарата.
 #     - Имеют повышенную выносливость.

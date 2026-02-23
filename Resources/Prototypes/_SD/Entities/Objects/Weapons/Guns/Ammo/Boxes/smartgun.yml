@@ -16,7 +16,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: SD/Objects/Weapons/Guns/Ammunition/Boxes/smartpistol.rsi
+    sprite: _SD/Objects/Weapons/Guns/Ammunition/Boxes/smartpistol.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

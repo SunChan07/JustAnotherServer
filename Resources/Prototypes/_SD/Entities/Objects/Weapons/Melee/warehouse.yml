@@ -9,20 +9,20 @@
     tags:
     - Knife
   - type: Sprite
-    sprite: SD/Entities/Weapons/Warehouse/topor-myasnika.rsi
+    sprite: _SD/Entities/Weapons/Warehouse/topor-myasnika.rsi
     state: icon
   - type: Item
-    sprite: SD/Entities/Weapons/Warehouse/topor-myasnika.rsi
+    sprite: _SD/Entities/Weapons/Warehouse/topor-myasnika.rsi
     storedSprite:
       state: icon
-      sprite: SD/Entities/Weapons/Warehouse/topor-myasnika.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/topor-myasnika.rsi
   - type: MeleeWeapon
     wideAnimationRotation: -135
     attackRate: 1.5
     soundHit:
-      path: /Audio/SD/Weapons/Melee/Warehouse/hit.ogg
+      path: /Audio/_SD/Weapons/Melee/Warehouse/hit.ogg
     soundSwing:
-      path: /Audio/SD/Weapons/Melee/Warehouse/miss.ogg
+      path: /Audio/_SD/Weapons/Melee/Warehouse/miss.ogg
     damage:
       types:
         Slash: 12
@@ -37,12 +37,12 @@
   suffix: "abobkamenyaebali"
   components:
     - type: Sprite
-      sprite: SD/Entities/Weapons/Warehouse/abobkamenayebali/tracksuitCoat.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/abobkamenayebali/tracksuitCoat.rsi
       state: icon
     - type: Item
-      sprite: SD/Entities/Weapons/Warehouse/abobkamenayebali/tracksuitCoat.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/abobkamenayebali/tracksuitCoat.rsi
     - type: Clothing
-      sprite: SD/Entities/Weapons/Warehouse/abobkamenayebali/tracksuitCoat.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/abobkamenayebali/tracksuitCoat.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -51,12 +51,12 @@
   suffix: "abobkamenyaebali"
   components:
     - type: Sprite
-      sprite: SD/Entities/Weapons/Warehouse/abobkamenayebali/tracksuit.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/abobkamenayebali/tracksuit.rsi
       state: icon
     - type: Item
-      sprite: SD/Entities/Weapons/Warehouse/abobkamenayebali/tracksuit.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/abobkamenayebali/tracksuit.rsi
     - type: Clothing
-      sprite: SD/Entities/Weapons/Warehouse/abobkamenayebali/tracksuit.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/abobkamenayebali/tracksuit.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -65,12 +65,12 @@
   suffix: "Dolzhnik"
   components:
     - type: Sprite
-      sprite: SD/Entities/Weapons/Warehouse/Dolzhnik/noblecoat.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/Dolzhnik/noblecoat.rsi
       state: icon
     - type: Item
-      sprite: SD/Entities/Weapons/Warehouse/Dolzhnik/noblecoat.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/Dolzhnik/noblecoat.rsi
     - type: Clothing
-      sprite: SD/Entities/Weapons/Warehouse/Dolzhnik/noblecoat.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/Dolzhnik/noblecoat.rsi
 
 - type: entity
   id: noblespear
@@ -80,7 +80,7 @@
   description: Древнее древковое орудие, какого-то нищего из глубин технических тоннелей.
   components:
     - type: Sprite
-      sprite: SD/Entities/Weapons/Warehouse/Dolzhnik/noblespear.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/Dolzhnik/noblespear.rsi
       layers:
         - state: spear
         - state: spear1
@@ -88,10 +88,10 @@
           visible: false
     - type: Item
       size: Ginormous
-      sprite: SD/Entities/Weapons/Warehouse/Dolzhnik/noblespear.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/Dolzhnik/noblespear.rsi
       storedSprite:
         state: spear
-        sprite: SD/Entities/Weapons/Warehouse/Dolzhnik/noblespear.rsi
+        sprite: _SD/Entities/Weapons/Warehouse/Dolzhnik/noblespear.rsi
 
 - type: entity
   id: noblecrown
@@ -100,12 +100,12 @@
   name: корона короля техов
   components:
     - type: Sprite
-      sprite: SD/Entities/Weapons/Warehouse/Dolzhnik/tcrown.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/Dolzhnik/tcrown.rsi
       state: icon
     - type: Item
-      sprite: SD/Entities/Weapons/Warehouse/Dolzhnik/tcrown.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/Dolzhnik/tcrown.rsi
     - type: Clothing
-      sprite: SD/Entities/Weapons/Warehouse/Dolzhnik/tcrown.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/Dolzhnik/tcrown.rsi
 
 - type: entity
   id: honorandloyalty
@@ -115,13 +115,13 @@
   description: Этот револьвер является полным описанием своего владельца. По виду револьвера можно понять, что он верно служит хозяину на протяжении многих лет. На стволе револьвера виднеется гравировка "М.Э.", которая, судя по всему, была выцарапана.
   components:
     - type: Sprite
-      sprite: SD/Entities/Weapons/Warehouse/freealeq/revgun.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/freealeq/revgun.rsi
       state: icon
     - type: Item
-      sprite: SD/Entities/Weapons/Warehouse/freealeq/revgun.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/freealeq/revgun.rsi
       storedSprite:
         state: icon
-        sprite: SD/Entities/Weapons/Warehouse/freealeq/revgun.rsi
+        sprite: _SD/Entities/Weapons/Warehouse/freealeq/revgun.rsi
 
 - type: entity
   parent: ClothingHandsBase
@@ -131,12 +131,12 @@
   description: Эти золотые механические часы блестят настолько ярко, что могут кого-нибудь ослепить. Одно золотое звено этих часов стоит как среднестатистическое жалованье сотрудника корпорации, что ясно даёт понять о статусе носителя. Рядом с циферблатом виднеется чёрная гравировка "М.Э."
   components:
     - type: Sprite
-      sprite: SD/Entities/Weapons/Warehouse/freealeq/watch.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/freealeq/watch.rsi
       state: icon
     - type: Item
-      sprite: SD/Entities/Weapons/Warehouse/freealeq/watch.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/freealeq/watch.rsi
     - type: Clothing
-      sprite: SD/Entities/Weapons/Warehouse/freealeq/watch.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/freealeq/watch.rsi
 
 - type: entity
   parent: ClothingOuterArmorBase
@@ -146,12 +146,12 @@
   suffix: "KiberNikitos"
   components:
     - type: Sprite
-      sprite: SD/Entities/Weapons/Warehouse/KiberNikitos/armor.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/KiberNikitos/armor.rsi
       state: icon
     - type: Item
-      sprite: SD/Entities/Weapons/Warehouse/KiberNikitos/armor.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/KiberNikitos/armor.rsi
     - type: Clothing
-      sprite: SD/Entities/Weapons/Warehouse/KiberNikitos/armor.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/KiberNikitos/armor.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -160,9 +160,9 @@
   suffix: "KiberNikitos"
   components:
     - type: Sprite
-      sprite: SD/Entities/Weapons/Warehouse/KiberNikitos/suit.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/KiberNikitos/suit.rsi
       state: icon
     - type: Item
-      sprite: SD/Entities/Weapons/Warehouse/KiberNikitos/suit.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/KiberNikitos/suit.rsi
     - type: Clothing
-      sprite: SD/Entities/Weapons/Warehouse/KiberNikitos/suit.rsi
+      sprite: _SD/Entities/Weapons/Warehouse/KiberNikitos/suit.rsi

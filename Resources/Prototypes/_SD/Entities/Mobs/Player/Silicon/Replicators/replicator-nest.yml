@@ -11,7 +11,7 @@
   components:
   - type: ReplicatorNest
     fallingSound:
-      path: /Audio/SD/Effects/falling.ogg
+      path: /Audio/_SD/Effects/falling.ogg
       params:
         variation: 0.1
     blacklist:
@@ -52,7 +52,7 @@
         hard: false
   - type: Sprite
     drawdepth: FloorTiles
-    sprite: SD/Mobs/Replicator/replicator_nest.rsi
+    sprite: _SD/Mobs/Replicator/replicator_nest.rsi
     layers:
     - map: ["enum.ReplicatorNestVisuals.Level1"]
       state: nest1

@@ -35,7 +35,7 @@
   - type: Sprite
     snapCardinals: true
     layers:
-    - sprite: SD/Mobs/Replicator/replicator_tileset.rsi
+    - sprite: _SD/Mobs/Replicator/replicator_tileset.rsi
       state: replicator-tile-anim
       shader: unshaded
     drawdepth: Mobs

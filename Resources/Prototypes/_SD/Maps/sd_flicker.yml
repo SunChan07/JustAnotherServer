@@ -1,7 +1,7 @@
 - type: gameMap
   id: SD_Flicker
   mapName: 'Flicker Station'
-  mapPath: /Maps/SDMaps/SDStations/sd_flicker.yml
+  mapPath: /Maps/_SDMaps/SDStations/sd_flicker.yml
   minPlayers: 5
   maxPlayers: 80
   stations:

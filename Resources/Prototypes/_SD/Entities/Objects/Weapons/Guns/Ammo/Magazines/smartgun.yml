@@ -18,7 +18,7 @@
     proto: SD_Cartridge792mm
     capacity: 100
   - type: Sprite
-    sprite: SD/Objects/Weapons/Guns/Ammunition/Magazines/magazine_smart_gun.rsi
+    sprite: _SD/Objects/Weapons/Guns/Ammunition/Magazines/magazine_smart_gun.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -42,7 +42,7 @@
     proto: SD_Cartridge792mmRad
     capacity: 100
   - type: Sprite
-    sprite: SD/Objects/Weapons/Guns/Ammunition/Magazines/magazine_smart_gun_deplated.rsi
+    sprite: _SD/Objects/Weapons/Guns/Ammunition/Magazines/magazine_smart_gun_deplated.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
@@ -70,7 +70,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: SD/Objects/Weapons/Guns/Ammunition/Magazines/smartgun_mag.rsi
+    sprite: _SD/Objects/Weapons/Guns/Ammunition/Magazines/smartgun_mag.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]

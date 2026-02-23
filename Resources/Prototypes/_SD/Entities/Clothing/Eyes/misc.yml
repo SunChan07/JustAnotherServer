@@ -5,8 +5,8 @@
   description: It has a snake on it.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Eyes/Misc/maddogeyepatch.rsi
+    sprite: _SD/Clothing/Eyes/Misc/maddogeyepatch.rsi
   - type: Clothing
-    sprite: SD/Clothing/Eyes/Misc/maddogeyepatch.rsi
+    sprite: _SD/Clothing/Eyes/Misc/maddogeyepatch.rsi
   - type: EyeProtection
     protectionTime: 5

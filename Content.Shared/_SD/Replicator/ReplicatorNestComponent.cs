@@ -129,13 +129,13 @@ public sealed partial class ReplicatorNestComponent : Component
     public EntProtoId SpawnNewNestAction = "ActionReplicatorSpawnNest";
 
     [DataField]
-    public SoundSpecifier FallingSound = new SoundPathSpecifier("/Audio/SD/Effects/falling.ogg");
+    public SoundSpecifier FallingSound = new SoundPathSpecifier("/Audio/_SD/Effects/falling.ogg");
     [DataField]
-    public SoundSpecifier LevelUpSound = new SoundPathSpecifier("/Audio/SD/Ambience/hole_2.ogg");
+    public SoundSpecifier LevelUpSound = new SoundPathSpecifier("/Audio/_SD/Ambience/hole_2.ogg");
     [DataField]
-    public SoundSpecifier UpgradeSound = new SoundPathSpecifier("/Audio/SD/Misc/replicator_sfx2.ogg");
+    public SoundSpecifier UpgradeSound = new SoundPathSpecifier("/Audio/_SD/Misc/replicator_sfx2.ogg");
     [DataField]
-    public SoundSpecifier TilePlaceSound = new SoundPathSpecifier("/Audio/SD/Misc/replicator_sfx1.ogg");
+    public SoundSpecifier TilePlaceSound = new SoundPathSpecifier("/Audio/_SD/Misc/replicator_sfx1.ogg");
     [DataField]
     public ProtoId<ContentTileDefinition> ConversionTile = "FloorReplicator";
     [DataField]

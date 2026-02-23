@@ -14,10 +14,10 @@ namespace Content.Shared._SD.Weapons.SmartGun;
 public sealed partial class LaserPointerComponent : Component
 {
     [DataField]
-    public SoundSpecifier? Sound = new SoundPathSpecifier("/Audio/SD/Weapons/Guns/Misc/Smartpistol_StartCast_1.ogg");
+    public SoundSpecifier? Sound = new SoundPathSpecifier("/Audio/_SD/Weapons/Guns/Misc/Smartpistol_StartCast_1.ogg");
 
     [DataField]
-    public SoundSpecifier? LockOnSound = new SoundPathSpecifier("/Audio/SD/Weapons/Guns/Misc/Smartpistol_Aim_1.ogg");
+    public SoundSpecifier? LockOnSound = new SoundPathSpecifier("/Audio/_SD/Weapons/Guns/Misc/Smartpistol_Aim_1.ogg");
 
     [DataField(customTypeSerializer: typeof(FlagSerializer<CollisionMask>))]
     public int CollisionMask = (int) CollisionGroup.BulletImpassable;

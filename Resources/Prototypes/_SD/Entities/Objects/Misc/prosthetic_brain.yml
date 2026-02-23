@@ -4,7 +4,7 @@
   name: brain
   components:
   - type: Sprite
-    sprite: SD/Objects/Misc/prosthetic_brain.rsi
+    sprite: _SD/Objects/Misc/prosthetic_brain.rsi
     state: icon
   - type: Organ
   - type: Input

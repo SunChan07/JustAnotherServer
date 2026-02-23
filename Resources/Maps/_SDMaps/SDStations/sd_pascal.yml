@@ -16207,13 +16207,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 12.5,33.5
       parent: 2
-- proto: BorgBeaker
-  entities:
-  - uid: 843
-    components:
-    - type: Transform
-      pos: 0.75523114,12.588799
-      parent: 2
 - proto: BorgCharger
   entities:
   - uid: 844
@@ -73029,7 +73022,7 @@ entities:
 
         Откуда у меня Оппорозидон и как я узнал его рецепт?
 
-        Всё очень просто! 
+        Всё очень просто!
 
                   [head=2]ГЛУПЕНЬКИЙ ХОНК-ХОООНК!!![/head]
 

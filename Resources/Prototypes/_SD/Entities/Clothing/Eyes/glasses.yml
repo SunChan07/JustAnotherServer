@@ -6,9 +6,9 @@
   description: A pair of shades designed for central command personnel. It's nothing personal.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Eyes/Glasses/centcommglasses.rsi
+    sprite: _SD/Clothing/Eyes/Glasses/centcommglasses.rsi
   - type: Clothing
-    sprite: SD/Clothing/Eyes/Glasses/centcommglasses.rsi
+    sprite: _SD/Clothing/Eyes/Glasses/centcommglasses.rsi
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5
@@ -26,9 +26,9 @@
   description: A pair of shades designed for special operations.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Eyes/Glasses/deathsquad.rsi
+    sprite: _SD/Clothing/Eyes/Glasses/deathsquad.rsi
   - type: Clothing
-    sprite: SD/Clothing/Eyes/Glasses/deathsquad.rsi
+    sprite: _SD/Clothing/Eyes/Glasses/deathsquad.rsi
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5

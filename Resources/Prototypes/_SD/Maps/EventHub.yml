@@ -1,7 +1,7 @@
 - type: gameMap
   id: EventHub
   mapName: 'EventHub'
-  mapPath: /Maps/SDMaps/SDEvents/EventHub.yml
+  mapPath: /Maps/_SDMaps/SDEvents/EventHub.yml
   minPlayers: 5
   maxPlayers: 80
   stations:

@@ -40,7 +40,7 @@
       types:
         Piercing: 16
   - type: Sprite
-    sprite: SD/Objects/Weapons/Guns/Ammunition/Projectiles/smartgun.rsi
+    sprite: _SD/Objects/Weapons/Guns/Ammunition/Projectiles/smartgun.rsi
     layers:
     - state: smartgun
       shader: unshaded

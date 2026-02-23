@@ -6,9 +6,9 @@
   description: Nice-made chunk of reflect plates, reflecting all laser beams and protecting it's owner from the heat.
   components:
   - type: Sprite
-    sprite: SD/Entities/Clothing/OuterClothing/Armor/syndreflect.rsi
+    sprite: _SD/Entities/Clothing/OuterClothing/Armor/syndreflect.rsi
   - type: Clothing
-    sprite: SD/Entities/Clothing/OuterClothing/Armor/syndreflect.rsi
+    sprite: _SD/Entities/Clothing/OuterClothing/Armor/syndreflect.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -34,7 +34,7 @@
   description: A heavy protective vest designed to be worn with the MK-64 Smart Gun System. It has specially designed straps and reinforcement to carry the Smartgun and accessories.
   components:
   - type: Sprite
-    sprite: SD/Clothing/OuterClothing/Vests/smartharness.rsi
+    sprite: _SD/Clothing/OuterClothing/Vests/smartharness.rsi
   - type: Storage
     maxItemSize: Normal
     grid:
@@ -50,9 +50,9 @@
   description: An armored vest that utilizes bluespace technology, bending light and becoming invisible to the naked eye when worn.
   components:
   - type: Sprite
-    sprite: SD/Clothing/OuterClothing/Vests/covert_armor.rsi
+    sprite: _SD/Clothing/OuterClothing/Vests/covert_armor.rsi
   - type: Clothing
-    sprite: SD/Clothing/OuterClothing/Vests/covert_armor.rsi
+    sprite: _SD/Clothing/OuterClothing/Vests/covert_armor.rsi
   - type: Armor
     modifiers:
       coefficients:

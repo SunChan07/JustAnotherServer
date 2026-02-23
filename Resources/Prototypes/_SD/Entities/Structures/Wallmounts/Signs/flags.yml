@@ -4,7 +4,7 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: SD/Structures/Wallmounts/flags.rsi
+    sprite: _SD/Structures/Wallmounts/flags.rsi
 
 - type: entity
   parent: SDBaseFlag

@@ -5,9 +5,9 @@
   description: A belt used to hold most janitorial supplies.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Belt/tacticalmaid.rsi
+    sprite: _SD/Clothing/Belt/tacticalmaid.rsi
   - type: Clothing
-    sprite: SD/Clothing/Belt/tacticalmaid.rsi
+    sprite: _SD/Clothing/Belt/tacticalmaid.rsi
 
 - type: entity
   parent: ClothingBeltJanitorFilled
@@ -16,9 +16,9 @@
   description: A belt used to hold most janitorial supplies.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Belt/tacticalmaid.rsi
+    sprite: _SD/Clothing/Belt/tacticalmaid.rsi
   - type: Clothing
-    sprite: SD/Clothing/Belt/tacticalmaid.rsi
+    sprite: _SD/Clothing/Belt/tacticalmaid.rsi
 
 - type: entity
   parent: [ClothingBeltBase, ClothingSlotBase, ClothingBeltStorageBase]
@@ -27,10 +27,10 @@
   description: XM52 pattern holster for the MK-6 smartgun model.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Belt/smartgun_holster.rsi
+    sprite: _SD/Clothing/Belt/smartgun_holster.rsi
     state: icon
   - type: Clothing
-    sprite: SD/Clothing/Belt/smartgun_holster.rsi
+    sprite: _SD/Clothing/Belt/smartgun_holster.rsi
   - type: Item
     size: Ginormous
   - type: ItemSlots
@@ -49,7 +49,7 @@
         whitelist:
           tags:
           - SD_MK6Pistol
-    sprite: SD/Clothing/Belt/smartgun_holster.rsi
+    sprite: _SD/Clothing/Belt/smartgun_holster.rsi
   - type: Appearance
   - type: ContainerContainer
     containers:

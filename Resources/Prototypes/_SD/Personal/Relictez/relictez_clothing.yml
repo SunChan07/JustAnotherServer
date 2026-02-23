@@ -1,4 +1,4 @@
-# Чёрная униформа 
+# Чёрная униформа
 - type: entity
   parent: ClothingUniformBase
   id: SD_ClothingUniformBlackRelictez
@@ -7,11 +7,11 @@
   suffix: Personal Items, Relictez
   components:
   - type: Sprite
-    sprite: SD/Personal/Relictez/black_unifrom.rsi
+    sprite: _SD/Personal/Relictez/black_unifrom.rsi
   - type: Clothing
-    sprite: SD/Personal/Relictez/black_unifrom.rsi
+    sprite: _SD/Personal/Relictez/black_unifrom.rsi
 
-# Тренч 
+# Тренч
 - type: entity
   parent: ClothingOuterStorageBase
   id: SD_ClothingTrenchCoatRelictez
@@ -20,9 +20,9 @@
   suffix: Personal Items, Relictez
   components:
   - type: Sprite
-    sprite: SD/Personal/Relictez/cloak_officer.rsi
+    sprite: _SD/Personal/Relictez/cloak_officer.rsi
   - type: Clothing
-    sprite: SD/Personal/Relictez/cloak_officer.rsi
+    sprite: _SD/Personal/Relictez/cloak_officer.rsi
 
 - type: entity
   parent: ClothingOuterHardsuitBase
@@ -32,9 +32,9 @@
   description: Усовершенствованный тактический скафандр, используемый привилегированным офицером высшего состава NanoTrasen. Броня укреплена сверхпрочным сплавом и не сковывает движений носителя.
   components:
   - type: Sprite
-    sprite: SD/Personal/Relictez/dq_hardsuit_commander.rsi
+    sprite: _SD/Personal/Relictez/dq_hardsuit_commander.rsi
   - type: Clothing
-    sprite: SD/Personal/Relictez/dq_hardsuit_commander.rsi
+    sprite: _SD/Personal/Relictez/dq_hardsuit_commander.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
@@ -72,9 +72,9 @@
   components:
   - type: BreathMask
   - type: Sprite
-    sprite: SD/Personal/Relictez/dq_helmet_commander.rsi
+    sprite: _SD/Personal/Relictez/dq_helmet_commander.rsi
   - type: Clothing
-    sprite: SD/Personal/Relictez/dq_helmet_commander.rsi
+    sprite: _SD/Personal/Relictez/dq_helmet_commander.rsi
   - type: PointLight
     color: "#FFA500"
   - type: PressureProtection

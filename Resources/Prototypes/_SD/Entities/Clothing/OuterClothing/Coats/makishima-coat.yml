@@ -5,7 +5,7 @@
   description: cloat-desc
   components:
   - type: Clothing
-    sprite: SD/Clothing/OuterClothing/CustomCoats/bloody-red.rsi
+    sprite: _SD/Clothing/OuterClothing/CustomCoats/bloody-red.rsi
   - type: Sprite
-    sprite: SD/Clothing/OuterClothing/CustomCoats/bloody-red.rsi
+    sprite: _SD/Clothing/OuterClothing/CustomCoats/bloody-red.rsi
 

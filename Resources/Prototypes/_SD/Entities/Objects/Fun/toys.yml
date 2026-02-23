@@ -7,7 +7,7 @@
   - type: Item
     size: Normal
   - type: Sprite
-    sprite: SD/Objects/Fun/toys.rsi
+    sprite: _SD/Objects/Fun/toys.rsi
     state: rk22_plush
   - type: EmitSoundOnUse
     sound:
@@ -34,7 +34,7 @@
   description: wow.
   components:
   - type: Sprite
-    sprite: SD/Objects/Fun/toys.rsi
+    sprite: _SD/Objects/Fun/toys.rsi
     state: plush_ametist
 
 - type: entity
@@ -44,7 +44,7 @@
   description: wow.
   components:
   - type: Sprite
-    sprite: SD/Objects/Fun/toys.rsi
+    sprite: _SD/Objects/Fun/toys.rsi
     state: plush_dirk
   - type: AmbientSound
     enabled: true
@@ -60,7 +60,7 @@
   description: wow.
   components:
   - type: Sprite
-    sprite: SD/Objects/Fun/toys.rsi
+    sprite: _SD/Objects/Fun/toys.rsi
     state: plush_ZHETS
 
 - type: entity
@@ -70,7 +70,7 @@
   description: wow.
   components:
   - type: Sprite
-    sprite: SD/Objects/Fun/toys.rsi
+    sprite: _SD/Objects/Fun/toys.rsi
     state: plush_sammy
 
 - type: entity
@@ -80,11 +80,11 @@
   description: wow.
   components:
   - type: Sprite
-    sprite: SD/Objects/Fun/toys.rsi
+    sprite: _SD/Objects/Fun/toys.rsi
     state: plush_ena
   - type: AmbientSound
     enabled: true
     volume: -10
     range: 7
     sound:
-      path: /Audio/SD/Items/METAROOM-The-Purge-Event-MONO.ogg
+      path: /Audio/_SD/Items/METAROOM-The-Purge-Event-MONO.ogg

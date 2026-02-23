@@ -2,7 +2,7 @@
   id: SD_Centcomm
   isGrid: true # Did you know that centcomm is the only "game map" that isn't actually a map? Send help.
   mapName: 'Станция ЦК'
-  mapPath: /Maps/SDMaps/SD_Centcomm.yml
+  mapPath: /Maps/_SDMaps/SD_Centcomm.yml
   minPlayers: 10
   stations:
     SD_Centcomm:

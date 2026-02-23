@@ -5,14 +5,14 @@
   description: A prototype born from cooperation of Nanotrasen Small Division and Scarborough Arms Manufacturing. This is a precision crafted pistol, some may even say - a masterpiece. It is a complex killing machine, capable of aiming bullets AFTER they left the barrel. Uses 9x21mm smart pistol cartridges.
   components:
   - type: Sprite
-    sprite: SD/Objects/Weapons/Guns/smartgun.rsi
+    sprite: _SD/Objects/Weapons/Guns/smartgun.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: SD/Objects/Weapons/Guns/smartgun.rsi
+    sprite: _SD/Objects/Weapons/Guns/smartgun.rsi
   - type: Gun
     lockOnTargetBurst: true
     fireRate: 7
@@ -26,7 +26,7 @@
     - SemiAuto
     - Burst
     soundGunshot:
-      path: /Audio/SD/Weapons/Guns/Gunshots/Smartpistol_Fire_1.ogg
+      path: /Audio/_SD/Weapons/Guns/Gunshots/Smartpistol_Fire_1.ogg
     selectedMode: Burst
   - type: SmartGun
     requiresWield: true

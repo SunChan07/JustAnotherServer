@@ -4,7 +4,7 @@
   name: strange core
   components:
   - type: Sprite
-    sprite: /Textures/SD/Objects/Specific/Salvage/Artefacts/hunter_eye.rsi
+    sprite: /Textures/_SD/Objects/Specific/Salvage/Artefacts/hunter_eye.rsi
     state: hunter-eye
   - type: MeleeUpgrade
   # Первый тэг, это уникальное айди для модуля.

@@ -42,18 +42,18 @@
 #   categories: [HideSpawnMenu]
 #   components:
 #   - type: Sprite
-#     sprite: SD/Mobs/Replicator/replicator.rsi
+#     sprite: _SD/Mobs/Replicator/replicator.rsi
 #     layers:
 #       - state: t1weapon
 #         map: ["enum.GunVisualLayers.Base"]
 #   - type: Icon
-#     sprite: SD/Mobs/Replicator/replicator.rsi
+#     sprite: _SD/Mobs/Replicator/replicator.rsi
 #     state: t1weapon
 #   - type: Appearance
 #   - type: Gun
 #     fireRate: 0.3
 #     soundGunshot:
-#       path: /Audio/SD/Weapons/Guns/Gunshots/stunprojector.ogg
+#       path: /Audio/_SD/Weapons/Guns/Gunshots/stunprojector.ogg
 #   - type: HitscanBatteryAmmoProvider
 #     proto: HitscanReplicator
 #     fireCost: 150
@@ -78,12 +78,12 @@
 #   categories: [HideSpawnMenu]
 #   components:
 #   - type: Sprite
-#     sprite: SD/Mobs/Replicator/replicator.rsi
+#     sprite: _SD/Mobs/Replicator/replicator.rsi
 #     layers:
 #       - state: t2altweapon
 #         map: ["enum.GunVisualLayers.Base"]
 #   - type: Icon
-#     sprite: SD/Mobs/Replicator/replicator.rsi
+#     sprite: _SD/Mobs/Replicator/replicator.rsi
 #     state: t2altweapon
 #   - type: HitscanBatteryAmmoProvider
 #     proto: HitscanReplicator2
@@ -97,7 +97,7 @@
 #   categories: [ HideSpawnMenu ]
 #   components:
 #   - type: Sprite
-#     sprite: SD/Mobs/Replicator/replicator.rsi
+#     sprite: _SD/Mobs/Replicator/replicator.rsi
 #     state: t2altmelee
 #   - type: MeleeWeapon
 #     attackRate: 1.2
@@ -122,7 +122,7 @@
 #     tags:
 #     - Pickaxe
 #   - type: Sprite
-#     sprite: SD/Mobs/Replicator/replicator.rsi
+#     sprite: _SD/Mobs/Replicator/replicator.rsi
 #     state: t3weapon
 #   - type: MeleeWeapon
 #     attackRate: 0.5
@@ -151,9 +151,9 @@
 #   description: Locates the Nest.
 #   components:
 #   - type: Sprite
-#     sprite: SD/Objects/Devices/pinpointer.rsi
+#     sprite: _SD/Objects/Devices/pinpointer.rsi
 #     layers:
-#     - sprite: SD/Objects/Devices/pinpointer_replicator.rsi
+#     - sprite: _SD/Objects/Devices/pinpointer_replicator.rsi
 #       state: pinpointer-replicator
 #       map: ["enum.PinpointerLayers.Base"]
 #     - state: pinonnull
@@ -161,7 +161,7 @@
 #       shader: unshaded
 #       visible: false
 #   - type: Icon
-#     sprite: SD/Objects/Devices/pinpointer_replicator.rsi
+#     sprite: _SD/Objects/Devices/pinpointer_replicator.rsi
 #     state: pinpointer-replicator
 #   - type: Pinpointer
 #     component: ReplicatorNest
@@ -178,24 +178,24 @@
 #   id: HitscanReplicator
 #   staminaDamage: 18
 #   muzzleFlash:
-#     sprite: SD/Mobs/Replicator/replicator_gun.rsi
+#     sprite: _SD/Mobs/Replicator/replicator_gun.rsi
 #     state: muzzle_repli
 #   travelFlash:
-#     sprite: SD/Mobs/Replicator/replicator_gun.rsi
+#     sprite: _SD/Mobs/Replicator/replicator_gun.rsi
 #     state: beam_repli
 #   impactFlash:
-#     sprite: SD/Mobs/Replicator/replicator_gun.rsi
+#     sprite: _SD/Mobs/Replicator/replicator_gun.rsi
 #     state: impact_repli
 
 # - type: hitscan
 #   id: HitscanReplicator2
 #   staminaDamage: 32
 #   muzzleFlash:
-#     sprite: SD/Mobs/Replicator/replicator_gun.rsi
+#     sprite: _SD/Mobs/Replicator/replicator_gun.rsi
 #     state: muzzle_repli2
 #   travelFlash:
-#     sprite: SD/Mobs/Replicator/replicator_gun.rsi
+#     sprite: _SD/Mobs/Replicator/replicator_gun.rsi
 #     state: beam_repli2
 #   impactFlash:
-#     sprite: SD/Mobs/Replicator/replicator_gun.rsi
+#     sprite: _SD/Mobs/Replicator/replicator_gun.rsi
 #     state: impact_repli2

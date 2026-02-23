@@ -5,7 +5,7 @@
   parent: SprayBottle
   components:
   - type: Sprite
-    sprite: SD/Objects/Medical/Stypticspray.rsi
+    sprite: _SD/Objects/Medical/Stypticspray.rsi
     state: icon
   - type: Tag
     tags:
@@ -25,7 +25,7 @@
   parent: SprayBottle
   components:
   - type: Sprite
-    sprite: SD/Objects/Medical/Silverspray.rsi
+    sprite: _SD/Objects/Medical/Silverspray.rsi
     state: icon
   - type: Tag
     tags:

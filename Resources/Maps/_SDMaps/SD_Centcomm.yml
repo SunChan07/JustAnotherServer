@@ -30759,22 +30759,6 @@ entities:
     - type: Transform
       pos: 6.4908934,9.705824
       parent: 1
-- proto: FoodSnackLollypopBlueshield
-  entities:
-  - uid: 136
-    components:
-    - type: Transform
-      parent: 129
-    - type: Clothing
-      inSlotFlag: MASK
-      inSlot: mask
-    - type: Physics
-      canCollide: False
-  - uid: 4487
-    components:
-    - type: Transform
-      pos: 1.3435469,-44.397865
-      parent: 1
 - proto: ForkPlastic
   entities:
   - uid: 4488

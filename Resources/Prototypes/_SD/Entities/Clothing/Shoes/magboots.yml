@@ -5,10 +5,10 @@
   description: Magnetic boots atmos, often used during extravehicular activity to ensure the user remains safely attached to the vehicle.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Shoes/Boots/atmos_magboots.rsi
+    sprite: _SD/Clothing/Shoes/Boots/atmos_magboots.rsi
     state: icon
   - type: Clothing
-    sprite: SD/Clothing/Shoes/Boots/atmos_magboots.rsi
+    sprite: _SD/Clothing/Shoes/Boots/atmos_magboots.rsi
   - type: ClothingSpeedModifier
     walkModifier: 0.85
     sprintModifier: 0.85
@@ -28,8 +28,8 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    icon: { sprite: SD/Clothing/Shoes/Boots/atmos_magboots.rsi, state: icon }
-    iconOn: SD/Clothing/Shoes/Boots/atmos_magboots.rsi/icon-on.png
+    icon: { sprite: _SD/Clothing/Shoes/Boots/atmos_magboots.rsi, state: icon }
+    iconOn: _SD/Clothing/Shoes/Boots/atmos_magboots.rsi/icon-on.png
 
 - type: entity
   parent: ClothingShoesBootsMag
@@ -38,10 +38,10 @@
   description: Them magboots of death.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Shoes/Boots/deathsquad.rsi
+    sprite: _SD/Clothing/Shoes/Boots/deathsquad.rsi
     state: icon
   - type: Clothing
-    sprite: SD/Clothing/Shoes/Boots/deathsquad.rsi
+    sprite: _SD/Clothing/Shoes/Boots/deathsquad.rsi
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
@@ -60,5 +60,5 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Action
-    icon: { sprite: SD/Clothing/Shoes/Boots/deathsquad.rsi, state: icon }
-    iconOn: SD/Clothing/Shoes/Boots/deathsquad.rsi
+    icon: { sprite: _SD/Clothing/Shoes/Boots/deathsquad.rsi, state: icon }
+    iconOn: _SD/Clothing/Shoes/Boots/deathsquad.rsi

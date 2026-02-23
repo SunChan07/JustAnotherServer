@@ -7,5 +7,5 @@
   - type: CrewMonitoringConsole
     departments: [Engineering, Science, Medical, Cargo, Civilian]
   - type: Sprite
-    sprite: SD/Objects/Specific/Medical/paramedic_handheldcrewmonitor.rsi
+    sprite: _SD/Objects/Specific/Medical/paramedic_handheldcrewmonitor.rsi
     state: scanner

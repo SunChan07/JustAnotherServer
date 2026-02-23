@@ -86565,38 +86565,6 @@ entities:
     - type: Transform
       pos: 45.766823,41.512684
       parent: 2
-- proto: FoodSnackLollypop
-  entities:
-  - uid: 12695
-    components:
-    - type: Transform
-      pos: -34.662704,-20.520403
-      parent: 2
-- proto: FoodSnackLollypopCaptain
-  entities:
-  - uid: 12696
-    components:
-    - type: MetaData
-      desc: Самому сладкому капитану
-      name: самый сладкий леденец
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -21.189302,35.551483
-      parent: 2
-- proto: FoodSnackLollypopSyndicate
-  entities:
-  - uid: 12697
-    components:
-    - type: Transform
-      pos: 34.68534,50.527172
-      parent: 2
-- proto: FoodSnackLollypopWrappedWeh
-  entities:
-  - uid: 12698
-    components:
-    - type: Transform
-      pos: -16.465881,-22.588152
-      parent: 2
 - proto: FoodSnackNutribrick
   entities:
   - uid: 12699
@@ -124408,21 +124376,6 @@ entities:
       - Experimental
       - Arsenal
       - CivilianServices
-- proto: OrganAegiEyes
-  entities:
-  - uid: 123
-    components:
-    - type: Transform
-      parent: 117
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 18030
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -56.614975,56.76028
-      parent: 2
 - proto: OrganHumanLungs
   entities:
   - uid: 18031
@@ -124964,7 +124917,7 @@ entities:
       parent: 2
     - type: Paper
       content: >
-        МЫ ЗАТОЧЕННЫ В ЭТОЙ ЕБАННОЙ БАНКИ БЕЗ ПРАВА НА ВЫХОД!! ПОСЛЕДНИЙ, СУКА, БС ПРЫЖОК И МЫ ВЪЕБАЛИСЬ В СТАНЦИЮ, ОТ ЧЕГО СРАБОТАЛА СИСТЕМА ПРЕДОТВРАЩЕНИЯ ПРОБОИН И МОЕГО НАПАРНИКА РАЗЪЕБАЛО В НЕЙ НАХУЙ!!! МНЕ ПИЗДА, МОЙ ЖЕЛУДОК РАЗЪЕДАЕТ ЯД, КОТОРЫЙ Я САМ СДЕЛАЛ И ВЫПИЛ, ЕБАННЫЙ ПИ ---- 
+        МЫ ЗАТОЧЕННЫ В ЭТОЙ ЕБАННОЙ БАНКИ БЕЗ ПРАВА НА ВЫХОД!! ПОСЛЕДНИЙ, СУКА, БС ПРЫЖОК И МЫ ВЪЕБАЛИСЬ В СТАНЦИЮ, ОТ ЧЕГО СРАБОТАЛА СИСТЕМА ПРЕДОТВРАЩЕНИЯ ПРОБОИН И МОЕГО НАПАРНИКА РАЗЪЕБАЛО В НЕЙ НАХУЙ!!! МНЕ ПИЗДА, МОЙ ЖЕЛУДОК РАЗЪЕДАЕТ ЯД, КОТОРЫЙ Я САМ СДЕЛАЛ И ВЫПИЛ, ЕБАННЫЙ ПИ ----
 - proto: PaperBin
   entities:
   - uid: 18109

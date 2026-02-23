@@ -5,8 +5,8 @@
   description: Значок Колонии Германского Народа.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Neck/Misc/pins.rsi
+    sprite: _SD/Clothing/Neck/Misc/pins.rsi
     state: OSeven_Pin
   - type: Clothing
-    sprite: SD/Clothing/Neck/Misc/pins.rsi
+    sprite: _SD/Clothing/Neck/Misc/pins.rsi
     equippedPrefix: OSeven_Pin

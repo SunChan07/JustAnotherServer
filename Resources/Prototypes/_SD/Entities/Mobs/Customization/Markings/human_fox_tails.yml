@@ -4,7 +4,7 @@
   markingCategory: Tail
   speciesRestriction: [Human]
   sprites:
-  - sprite: SD/Mobs/Customization/Human/fox_tails.rsi
+  - sprite: _SD/Mobs/Customization/Human/fox_tails.rsi
     state: hum_fox_tail1
 
 - type: marking
@@ -13,7 +13,7 @@
   markingCategory: Tail
   speciesRestriction: [Human]
   sprites:
-  - sprite: SD/Mobs/Customization/Human/fox_tails.rsi
+  - sprite: _SD/Mobs/Customization/Human/fox_tails.rsi
     state: hum_fox_tail2
 
 - type: marking
@@ -22,5 +22,5 @@
   markingCategory: Tail
   speciesRestriction: [Human]
   sprites:
-  - sprite: SD/Mobs/Customization/Human/fox_tails.rsi
+  - sprite: _SD/Mobs/Customization/Human/fox_tails.rsi
     state: hum_fox_tail3

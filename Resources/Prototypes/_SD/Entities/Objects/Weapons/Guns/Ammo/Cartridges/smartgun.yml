@@ -49,7 +49,7 @@
     deleteOnSpawn: true
     proto: SD_BulletSmartPistol
   - type: Sprite
-    sprite: SD/Objects/Weapons/Guns/Ammunition/Casings/smartgun.rsi/
+    sprite: _SD/Objects/Weapons/Guns/Ammunition/Casings/smartgun.rsi/
     layers:
     - state: base
       map: ["enum.AmmoVisualLayers.Base"]

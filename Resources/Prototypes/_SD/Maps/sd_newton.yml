@@ -1,7 +1,7 @@
 - type: gameMap
   id: SD_Newton
   mapName: 'Newton'
-  mapPath: /Maps/SDMaps/SDStations/sd_newton.yml
+  mapPath: /Maps/_SDMaps/SDStations/sd_newton.yml
   minPlayers: 5
   stations:
     SD_Newton:

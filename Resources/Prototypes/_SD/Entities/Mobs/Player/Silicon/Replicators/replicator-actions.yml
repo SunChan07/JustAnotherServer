@@ -6,7 +6,7 @@
   components:
   - type: Action
     itemIconStyle: NoItem
-    icon: SD/Interface/Actions/spawn_nest.png
+    icon: _SD/Interface/Actions/spawn_nest.png
     useDelay: 20
   - type: InstantAction
     event: !type:ReplicatorSpawnNestActionEvent
@@ -28,7 +28,7 @@
   components:
   - type: Action
     itemIconStyle: NoItem
-    icon: SD/Interface/Actions/replicator_level1.png
+    icon: _SD/Interface/Actions/replicator_level1.png
     useDelay: 20
   - type: InstantAction
     event: !type:ReplicatorUpgradeActionEvent
@@ -42,7 +42,7 @@
   components:
   - type: Action
     itemIconStyle: NoItem
-    icon: SD/Interface/Actions/replicator_level2.png
+    icon: _SD/Interface/Actions/replicator_level2.png
     useDelay: 20
   - type: InstantAction
     event: !type:ReplicatorUpgradeActionEvent
@@ -57,7 +57,7 @@
   components:
   - type: Action
     itemIconStyle: NoItem
-    icon: SD/Interface/Actions/replicator_level2alt.png
+    icon: _SD/Interface/Actions/replicator_level2alt.png
     useDelay: 20
   - type: InstantAction
     event: !type:ReplicatorUpgradeActionEvent
@@ -72,7 +72,7 @@
   components:
   - type: Action
     itemIconStyle: NoItem
-    icon: SD/Interface/Actions/replicator_level3.png
+    icon: _SD/Interface/Actions/replicator_level3.png
     useDelay: 20
   - type: InstantAction
     event: !type:ReplicatorUpgradeActionEvent

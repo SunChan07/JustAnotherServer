@@ -1,7 +1,7 @@
 - type: gameMap
   id: SD_Sievert
   mapName: 'Sievert Station'
-  mapPath: /Maps/SDMaps/SDStations/SD_Sievert.yml
+  mapPath: /Maps/_SDMaps/SDStations/SD_Sievert.yml
   minPlayers: 5
   stations:
     SD_Sievert:

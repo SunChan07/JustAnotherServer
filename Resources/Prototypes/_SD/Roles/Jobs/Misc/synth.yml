@@ -20,7 +20,7 @@
     components:
     - type: MeleeWeapon
       soundHit:
-        path: /Audio/SD/RMC/synthpunch1.ogg
+        path: /Audio/_SD/RMC/synthpunch1.ogg
         params:
           variation: 0.15
           volume: -1
@@ -119,7 +119,7 @@
   parent: JobIcon
   id: SD_JobIconSynth
   icon:
-    sprite: /Textures/SD/Interface/job_icons.rsi
+    sprite: /Textures/_SD/Interface/job_icons.rsi
     state: synth
   jobName: sd-job-name-synth
 

@@ -1,7 +1,7 @@
 - type: gameMap
   id: SD_Pascal
   mapName: 'Pascal'
-  mapPath: /Maps/SDMaps/SDStations/sd_pascal.yml
+  mapPath: /Maps/_SDMaps/SDStations/sd_pascal.yml
   minPlayers: 1
   maxPlayers: 35
   stations:

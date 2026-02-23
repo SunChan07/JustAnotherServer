@@ -5,6 +5,6 @@
   description: Got ya now.
   components:
   - type: Sprite
-    sprite: SD/Clothing/OuterClothing/maddogcoat.rsi
+    sprite: _SD/Clothing/OuterClothing/maddogcoat.rsi
   - type: Clothing
-    sprite: SD/Clothing/OuterClothing/maddogcoat.rsi
+    sprite: _SD/Clothing/OuterClothing/maddogcoat.rsi

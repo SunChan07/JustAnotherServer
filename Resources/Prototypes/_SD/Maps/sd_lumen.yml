@@ -1,7 +1,7 @@
 - type: gameMap
   id: SD_Lumen
   mapName: 'Lumen'
-  mapPath: /Maps/SDMaps/SDStations/sd_lumen.yml
+  mapPath: /Maps/_SDMaps/SDStations/sd_lumen.yml
   minPlayers: 5
   stations:
     SD_Lumen:

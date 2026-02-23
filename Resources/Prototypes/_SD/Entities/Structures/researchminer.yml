@@ -13,7 +13,7 @@
     itemSlotId: tc_slot
   - type: Sprite
     noRot: true
-    sprite: SD/Structures/Machines/researchminer.rsi
+    sprite: _SD/Structures/Machines/researchminer.rsi
     layers:
     - map: ["computerLayerBody"]
       state: icon

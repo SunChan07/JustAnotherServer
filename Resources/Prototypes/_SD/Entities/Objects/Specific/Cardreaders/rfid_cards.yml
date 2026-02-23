@@ -8,7 +8,7 @@
     size: Small
   - type: Rfid
   - type: Sprite
-    sprite: SD/Objects/Specific/Cardreader/Cards/card.rsi
+    sprite: _SD/Objects/Specific/Cardreader/Cards/card.rsi
     layers:
     - state: icon
   - type: EmitSoundOnPickup

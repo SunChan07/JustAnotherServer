@@ -26,4 +26,4 @@
   description: An expensive dark green satchel. Smells like fax machines.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Back/Satchels/nanorep.rsi
+    sprite: _SD/Clothing/Back/Satchels/nanorep.rsi

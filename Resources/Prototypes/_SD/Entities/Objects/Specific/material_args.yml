@@ -5,7 +5,7 @@
   parent: BaseItem
   components:
     - type: Sprite
-      sprite: SD/Objects/Specific/martial_arts.rsi
+      sprite: _SD/Objects/Specific/martial_arts.rsi
       state: dragon
     - type: AddComponentsOnUse
       components:

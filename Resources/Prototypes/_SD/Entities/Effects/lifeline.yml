@@ -7,7 +7,7 @@
   - type: Transform
     anchored: True
   - type: Sprite
-    sprite: /Textures/SD/Effects/bluespace_lifeline.rsi
+    sprite: /Textures/_SD/Effects/bluespace_lifeline.rsi
     noRot: true
     layers:
     - state: bluespace_lifeline
@@ -16,7 +16,7 @@
     prototype: AnomalyCoreBluespace
   - type: EmitSoundOnSpawn
     sound:
-      path: /Audio/SD/Effects/lifeline.ogg
+      path: /Audio/_SD/Effects/lifeline.ogg
   - type: PointLight
     color: SkyBlue
     radius: 3

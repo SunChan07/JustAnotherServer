@@ -1,7 +1,7 @@
 - type: gameMap
-  id: SD_Amber 
+  id: SD_Amber
   mapName: 'Amber Station'
-  mapPath: /Maps/SDMaps/SDStations/SD_Amber.yml
+  mapPath: /Maps/_SDMaps/SDStations/SD_Amber.yml
   minPlayers: 5
   maxPlayers: 40
   stations:

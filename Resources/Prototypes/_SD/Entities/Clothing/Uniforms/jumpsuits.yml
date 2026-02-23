@@ -5,9 +5,9 @@
   description: A suit worn by high-ranking Central Command members. The rest is classified.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Uniform/Jumpsuit/navy_gold.rsi
+    sprite: _SD/Clothing/Uniform/Jumpsuit/navy_gold.rsi
   - type: Clothing
-    sprite: SD/Clothing/Uniform/Jumpsuit/navy_gold.rsi
+    sprite: _SD/Clothing/Uniform/Jumpsuit/navy_gold.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -23,9 +23,9 @@
   description: A suit worn by high-ranking spec ops officers. The rest is classified.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Uniform/Jumpsuit/specialoperations.rsi
+    sprite: _SD/Clothing/Uniform/Jumpsuit/specialoperations.rsi
   - type: Clothing
-    sprite: SD/Clothing/Uniform/Jumpsuit/specialoperations.rsi
+    sprite: _SD/Clothing/Uniform/Jumpsuit/specialoperations.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -41,9 +41,9 @@
   description: A suit worn by diplomacy focused Central Command workers.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Uniform/Jumpsuit/diplomat.rsi
+    sprite: _SD/Clothing/Uniform/Jumpsuit/diplomat.rsi
   - type: Clothing
-    sprite: SD/Clothing/Uniform/Jumpsuit/diplomat.rsi
+    sprite: _SD/Clothing/Uniform/Jumpsuit/diplomat.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -52,9 +52,9 @@
   description: A black suit worn by officials.
   components:
   - type: Sprite
-    sprite: SD/Clothing/Uniform/Jumpsuit/nanotrasen_representative.rsi
+    sprite: _SD/Clothing/Uniform/Jumpsuit/nanotrasen_representative.rsi
   - type: Clothing
-    sprite: SD/Clothing/Uniform/Jumpsuit/nanotrasen_representative.rsi
+    sprite: _SD/Clothing/Uniform/Jumpsuit/nanotrasen_representative.rsi
 
 - type: entity
   parent: ClothingUniformBase
@@ -63,6 +63,6 @@
   description: Kiryu-chan!
   components:
   - type: Sprite
-    sprite: SD/Clothing/Uniform/Jumpsuit/maddog.rsi
+    sprite: _SD/Clothing/Uniform/Jumpsuit/maddog.rsi
   - type: Clothing
-    sprite: SD/Clothing/Uniform/Jumpsuit/maddog.rsi
+    sprite: _SD/Clothing/Uniform/Jumpsuit/maddog.rsi

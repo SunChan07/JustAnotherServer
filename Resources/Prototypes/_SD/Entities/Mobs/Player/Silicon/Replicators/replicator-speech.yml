@@ -1,14 +1,14 @@
 - type: typingIndicator
   id: replicator
-  spritePath: /Textures/SD/Mobs/Replicator/replicator.rsi
+  spritePath: /Textures/_SD/Mobs/Replicator/replicator.rsi
   typingState: replicator0
   idleState: replicator0 # TODO: new idle state
 
 - type: speechSounds
   id: Replicator
   saySound:
-    path: /Audio/SD/Effects/replicator_speak.ogg
+    path: /Audio/_SD/Effects/replicator_speak.ogg
   askSound:
-    path: /Audio/SD/Effects/replicator_ask.ogg
+    path: /Audio/_SD/Effects/replicator_ask.ogg
   exclaimSound:
-    path: /Audio/SD/Effects/replicator_exclaim.ogg
+    path: /Audio/_SD/Effects/replicator_exclaim.ogg
