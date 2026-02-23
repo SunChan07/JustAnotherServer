@@ -146,6 +146,7 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Novakid ]
+          inverted: true
         - !type:ReagentCondition
           reagent: Plasma
           min: 1

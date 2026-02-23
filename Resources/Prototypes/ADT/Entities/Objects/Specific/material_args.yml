@@ -236,15 +236,20 @@
                   sound:
                     collection: GenericHit
 
-- type: entity #TODO: когда визарды добавят области, добавьте повару свой стиль с привязкой к области
-  id: ADTCqcManualWeak
-  name: cqc manual for the smallest
-  description: A one-off manual teaching the user Mideast Combat Tactics at a basic level.
+- type: entity
+  id: ADTCookbookManual
+  name: cookbook of techniques
+  description: A cookbook describing in detail how to exquisitely cook a chop from a bun thief.
   parent: BaseItem
   components:
     - type: Sprite
       sprite: ADT/Objects/Specific/material_art_book.rsi
-      state: cqc
+      state: cookbook
+    - type: SpawnItemsOnUse
+      items:
+      - id: Ash
+      sound:
+        path: /Audio/Items/Lighters/lighter3.ogg
     - type: AddComponentsOnUse
       components:
         - type: MeleeWeapon
@@ -259,7 +264,7 @@
                 - Hit
               comboEvent:
                 - !type:ComboPopupEffect
-                  localeText: combo-slam-end
+                  localeText: combo-cookbook-battre-end
                 - !type:ComboDamageEffect
                   damage:
                     types:
@@ -271,62 +276,33 @@
                   sound:
                     collection: GenericHit
             - actionsNeeds:
-                - Hit
-                - Disarm
-                - Hit
-              comboEvent:
-                - !type:ComboPopupEffect
-                  localeText: combo-cqc-kick-end
-                - !type:ComboDamageEffect
-                  damage:
-                    types:
-                      Blunt: 15
-                - !type:ComboFallEffect
-                  dropItems: false
-                - !type:ComboAudioEffect
-                  sound:
-                    collection: GenericHit
-            - actionsNeeds:
                 - Disarm
                 - Grab
-              comboEvent:
-                - !type:ComboPopupEffect
-                  localeText: combo-cqc-pressure-end
-                - !type:ComboStaminaDamageEffect
-                  staminaDamage: 65
-            - actionsNeeds:
-                - Grab
-                - Grab
-              comboEvent:
-                - !type:ComboPopupEffect
-                  localeText: combo-cqc-restain-end
-                - !type:ComboStaminaDamageEffect
-                  staminaDamage: 45
-            - actionsNeeds:
-                - Disarm
-                - Disarm
                 - Hit
               comboEvent:
                 - !type:ComboPopupEffect
-                  localeText: combo-cqc-consecutive-end
-                - !type:ComboMoreDamageToDownedEffect
-                  damage:
-                    types:
-                      Blunt: 15
+                  localeText: combo-cookbook-unwinding-end
+                - !type:ComboEffectSleep
+                  time: 5
+            - actionsNeeds:
+                - Grab
+                - Grab
+              stopGrab: false
+              comboEvent:
+                - !type:ComboPopupEffect
+                  localeText: combo-cookbook-rolling-end
                 - !type:ComboFallEffect
+                  dropItems: true
                 - !type:ComboStaminaDamageEffect
-                  staminaDamage: 60
-                - !type:ComboAudioEffect
-                  sound:
-                    collection: GenericHit
+                  staminaDamage: 35
             - actionsNeeds:
                 - Grab
                 - Disarm
               comboEvent:
                 - !type:ComboPopupEffect
-                  localeText: combo-leg-sweep-end
+                  localeText: combo-cookbook-squeezing-end
                 - !type:ComboFallEffect
-                  dropItems: false
+                  dropItems: true
                 - !type:ComboAudioEffect
                   sound:
                     collection: GenericHit
