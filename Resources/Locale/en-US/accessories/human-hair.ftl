@@ -200,3 +200,8 @@ marking-HumanHairVolaju = Volaju
 marking-HumanHairWisp = Wisp
 marking-HumanHairLongWithBangs = Long With Bangs
 marking-HumanHairOverEyePigtail = Pigtail (Over Eye)
+# sd added start
+marking-SDHumanHairSeph = Sephy
+marking-SDHumanHairSephAlt = Sephy (Alt)
+marking-SDHumanHairSephLong = Sephy (Long)
+# sd added end

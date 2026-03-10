@@ -78,7 +78,7 @@ public sealed partial class BlockingSystem
             return;
         }
 
-        args.Damage = DamageSpecifier.ApplyModifierSet(args.Damage, modifier);
+        args.Damage = DamageSpecifier.ApplyModifierSet(args.Damage, DamageSpecifier.PenetrateArmor(modifier, args.OriginalDamage.ArmorPenetration));
     }
 
     private void OnEntityTerminating(EntityUid uid, BlockingUserComponent component, ref EntityTerminatingEvent args)

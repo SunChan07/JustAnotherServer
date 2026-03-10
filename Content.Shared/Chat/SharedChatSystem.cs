@@ -30,6 +30,7 @@ public abstract partial class SharedChatSystem : EntitySystem
     public const char OOCPrefix = '[';
     public const char EmotesPrefix = '%'; // Corvax-Localization
     public const char EmotesAltPrefix = '*';
+    public const char AntiGhostPrefix = '^';
     public const char AdminPrefix = ']';
     public const char WhisperPrefix = ',';
     public const char DefaultChannelKey = 'р'; // Corvax-Localization
@@ -474,7 +475,7 @@ public enum ChatTransmitRange : byte
     /// Hidden from the chat window.
     HideChat,
     /// Ghosts can't hear or see it at all. Regular players can if in-range.
-    NoGhosts
+    NoGhosts,
 }
 
 /// <summary>
@@ -485,7 +486,8 @@ public enum InGameICChatType : byte
 {
     Speak,
     Emote,
-    Whisper
+    Whisper,
+    AntiGhost
 }
 
 /// <summary>

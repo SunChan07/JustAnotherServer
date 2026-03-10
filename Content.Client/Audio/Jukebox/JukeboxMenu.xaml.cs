@@ -17,7 +17,7 @@ public sealed partial class JukeboxMenu : FancyWindow
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
     private AudioSystem _audioSystem;
-
+    private readonly List<(string Name, ProtoId<JukeboxPrototype> Id)> _allSongs = new();
     /// <summary>
     /// Are we currently 'playing' or paused for the play / pause button.
     /// </summary>
@@ -27,6 +27,7 @@ public sealed partial class JukeboxMenu : FancyWindow
     /// True if playing, false if paused.
     /// </summary>
     public event Action<bool>? OnPlayPressed;
+    public event Action? OnLoopPressed;
     public event Action? OnStopPressed;
     public event Action<ProtoId<JukeboxPrototype>>? OnSongSelected;
     public event Action<float>? SetTime;
@@ -44,12 +45,10 @@ public sealed partial class JukeboxMenu : FancyWindow
 
         MusicList.OnItemSelected += args =>
         {
-            var entry = MusicList[args.ItemIndex];
-
-            if (entry.Metadata is not string juke)
-                return;
-
-            OnSongSelected?.Invoke(juke);
+            if (MusicList[args.ItemIndex].Metadata is ProtoId<JukeboxPrototype> songId)
+            {
+                OnSongSelected?.Invoke(songId);
+            }
         };
 
         PlayButton.OnPressed += args =>
@@ -98,11 +97,41 @@ public sealed partial class JukeboxMenu : FancyWindow
     /// </summary>
     public void Populate(IEnumerable<JukeboxPrototype> jukeboxProtos)
     {
+        _allSongs.Clear();
+        foreach (var proto in jukeboxProtos)
+        {
+            _allSongs.Add((proto.Name, proto.ID));
+        }
+        FilterSongs();
+    }
+
+    private void FilterSongs()
+    {
+        MusicList.Clear();
+        var filter = SearchBar.Text.Trim().ToLowerInvariant();
+        foreach (var song in _allSongs)
+        {
+            if (string.IsNullOrEmpty(filter) || song.Name.ToLowerInvariant().Contains(filter))
+            {
+                MusicList.AddItem(song.Name, metadata: song.Id);
+            }
+        }
+    }
+
+    private void OnSearchTextChanged(LineEdit.LineEditEventArgs args)
+    {
+        if (SearchBar == null || MusicList == null)
+            return;
+
+        var filter = SearchBar.Text.Trim().ToLowerInvariant();
         MusicList.Clear();
 
-        foreach (var entry in jukeboxProtos)
+        foreach (var (name, id) in _allSongs)
         {
-            MusicList.AddItem(entry.Name, metadata: entry.ID);
+            if (string.IsNullOrEmpty(filter) || name.ToLowerInvariant().Contains(filter))
+            {
+                MusicList.AddItem(name, metadata: id);
+            }
         }
         MusicList.SortItemsByText(); /// ADT-Tweak
     }

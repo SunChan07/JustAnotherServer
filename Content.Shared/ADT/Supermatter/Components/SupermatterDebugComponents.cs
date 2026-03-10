@@ -44,4 +44,3 @@ public sealed partial class SupermatterFoodComponent : Component
 public sealed partial class SupermatterNobliumCoreComponent : Component
 {
 }
-

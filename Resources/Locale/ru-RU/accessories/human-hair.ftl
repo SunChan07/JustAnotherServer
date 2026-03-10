@@ -200,3 +200,8 @@ marking-HumanHairVolaju = Воладзю
 marking-HumanHairWisp = Пряди
 marking-HumanHairLongWithBangs = Длинная с чёлкой
 marking-HumanHairOverEyePigtail = Хвостик (Через глаз)
+# sd added start
+marking-SDHumanHairSeph = Сефи
+marking-SDHumanHairSephAlt = Сефи (Альт)
+marking-SDHumanHairSephLong = Сефи (Длинные)
+# sd added end

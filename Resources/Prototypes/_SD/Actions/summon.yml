@@ -1,0 +1,52 @@
+- type: entity
+  parent: BaseAction
+  id: SD_ActionSummonGun
+  name: Summon Gun
+  description: Use this on a closed container to summon a [color=crimson][bold]dangerous firearm![/bold][/color]
+  components:
+  - type: Action
+    icon:
+      sprite: _SD/Interface/extract.rsi
+      state: arms-dealer
+    iconOn:
+      sprite: _SD/Interface/extract.rsi
+      state: arms-dealer-on
+    useDelay: 180
+  - type: TargetAction
+  - type: EntityTargetAction
+    whitelist:
+      components:
+      - EntityStorage
+    event: !type:ContainerSummonActionEvent
+      table: !type:GroupSelector
+        children:
+        - id: WeaponLaserSvalinn
+          weight: 15
+        - id: WeaponPistolMk58
+          weight: 10
+        - id: WeaponPistolViper
+          weight: 5
+        - id: WeaponPistolCobra
+          weight: 5
+        - id: WeaponRevolverPython
+          weight: 15
+        - id: WeaponShotgunDoubleBarreled
+          weight: 7.5
+        - id: ADTClothingBackpackDuffelSyndicateFilledWeaponAttachments
+          weight: 7.5
+        - id: WeaponShotgunKammerer
+          weight: 5
+        - id: WeaponSubMachineGunWt550
+          weight: 1
+        - id: WeaponSubMachineGunAtreides
+          weight: 5
+        - id: ADTWeaponCaseAmmoBulldogX4
+          weight: 10
+        - id: BoxMagazinePistolSubMachineGun
+          weight: 5
+        - id: BoxMagazinePistolHighCapacity
+          weight: 5
+        - id: BoxMagazinePistol
+          weight: 5
+        - id: ADTWeaponEnergyCrossbow
+          weight: 7.5

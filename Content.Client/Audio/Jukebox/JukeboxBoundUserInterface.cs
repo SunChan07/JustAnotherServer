@@ -36,6 +36,11 @@ public sealed class JukeboxBoundUserInterface : BoundUserInterface
             }
         };
 
+        _menu.OnLoopPressed += () =>
+        {
+            SendMessage(new JukeboxToggleLoopMessage());
+        };
+
         _menu.OnStopPressed += () =>
         {
             SendMessage(new JukeboxStopMessage());

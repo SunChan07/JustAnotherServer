@@ -56,7 +56,8 @@ public abstract class SharedCursedMaskSystem : EntitySystem
     private void OnModifyDamage(Entity<CursedMaskComponent> ent, ref InventoryRelayedEvent<DamageModifyEvent> args)
     {
         if (ent.Comp.CurrentState == CursedMaskExpression.Despair)
-            args.Args.Damage = DamageSpecifier.ApplyModifierSet(args.Args.Damage, ent.Comp.DespairDamageModifier);
+            args.Args.Damage = DamageSpecifier.ApplyModifierSet(args.Args.Damage, DamageSpecifier.PenetrateArmor(ent.Comp.DespairDamageModifier,
+                args.Args.OriginalDamage.ArmorPenetration)); // Helix-edit
     }
 
     protected void RandomizeCursedMask(Entity<CursedMaskComponent> ent, EntityUid wearer)

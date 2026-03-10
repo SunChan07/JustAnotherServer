@@ -19,6 +19,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
+using Content.Shared.SD;
+using System.Runtime.CompilerServices;
 
 namespace Content.Shared.Preferences
 {
@@ -34,7 +36,7 @@ namespace Content.Shared.Preferences
 
         public const int MaxNameLength = 96;    // ну тип ADT
         public const int MaxLoadoutNameLength = 32;
-        public const int MaxDescLength = 512;
+        public const int MaxDescLength = 4096;
 
         /// <summary>
         /// Job preferences for initial spawn.
@@ -87,6 +89,7 @@ namespace Content.Shared.Preferences
         [DataField]
         public string HeadshotUrl { get; set; } = string.Empty;
         //ADT-tweak-end
+        public EnumERPStatus ERPStatus { get; set; } // SD-ERPStatus
 
         /// <summary>
         /// Associated <see cref="SpeciesPrototype"/> for this profile.
@@ -158,6 +161,7 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile(
             string name,
             string flavortext,
+            int erpStatus, // SD-ERPStatus
             string species,
             string voice, // Corvax-TTS
             int age,
@@ -180,6 +184,7 @@ namespace Content.Shared.Preferences
         {
             Name = name;
             FlavorText = flavortext;
+            ERPStatus = (EnumERPStatus) erpStatus; // SD-ERPStatus
             Species = species;
             Voice = voice; // Corvax-TTS
             Age = age;
@@ -218,6 +223,7 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile(HumanoidCharacterProfile other)
             : this(other.Name,
                 other.FlavorText,
+                (int) other.ERPStatus, // SD-ERPStatus
                 other.Species,
                 other.Voice,
                 other.Age,
@@ -352,6 +358,13 @@ namespace Content.Shared.Preferences
             return new(this) { HeadshotUrl = headshotUrl };
         }
         //ADT-tweak-end
+        // SD-ERPStatus-Start
+        public HumanoidCharacterProfile WithERPStatus(EnumERPStatus state)
+        {
+            return new(this) { ERPStatus = state };
+        }
+        // SD-ERPStatus-End
+
         public HumanoidCharacterProfile WithAge(int age)
         {
             return new(this) { Age = age };
@@ -610,11 +623,11 @@ namespace Content.Shared.Preferences
             }
 
             // Corvax-Sponsors-Start: Reset to human if player not sponsor
-            if (speciesPrototype.SponsorOnly && !sponsorPrototypes.Contains(Species.Id))
+            /*if (speciesPrototype.SponsorOnly && !sponsorPrototypes.Contains(Species.Id))
             {
                 Species = SharedHumanoidAppearanceSystem.DefaultSpecies;
                 speciesPrototype = prototypeManager.Index(Species);
-            }
+            }*/
             // Corvax-Sponsors-End
 
             var sex = Sex switch
