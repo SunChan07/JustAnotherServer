@@ -91,6 +91,8 @@ public abstract partial class SharedPuddleSystem
         return evaporatingReagents.ToArray();
     }
 
+    private const string DryableBlood = "DryableBlood"; // SD tweak
+
     public ProtoId<ReagentPrototype>[] GetAbsorbentReagents(Solution solution)
     {
         var absorbentReagents = new List<ProtoId<ReagentPrototype>>();

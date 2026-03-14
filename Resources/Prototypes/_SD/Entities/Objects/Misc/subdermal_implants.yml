@@ -1,0 +1,29 @@
+# - type: entity
+#   parent: BaseTranslatorImplant
+#   id: SindarinTranslatorImplant
+#   name: translator implant
+#   # description: This implant grants language knowledge.
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: TranslatorImplant
+#     languages:
+#       Sindarin: Speak
+
+# - type: entity
+#   parent: BaseSubdermalImplant
+#   id: SD_BluespaceLifelineImplant
+#   name: bluespace lifeline implant
+#   description: Teleports the hosts body to Central Command on activation.
+#   categories: [ HideSpawnMenu ]
+#   components:
+#   - type: SubdermalImplant
+#     permanent: true
+#     implantAction: SD_ActionActivateBluespaceLifeline
+#   - type: TriggerImplantAction
+#   - type: TeleportOnTrigger
+#   - type: SpawnOnTrigger
+#     proto: SD_BluespaceLifelineSpawnCore
+#   - type: Tag
+#     tags:
+#     - SubdermalImplant
+#     - HideContextMenu

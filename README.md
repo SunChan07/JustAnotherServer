@@ -9,7 +9,7 @@ Space Station 14 это ремейк SS13, который работает на 
 Adventure Time - это проект русскоязычного сервера по Space Station 14, целью которого является полный перевод игры на русский язык, поддержка актуальных изменений из основного репозитория, а так же добавление собственных изменений по необходимости.
 
 ## Ссылки
-[Наш Discord](https://discord.gg/NY3KDNuH9r) | [Наша вики](https://wiki.adventurestation.space/Заглавная_страница) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/) | [Основной репозиторий](https://github.com/space-wizards/space-station-14)
+[Наш Discord](https://discord.gg/9jUHE5bAR7) | [Наша вики](https://wiki.sd.qeqk.ru/) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/) | [Основной репозиторий](https://github.com/Danil-Alr/SpaceDream_ADT)
 
 [Наш Discord](https://discord.station14.ru) | [Наша Вики](https://wiki.station14.ru) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/) | [Основной репозиторий](https://github.com/space-wizards/space-station-14)
 
@@ -25,7 +25,7 @@ Adventure Time - это проект русскоязычного сервера
 ## Сборка
 1. Клонируйте этот репозиторий локально.
 2. Запустите RUN_THIS.py для инициализации подмодулей и загрузки движка.
-3. Скомпилируйте проект с помощью команды dotnet build. 
+3. Скомпилируйте проект с помощью команды dotnet build.
 
 1. Склонируйте этот репозиторий локально
 2. Запустите `RUN_THIS.py` для инициализации подмодулей и скачивания движка.

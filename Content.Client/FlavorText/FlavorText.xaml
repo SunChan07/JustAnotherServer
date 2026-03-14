@@ -1,4 +1,4 @@
-﻿<!-- ФАЙЛ БЫЛ ПОЛНОСТЬЮ ПЕРЕПИСАН ADT, ПРИ АПСТРИМЕ ОСТАВЛЯТЬ НАШУ ВЕРСИЮ -->
+<!-- ФАЙЛ БЫЛ ПОЛНОСТЬЮ ПЕРЕПИСАН ADT, ПРИ АПСТРИМЕ ОСТАВЛЯТЬ НАШУ ВЕРСИЮ -->
 <Control Name="CFlavorText" xmlns="https://spacestation14.io"
          xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
          xmlns:ui="clr-namespace:Robust.Client.UserInterface.Controls;assembly=Robust.Client">
@@ -7,6 +7,10 @@
                   HorizontalExpand="True"
                   VerticalExpand="True"
                   SeparationOverride="10">
+
+        <!-- SD-ERPStatus-Start -->
+        <OptionButton Name="CERPStatusOption" Access="Public" MinSize="220 0" HorizontalExpand="True" />
+        <!-- SD-ERPStatus-End   -->
 
         <!-- Flavor Text Section -->
         <PanelContainer HorizontalExpand="True" VerticalExpand="True">

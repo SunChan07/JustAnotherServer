@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: MakishimaBloodyRedCoat
+  name: cloat-name
+  description: cloat-desc
+  components:
+  - type: Clothing
+    sprite: _SD/Clothing/OuterClothing/CustomCoats/bloody-red.rsi
+  - type: Sprite
+    sprite: _SD/Clothing/OuterClothing/CustomCoats/bloody-red.rsi
+

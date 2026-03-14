@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "rubber_pig by Moryachok136, Dirk&Ametist&Sammy by SWG,ZHETS by AshotSotov, Diana&Melima by SaiBuka",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+        {
+            "name": "rk22_plush"
+        },
+        {
+            "name": "plush_ametist"
+        },
+        {
+            "name": "plush_dirk"
+        },
+        {
+            "name": "plush_ZHETS"
+        },
+        {
+            "name": "plush_sammy"
+        },
+        {
+            "name": "plush_ena"
+        }
+    ]
+  }

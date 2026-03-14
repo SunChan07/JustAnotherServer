@@ -73,6 +73,9 @@
         "name": "crystal"
     },
     {
+        "name": "goliath_tentacle"
+    },
+    {
         "name": "cursed_heart",
         "delays": [
           [

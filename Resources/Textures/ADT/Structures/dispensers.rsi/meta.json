@@ -17,6 +17,12 @@
         "name": "industrial-panel"
       },
       {
+        "name": "booze"
+      },
+      {
+        "name": "soda"
+      },
+      {
         "name": "industrial-working",
         "delays": [
           [

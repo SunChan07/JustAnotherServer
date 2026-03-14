@@ -1,0 +1,26 @@
+- type: Tag
+  id: MeleeUpgrade
+
+- type: Tag
+  id: BloodDrunkerUpgrade
+
+- type: Tag
+  id: LegionSkullUpgrade
+
+- type: Tag
+  id: GoliathTentacleUpgrade
+
+- type: Tag
+  id: MedicalPatch
+
+- type: Tag
+  id: ResearchDisk
+
+- type: Tag
+  id: SD_MagazineSmartPistol
+
+- type: Tag
+  id: SD_CartridgeSmart
+
+- type: Tag
+  id: SD_MK6Pistol

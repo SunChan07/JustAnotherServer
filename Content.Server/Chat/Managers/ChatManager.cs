@@ -18,10 +18,13 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
+using Robust.Shared.GameObjects;
+using Robust.Shared.Maths;
 using Content.Shared.ADT.CCVar;
 using Content.Server.Discord;
 using Content.Server.ADT.Chat;
 using Content.Server.Corvax.Sponsors;
+using Content.Shared.Ghost;
 
 namespace Content.Server.Chat.Managers;
 
@@ -97,6 +100,24 @@ internal sealed partial class ChatManager : IChatManager
         var msg = new MsgDeleteChatMessagesBy { Key = user.Key, Entities = user.Entities };
         _netManager.ServerSendToAll(msg);
     }
+
+        public void SendAntiGhostMessage(EntityUid source, string message, float range, bool hideLog = false)
+        {
+            var sourceTransform = _entityManager.GetComponent<TransformComponent>(source);
+            var filter = Filter.Entities()
+                .AddWhere(session =>
+                {
+                    var entityUid = session.AttachedEntity ?? EntityUid.Invalid;
+                    if (entityUid == EntityUid.Invalid)
+                        return false;
+                    var transform = _entityManager.GetComponent<TransformComponent>(entityUid);
+                    var distance = (transform.Coordinates.Position - sourceTransform.Coordinates.Position).Length();
+                    return distance <= range && !_entityManager.HasComponent<GhostComponent>(entityUid);
+                });
+            var name = _entityManager.GetComponentOrNull<MetaDataComponent>(source)?.EntityName ?? "Unknown";
+            var wrappedMessage = $"{name} {FormattedMessage.EscapeText(message)}";
+            ChatMessageToManyFiltered(filter, ChatChannel.AntiGhost, message, wrappedMessage, source, false, true);
+        }
 
     [return: NotNullIfNotNull(nameof(author))]
     public ChatUser? EnsurePlayer(NetUserId? author)
@@ -444,22 +465,22 @@ internal sealed partial class ChatManager : IChatManager
         _discordLink.SendMessage(message, player.Name, ChatChannel.AdminChat);
         _adminLogger.Add(LogType.Chat, $"Admin chat from {player:Player}: {message}");
         // ADT-Tweak-start: Постит в дис весь админчат, если есть данный вебхук
-        // if (!string.IsNullOrEmpty(_cfg.GetCVar(ADTDiscordWebhookCCVars.DiscordAdminchatWebhook)))
-        // {
-        //     var webhookUrl = _cfg.GetCVar(ADTDiscordWebhookCCVars.DiscordAdminchatWebhook);
+        if (!string.IsNullOrEmpty(_configurationManager.GetCVar(ADTDiscordWebhookCCVars.DiscordAdminchatWebhook)))
+        {
+            var webhookUrl = _configurationManager.GetCVar(ADTDiscordWebhookCCVars.DiscordAdminchatWebhook);
 
-        //     if (webhookUrl == null)
-        //         return;
+            if (webhookUrl == null)
+                return;
 
-        //     if (await _discord.GetWebhook(webhookUrl) is not { } webhookData)
-        //         return;
-        //     var payload = new WebhookPayload
-        //     {
-        //         Content = $"***AdminChat***: `{player.Name}`[{senderAdmin.Title}]: {message}"
-        //     };
-        //     var identifier = webhookData.ToIdentifier();
-        //     await _discord.CreateMessage(identifier, payload);
-        // }
+            if (await _discord.GetWebhook(webhookUrl) is not { } webhookData)
+                return;
+            var payload = new WebhookPayload
+            {
+                Content = $"***AdminChat***: `{player.Name}`[{senderAdmin.Title}]: {message}"
+            };
+            var identifier = webhookData.ToIdentifier();
+            await _discord.CreateMessage(identifier, payload);
+        }
         // ADT-Tweak-end
     }
 

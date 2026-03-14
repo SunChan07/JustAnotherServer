@@ -11,6 +11,21 @@
       "name": "datadisk_base"
     },
     {
+      "name": "engineering"
+    },
+    {
+      "name": "service"
+    },
+    {
+      "name": "medical"
+    },
+    {
+      "name": "supply"
+    },
+    {
+      "name": "bluespace"
+    },
+    {
       "name": "datadisk_label"
     }
   ]
