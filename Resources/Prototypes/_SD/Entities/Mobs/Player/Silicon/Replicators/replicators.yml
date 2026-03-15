@@ -229,7 +229,6 @@
       bodyStatus: InAir
     - type: CanMoveInAir
     - type: MovementIgnoreGravity
-      gravityState: true
     - type: MovementAlwaysTouching
     - type: SyncSprite
     - type: MovementSpeedModifier
