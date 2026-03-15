@@ -153,6 +153,7 @@
     sprite: Structures/smalldispensers.rsi
     drawdepth: SmallObjects
     state: soda
+    snapCardinals: false #Починякайте побыстрее
     noRot: true
   - type: Transform
     anchored: true
@@ -219,6 +220,7 @@
     sprite: Structures/smalldispensers.rsi
     drawdepth: SmallObjects
     state: booze
+    snapCardinals: false #Это тоже надо починить
     noRot: true
   - type: Transform
     anchored: true
