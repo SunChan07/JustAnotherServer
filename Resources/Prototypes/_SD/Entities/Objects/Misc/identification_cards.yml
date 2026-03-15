@@ -7,7 +7,7 @@
       layers:
         - state: silver
     - type: PresetIdCard
-      job: SD_JobSynthetic
+    #  job: SD_JobSynthetic
     - type: Item
       heldPrefix: silver
 
@@ -22,7 +22,7 @@
     - type: Item
       heldPrefix: blue
     - type: PresetIdCard
-      job: SD_NavyOfficer
+    #  job: SD_NavyOfficer
 
 - type: entity
   parent: IDCardStandard
@@ -35,4 +35,4 @@
     - type: Item
       heldPrefix: blue
     - type: PresetIdCard
-      job: SD_SpecialOperationsOfficer
+    #  job: SD_SpecialOperationsOfficer

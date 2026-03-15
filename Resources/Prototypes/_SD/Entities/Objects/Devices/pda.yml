@@ -4,9 +4,7 @@
   suffix: Navy Officer
   components:
   - type: Pda
-    card: SD_CentcomNavyOfficerIDCard
-  # - type: Icon
-  #   state: pda-dso
+    # card: SD_CentcomNavyOfficerIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
@@ -21,9 +19,7 @@
   suffix: Special Operations Officer
   components:
   - type: Pda
-    card: SD_CentcomSpecopsOfficerIDCard
-  # - type: Icon
-  #   state: pda-dso
+    # card: SD_CentcomSpecopsOfficerIDCard
   - type: Appearance
     appearanceDataInit:
       enum.PdaVisuals.PdaType:
