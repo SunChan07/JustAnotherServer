@@ -4,14 +4,14 @@
   suffix: Navy Officer
   components:
   - type: Pda
-    id: SD_CentcomNavyOfficerIDCard
+    card: SD_CentcomNavyOfficerIDCard
   # - type: Icon
-    state: pda-dso
+  #   state: pda-dso
   - type: Appearance
     appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-dso
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-dso
   - type: PdaBorderColor
     borderColor: "#00842e"
 
@@ -21,13 +21,13 @@
   suffix: Special Operations Officer
   components:
   - type: Pda
-    id: SD_CentcomSpecopsOfficerIDCard
+    card: SD_CentcomSpecopsOfficerIDCard
   # - type: Icon
-    state: pda-dso
+  #   state: pda-dso
   - type: Appearance
     appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-dso
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-dso
   - type: PdaBorderColor
     borderColor: "#00842e"
