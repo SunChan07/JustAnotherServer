@@ -11,7 +11,6 @@
       damage:
         types:
           Shock: 10
-      staminaDamage: 12
     - type: HitscanBasicVisuals
       muzzleFlash:
         sprite: _SD/Mobs/Replicator/replicator_gun.rsi
@@ -33,7 +32,6 @@
       damage:
         types:
           Shock: 18
-      staminaDamage: 15
     - type: HitscanBasicVisuals
       muzzleFlash:
         sprite: _SD/Mobs/Replicator/replicator_gun.rsi
