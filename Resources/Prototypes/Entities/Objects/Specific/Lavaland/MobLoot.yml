@@ -14,10 +14,12 @@
       groups: # these are all split across multiple types
         Brute: -100
         Burn: -100
-    delay: 0
+    delay: 0.1
     selfHealPenaltyMultiplier: 0
+    healingBeginSound:
+      path: "/Audio/Items/eating_1.ogg"
     healingEndSound:
-      path: "/Audio/ADT/Heretic/heartbeat.ogg"
+      path: "/Audio/Items/eating_3.ogg"
   - type: TimedDespawn
     lifetime: 200
   - type: SpawnOnDespawn

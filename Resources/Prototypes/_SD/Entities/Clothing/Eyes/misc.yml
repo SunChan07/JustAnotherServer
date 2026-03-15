@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: SDClothingEyesMadDog
+  name: Mad Dog Eyepatch
+  description: It has a snake on it.
+  components:
+  - type: Sprite
+    sprite: _SD/Clothing/Eyes/Misc/maddogeyepatch.rsi
+  - type: Clothing
+    sprite: _SD/Clothing/Eyes/Misc/maddogeyepatch.rsi
+  - type: EyeProtection
+    protectionTime: 5

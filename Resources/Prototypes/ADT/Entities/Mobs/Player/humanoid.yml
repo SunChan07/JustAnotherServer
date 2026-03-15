@@ -49,7 +49,6 @@
     - SlimePerson
     - Dwarf
     - IPC
-    - Aegi # SD tweak
     - DraskSpecies # ADT-Tweak-end
   components:
     - type: GhostRole
@@ -58,9 +57,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h #
     - type: Loadout
       prototypes: [ ADTERTLeaderGear ]
     - type: RandomMetadata
@@ -79,9 +75,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h #
     - type: Loadout
       prototypes: [ ADTERTLeaderGearEVA ]
 
@@ -107,9 +100,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h #
     - type: Loadout
       prototypes: [ ADTERTLeaderGearEVARiot ]
 
@@ -153,7 +143,6 @@
     - Resomi
     - Dwarf
     - IPC
-    - Aegi # SD tweak
     - DraskSpecies # ADT-Tweak-end
   components:
     - type: GhostRole
@@ -162,9 +151,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h #
     - type: RandomMetadata
       nameSegments:
       - NamesFirstERTEngineer
@@ -195,9 +181,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h #
     - type: Loadout
       prototypes: [ ADTERTJanitorGearEVA ]
 
@@ -223,9 +206,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h #
     - type: Loadout
       prototypes: [ ADTERTJanitorGearEVARiot ]
 
@@ -269,7 +249,6 @@
     - Resomi
     - Dwarf
     - IPC
-    - Aegi # SD tweak
     - DraskSpecies # ADT-Tweak-end
   components:
     - type: GhostRole
@@ -278,9 +257,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h #
     - type: RandomMetadata
       nameSegments:
       - NamesFirstERTEngineer
@@ -311,9 +287,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h #
     - type: Loadout
       prototypes: [ ADTERTEngineerGearEVA ]
 
@@ -339,9 +312,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h
     - type: Loadout
       prototypes: [ ADTERTEngineerGearEVARiot ]
 
@@ -384,9 +354,7 @@
     - Resomi
     - Dwarf
     - IPC
-    - Aegi # SD tweak
     - DraskSpecies # ADT-Tweak-end
-
   parent: ADTERTLeader
   components:
     - type: GhostRole
@@ -395,9 +363,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h
     - type: RandomMetadata
       nameSegments:
       - NamesFirstERTMilitary
@@ -428,9 +393,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h
     - type: Loadout
       prototypes: [ ADTERTSecurityGearEVA ]
 
@@ -452,9 +414,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h
     - type: Loadout
       prototypes: [  ADTERTSecurityGearEVARiot ]
 
@@ -498,7 +457,6 @@
     - SlimePerson
     - Dwarf
     - IPC
-    - Aegi # SD tweak
     - DraskSpecies # ADT-Tweak-end
   components:
     - type: GhostRole
@@ -507,9 +465,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h
     - type: RandomMetadata
       nameSegments:
       - NamesFirstERTMedical
@@ -540,9 +495,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h
     - type: Loadout
       prototypes: [ ADTERTMedicalGearEVA ]
 
@@ -568,9 +520,6 @@
       rules: ghost-role-information-nonantagonist-rules
       raffle:
         settings: short
-      requirements:
-      - !type:OverallPlaytimeRequirement
-        time: 180000 # 50h
     - type: Loadout
       prototypes: [ ADTERTMedicalGearEVARiot ]
 
@@ -608,7 +557,6 @@
     - SlimePerson
     - Dwarf
     - IPC
-    - Aegi # SD tweak
     - DraskSpecies # ADT-Tweak-end
   id: ADTCmndCBURNAgent
   components:
@@ -620,17 +568,6 @@
       description: ghost-role-information-cmnd-cburn-agent-description
       raffle:
         settings: short
-      # ADT-tweak-start
-      requirements:
-      - !type:DepartmentTimeRequirement
-        department: Medical
-        time: 18000 # 5h
-      - !type:DepartmentTimeRequirement
-        department: Security
-        time: 36000 # 10h
-      - !type:OverallPlaytimeRequirement
-        time: 90000 # ADT tweak 10h > 25h
-      # ADT-Tweak-end
     - type: GhostTakeoverAvailable
     - type: RandomMetadata
       nameSegments:

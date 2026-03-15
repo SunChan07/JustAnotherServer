@@ -81,6 +81,22 @@
   - UplinkWeaponry
 
 - type: listing
+  id: UplinkEnergyCrossbow
+  name: uplink-energycrossbow-name
+  description: uplink-energycrossbow-desc
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  productEntity: WeaponEnergyCrossbow
+  cost:
+    Telecrystal: 5
+  categories:
+  - UplinkWeaponry
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
   id: UplinkThrowingKnivesKit
   name: uplink-knives-kit-name
   description: uplink-knives-kit-desc
@@ -634,7 +650,6 @@
     Telecrystal: 5 # ADT-Tweak 6>4
   categories:
   - UplinkChemicals
-  - UplinkContractor # SD
 
 - type: listing
   id: UplinkHypoDart
@@ -696,7 +711,6 @@
     Telecrystal: 5 # ADT-Tweak 6>4
   categories:
   - UplinkChemicals
-  - UplinkContractor # SD
 
 - type: listing
   id: UplinkCombatMedkit
@@ -783,6 +797,15 @@
           - SurplusBundle
 
 # Deception
+- type: listing
+  id: UplinkSyndicateIDCard
+  name: uplink-syndicate-id-card-name
+  description: uplink-syndicate-id-card-desc
+  productEntity: SyndicateIDCard
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkDeception
 
 - type: listing
   id: UplinkAgentIDCard
@@ -945,7 +968,6 @@
     Telecrystal: 4
   categories:
   - UplinkDisruption
-  - UplinkContractor
 
 - type: listing
   id: UplinkEmag
@@ -959,7 +981,6 @@
     Telecrystal: 3 # ADT-Tweak
   categories:
   - UplinkDisruption
-  - UplinkContractor
 
 - type: listing
   id: UplinkRadioJammer
@@ -1010,7 +1031,6 @@
     Telecrystal: 1
   categories:
   - UplinkDisruption
-  - UplinkContractor
 
 - type: listing
   id: UplinkSlipocalypseClusterSoap
@@ -1248,7 +1268,7 @@
   productEntity: ReinforcementRadioSyndicateNukeops
   icon: { sprite: ADT/Objects/Devices/communication.rsi, state: old-radio-nukeop } # ADT-tweak: Objects/Devices/communication.rsi --> ADT/Objects/Devices/communication.rsi
   cost:
-    Telecrystal: 30 #ADT_Tweak - подкрепление стоит дешево, но поступает без своего аплинка # Helix-tweak: Вы чё блять охуели с ебаниной своей совсем??
+    Telecrystal: 16 #ADT_Tweak - подкрепление стоит дешево, но поступает без своего аплинка
   categories:
   - UplinkAllies
   conditions:
@@ -1391,7 +1411,6 @@
     Telecrystal: 4 # ADT-Tweak 5>4
   categories:
     - UplinkImplants
-    - UplinkContractor
 
 - type: listing
   id: UplinkScramImplanter
@@ -1555,7 +1574,6 @@
     Telecrystal: 4
   categories:
   - UplinkImplants
-  - UplinkContractor
 
 
 # Wearables
@@ -1619,7 +1637,6 @@
     Telecrystal: 3 # ADT-Tweak 4>3
   categories:
     - UplinkWearables
-    - UplinkContractor
 
 - type: listing
   id: UplinkClothingNoSlipsShoes
@@ -2223,7 +2240,7 @@
   discountDownTo:
     Telecrystal: 2
   cost:
-    Telecrystal: 4 # ADT-Tweak 5>4
+    Telecrystal: 3
   categories:
   - UplinkJob
   conditions:
@@ -2266,15 +2283,15 @@
   - UplinkPointless
 
 - type: listing
-  id: UplinkClothingOuterVestSyndReflect
-  name: uplink-reflector-vest-name
-  description: uplink-reflector-vest-desc
-  productEntity: ClothingOuterVestSyndReflect
+  id: UplinkSmugglerSatchel
+  name: uplink-smuggler-satchel-name
+  description: uplink-smuggler-satchel-desc
+  productEntity: ClothingBackpackSatchelSmugglerUnanchored
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 6
+    Telecrystal: 1
   cost:
-    Telecrystal: 4
+    Telecrystal: 2
   categories:
   - UplinkDeception
 
@@ -2313,3 +2330,20 @@
   - !type:BuyerJobCondition
     whitelist:
     - MedicalDoctor
+
+- type: listing
+  id: uplinkBriefcaseGun
+  name: uplink-briefcase-gun-name
+  description: uplink-briefcase-gun-desc
+  productEntity: WeaponSubMachineGunBriefcase
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 10
+  cost:
+    Telecrystal: 15
+  categories:
+  - UplinkJob
+  conditions:
+  - !type:BuyerJobCondition
+    whitelist:
+    - Lawyer

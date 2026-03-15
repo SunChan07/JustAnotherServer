@@ -18,8 +18,7 @@
     - id: ClothingShoesBootsJack
     - id: ADTClothingUniformJumpskirtTurtleneckBlueshield
     - id: ADTClothingUniformJumpsuitTurtleneckBlueshield
-    - id: BlueShieldHypo
-    - id: FoodSnackLollypopWrappedBlueshield # SD tweak
+    - id: ADTClothingNeckCloakSecondBlueshield
     #- id: ADTCqcManualWeak
   - type: UserInterface
     interfaces:
@@ -48,8 +47,7 @@
     - id: ClothingShoesBootsJack
     - id: ADTClothingUniformJumpskirtTurtleneckBlueshield
     - id: ADTClothingUniformJumpsuitTurtleneckBlueshield
-    - id: BlueShieldHypo
-    - id: FoodSnackLollypopWrappedBlueshield # SD tweak
+    - id: ADTClothingNeckCloakSecondBlueshield
     # - id: ADTCqcManualWeak
 
 # Centcom Consultant
@@ -60,7 +58,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: ADTClothingUniformJumpskirtCCCFormal
+    - id: ADTClothingUniformJumpskirtCCCFormal 
     - id: ADTClothingUniformJumpsuitCCCFormal
     - id: ADTClothingUniformJumpskirtCCC
     - id: ADTClothingUniformJumpsuitConsultantCentcom
@@ -86,7 +84,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: ADTClothingUniformJumpskirtCCCFormal
+    - id: ADTClothingUniformJumpskirtCCCFormal 
     - id: ADTClothingUniformJumpsuitCCCFormal
     - id: ADTClothingUniformJumpskirtCCC
     - id: ADTClothingUniformJumpsuitConsultantCentcom

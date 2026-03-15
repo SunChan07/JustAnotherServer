@@ -179,10 +179,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Socks/cap_norm.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearSocksBase
@@ -237,10 +233,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Socks/hop_norm.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearSocksBase
@@ -250,10 +242,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Socks/hos_norm.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearSocksBase
@@ -373,10 +361,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Socks/cap_knee.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearSocksBase
@@ -449,10 +433,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Socks/hop_knee.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearSocksBase
@@ -462,10 +442,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Socks/hos_knee.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearSocksBase
@@ -576,10 +552,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Socks/cap_thigh.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearSocksBase
@@ -679,10 +651,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Socks/hop_thigh.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearSocksBase
@@ -692,10 +660,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Socks/hos_thigh.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearSocksBase

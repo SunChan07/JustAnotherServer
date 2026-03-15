@@ -325,7 +325,7 @@
   icon: { sprite: ADT/Clothing/OuterClothing/Coats/david_jacket.rsi, state: icon }
   productEntity: ADTClothingOuterDavidsJacketValid
   cost:
-    Telecrystal: 1
+    Telecrystal: 2
   categories:
   - UplinkWearables
 
@@ -568,9 +568,9 @@
   icon: { sprite: ADT/Implants/sandevistan.rsi, state: icon}
   productEntity: ADTSandevistanAutoSurgeon
   discountDownTo:
-    Telecrystal: 12
+    Telecrystal: 8
   cost:
-    Telecrystal: 14
+    Telecrystal: 12
   categories:
     - UplinkImplants
 
@@ -581,9 +581,9 @@
   productEntity: ADTMantisDaggersAutoSurgeon
   icon: { sprite: ADT/Implants/mantis_daggers.rsi, state: icon}
   discountDownTo:
-    Telecrystal: 6
+    Telecrystal: 4
   cost:
-    Telecrystal: 10
+    Telecrystal: 7
   categories:
     - UplinkImplants
 
@@ -665,13 +665,13 @@
   cost:
     Telecrystal: 15 #Tweak 20->15
   categories:
-  - UplinkPointless
+    - UplinkPointless
   #ADT-tweak-start
   conditions:
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-        - SurplusBundle
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
   #ADT-tweak-end
 
 - type: listing
@@ -716,16 +716,9 @@
   description: uplink-invisible-cloak-desc
   productEntity: ADTClothingNeckInvisibleCloak
   cost:
-    Telecrystal: 10
+    Telecrystal: 5
   categories:
     - UplinkWearables
-    - UplinkContractor
-
-  conditions:
-  - !type:StoreWhitelistCondition
-    blacklist:
-      tags:
-      - NukeOpsUplink # SD-Tweak
 
 - type: listing
   id: ADTUplinkNightVision
@@ -736,7 +729,6 @@
     Telecrystal: 2
   categories:
     - UplinkWearables
-    - UplinkContractor
 
 - type: listing
   id: ADTUplinkThermalVision
@@ -803,7 +795,7 @@
   discountDownTo:
     Telecrystal: 10
   cost:
-    Telecrystal: 15
+    Telecrystal: 17
   categories:
   - UplinkWeaponry
   conditions:
@@ -817,6 +809,9 @@
   name: uplink-cqc-name
   description: uplink-cqc-desc
   productEntity: ADTCqcManual
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 10
   cost:
     Telecrystal: 13
   categories:
@@ -825,7 +820,7 @@
   - !type:StoreWhitelistCondition
     whitelist:
       tags:
-      - NukeOpsUplink # im not limiting it from surplus since i wanna do a funny. Anyways. SD tweak
+      - NukeOpsUplink # Бана в сюрплюсах не будет. Если тритор получил сикуси - тритор радуется
 
 - type: listing
   id: ADTUplinkModulesMod
@@ -943,3 +938,36 @@
   - !type:BuyerJobCondition
     whitelist:
     - AtmosphericTechnician
+
+- type: listing
+  id: UplinkClothingNoSoundShoes
+  name: uplink-clothing-no-sound-shoes-name
+  description: uplink-clothing-no-sound-shoes-desc
+  icon: { sprite: /Textures/ADT/Misc/silent_shoes_icon.rsi, state: icon_no_sound_shoes }
+  productEntity: ADTClothingShoesChameleonNoSound
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 1
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkWearables
+
+- type: listing
+  id: UplinkClothingSuperShoes
+  name: uplink-clothing-super-shoes-name
+  description: uplink-clothing-super-shoes-desc
+  icon: { sprite: /Textures/ADT/Misc/silent_shoes_icon.rsi, state: icon_supershoes }
+  productEntity: ADTClothingShoesChameleonSuper
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 3
+  categories:
+  - UplinkWearables
+  conditions:
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink

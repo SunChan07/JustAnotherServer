@@ -34,10 +34,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Top/Heads/capitan_bra.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearTopBase
@@ -47,10 +43,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Top/Heads/ce_bra.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearTopBase
@@ -60,10 +52,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Top/Heads/cmo_bra.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearTopBase
@@ -73,10 +61,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Top/Heads/hop_bra.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearTopBase
@@ -86,10 +70,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Top/Heads/hos_bra.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearTopBase
@@ -99,10 +79,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Top/Heads/qm_bra.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearTopBase
@@ -112,10 +88,6 @@
   components:
   - type: Sprite
     sprite: ADT/Clothing/Underwear/Top/Heads/rd_bra.rsi
-  # SD tweak start
-  - type: StealTarget
-    stealGroup: HeadUnderwear
-  # SD tweak end
 
 - type: entity
   parent: ADTClothingUnderwearTopBase

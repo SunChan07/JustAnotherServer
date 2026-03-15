@@ -54,7 +54,6 @@
   - IPCTranslatorImplanter
   - BorgTranslatorImplanter
   - DwarfTranslatorImplanter
-  - SindarinTranslatorImplanter # SD-tweak
   - UrsTranslator
   - ArkaneTranslator
   - NianTranslator
@@ -63,20 +62,19 @@
   - CintaTajTranslator
   - DwarfTranslator
   - IPCTranslator
-  - SindarinTranslator # SD-tweak
 
-- type: latheRecipePack
-  id: ADTPhantomPack
-  recipes:
-  - GhostRadio
-  - OuijaBoard
-  - EctoRifle
-  - EctoPistol
-  - EctoBatterySmall
-  - EctoBattery
-  - PsiShield
-  - PhantomHud
-  - EctoShield
+#- type: latheRecipePack
+#  id: ADTPhantomPack
+#  recipes:
+#  - GhostRadio
+#  - OuijaBoard
+#  - EctoRifle
+#  - EctoPistol
+#  - EctoBatterySmall
+#  - EctoBattery
+#  - PsiShield
+#  - PhantomHud
+#  - EctoShield
 
 - type: latheRecipePack
   id: ADTBluespaceHarvesterPack

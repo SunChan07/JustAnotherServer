@@ -4,22 +4,20 @@
   roundStart: true
   prototype: MobFelinid
   sprites: MobHumanSprites
-  shortDesc: species-short-desc-felinid
   markingLimits: MobFelinidMarkingLimits
   dollPrototype: MobFelinidDummy
   skinColoration: HumanToned
   category: Sponsor
   sponsorOnly: false
-  description: "/ServerInfo/ADT/SpeciesDescriptions/Felinid.xml"
   pros:
   - Имеют способность к зализыванию открытых ран.
   special:
-  - Имеют нестандартные возрастные рамки (Молодые 18-28, Зрелые 29-39, Старые 40-80)
+  - Имеют нестандартные возрастные рамки (Зрелые 18-26, Старые 26-50)
   cons:
   - Повышен урон от нехватки крови в 2 раза.
-  maxAge: 80
-  oldAge: 40
-  youngAge: 29
+  maxAge: 50
+  oldAge: 26
+  youngAge: 18
 
 
 

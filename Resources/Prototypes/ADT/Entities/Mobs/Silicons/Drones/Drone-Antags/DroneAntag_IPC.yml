@@ -311,7 +311,7 @@
         - reagents: [Water, SpaceCleaner]
           methods: [Touch]
           effects:
-            - !type:WashCreamPieReaction
+            - !type:WashCreamPie
     - type: DamageVisuals
       thresholds: [20, 40, 100]
       targetLayers:
@@ -344,7 +344,7 @@
 - type: entity
   id: ADTDroneAntagIPC
   parent: ADTipcdronebase2
-  name: Дрон солдат
+  name: drone soldier
   suffix: Antag Drone IPC
   description: Вам, вероятно, не стоит стоять рядом с ним, чтобы проверить, включен ли он.
   components:

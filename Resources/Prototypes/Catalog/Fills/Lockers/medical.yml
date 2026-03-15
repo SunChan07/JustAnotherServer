@@ -32,7 +32,7 @@
       # ADT tweak Start
       - id: ADTAntibioticOintment
         amount: 1
-      - id: ADTPatchPackFilled # SD tweak
+      - id: ADTPatchPackFilled
         amount: 1
       # ADT tweak End
       - id: Bloodpack
@@ -57,7 +57,7 @@
       # ADT tweak Start
       - id: ADTAntibioticOintment
         amount: 1
-      - id: ADTPatchPackFilled # SD tweak
+      - id: ADTPatchPackFilled
         amount: 1
       # ADT tweak End
       - id: Bloodpack
@@ -171,33 +171,34 @@
   components:
   - type: StorageFill
     contents:
-      # Helix-Tweak-Start
-      # - id: ADTClothingModsuitBackMedical #ADT tweak
-      - id: ClothingOuterHardsuitVoidParamed
-      # - id: ClothingOuterCoatParamedicWB
-      # - id: ClothingHeadHatParamedicsoft
-      - id: ADTClothingHeadHatsParamedicBeret # ADT tweak
-      - id: ADTHighVoltageDefibrillator # ADT Tweak
-      # - id: ClothingOuterWinterPara
-      # - id: ClothingUniformJumpsuitParamedic
-      # - id: ClothingUniformJumpskirtParamedic
-      # - id: ClothingEyesHudMedical
-      # - id: ClothingHandsGlovesLatex
-      # - id: ClothingHeadsetMedical
-      # - id: ClothingMaskSterile
-      # Helix-Tweak-End
+      - id: ClothingOuterCoatParamedicWB
+      - id: ClothingHeadHatParamedicsoft
+      #ADT-Tweak-Start
+      - id: ADTClothingHeadHatsParamedicBeret
+      - id: ADTHighVoltageDefibrillator
+      - id: OxygenTankFilled
+      - id: ClothingMaskBreathMedical
+      #ADT-Tweak-End
+      - id: ClothingOuterWinterPara
+      - id: ClothingUniformJumpsuitParamedic
+      - id: ClothingUniformJumpskirtParamedic
+      - id: ClothingEyesHudMedical
+      - id: ClothingHandsGlovesLatex
+      - id: ClothingHeadsetMedical
+      - id: ClothingMaskSterile
       - id: HandheldGPSBasic
       - id: MedkitFilled
         prob: 0.3
     # ADT-WikiBooks-Start
       - id: ADTBookSRPmed
     # ADT-WikiBooks-End
-    # Helix-Tweak-Start
-      - id: Fulton
-      - id: FultonBeacon
-      - id: SDHandheldCrewMonitorParamedic
-      - id: MedkitBruteFilled
-      - id: MedkitBurnFilled
-      - id: MedkitCombatFilled
-        prob: 0.25
-    # Helix-Tweak-End
+  #ADT-Tweak-Start
+  - type: UserInterface
+    interfaces:
+      enum.SuitStorageUiKey.Key:
+        type: SuitStorageBoundUserInterface
+  - type: SuitStorage
+    options:
+    - ADTClothingModsuitBackMedical
+    - ClothingOuterHardsuitVoidParamed
+  #ADT-Tweak-End

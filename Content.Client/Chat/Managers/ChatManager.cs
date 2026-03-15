@@ -34,6 +34,11 @@ internal sealed class ChatManager : IChatManager
         // See server-side manager. This just exists for shared code.
     }
 
+    public void SendAdminAlertNoFormatOrEscape(string message)
+    {
+        // See server-side manager. This just exists for shared code.
+    }
+
     public void SendMessage(string text, ChatSelectChannel channel)
     {
         var str = text.ToString();
@@ -87,10 +92,8 @@ internal sealed class ChatManager : IChatManager
 
             default:
                 throw new ArgumentOutOfRangeException(nameof(channel), channel, null);
-
         }
     }
-
 
 // ADT-CollectiveMind-Tweak-Start
     public void UpdatePermissions()

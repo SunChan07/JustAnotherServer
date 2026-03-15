@@ -216,25 +216,23 @@
 
 # Я не захотел создавать отдельный файл для двух ушек. Чмок.
 
-# Helix-Tweak-Start
-# - type: marking
-#   id: ADTHumanElfEars
-#   bodyPart: Head
-#   markingCategory: HeadSide
-#   speciesRestriction: [Human, Felinid]
-#   sprites:
-#   - sprite: ADT/Mobs/Customization/Human/elf.rsi
-#     state: elf_ears
+- type: marking
+  id: ADTHumanElfEars
+  bodyPart: Head
+  markingCategory: HeadSide
+  speciesRestriction: [Human, Felinid]
+  sprites:
+  - sprite: ADT/Mobs/Customization/Human/elf.rsi
+    state: elf_ears
 
-# - type: marking
-#   id: ADTHumanElfEars2
-#   bodyPart: Head
-#   markingCategory: HeadSide
-#   speciesRestriction: [Human, Felinid]
-#   sprites:
-#   - sprite: ADT/Mobs/Customization/Human/elf.rsi
-#     state: elf_ears2
-# Helix-Tweak-End
+- type: marking
+  id: ADTHumanElfEars2
+  bodyPart: Head
+  markingCategory: HeadSide
+  speciesRestriction: [Human, Felinid]
+  sprites:
+  - sprite: ADT/Mobs/Customization/Human/elf.rsi
+    state: elf_ears2
 
 # From Goobstation
 

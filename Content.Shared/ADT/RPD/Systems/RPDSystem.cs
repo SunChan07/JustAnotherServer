@@ -269,7 +269,8 @@ public class RPDSystem : EntitySystem
         if (session.SenderSession.AttachedEntity is not { } player)
             return;
 
-        if (_hands.GetActiveItem(player) != uid)
+        if (!TryComp<HandsComponent>(player, out var hands) ||
+            _hands.GetActiveItem(player) != uid)
             return;
 
         if (!TryComp<RPDComponent>(uid, out var rpd))

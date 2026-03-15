@@ -227,7 +227,6 @@
       BorgTalk: Understand
       Dwarf: Understand
       CintaTaj: Understand
-      Sindarin: Understand # SD-tweak
 
 - type: entity
   parent: BaseTranslatorImplant

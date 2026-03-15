@@ -33,6 +33,12 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-head-light-reptilian
+      #  shader: unshaded
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -46,6 +52,14 @@
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
+      - state: equipped-head-unshaded-vulpkanin
+        shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-head-reptilian
+      #- state: equipped-head-unshaded-reptilian
+      #  shader: unshaded
       head-dog:
       - state: equipped-head-dog
       - state: equipped-head-unshaded-dog
@@ -93,6 +107,12 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-head-light-reptilian
+      #  shader: unshaded
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -106,6 +126,14 @@
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
+      - state: equipped-head-unshaded-vulpkanin
+        shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-head-reptilian
+      #- state: equipped-head-unshaded-reptilian
+      #  shader: unshaded
       head-dog:
       - state: equipped-head-dog
       - state: equipped-head-unshaded-dog
@@ -147,6 +175,12 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-head-light-reptilian
+      #  shader: unshaded
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -160,6 +194,14 @@
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
+      - state: equipped-head-unshaded-vulpkanin
+        shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-head-reptilian
+      #- state: equipped-head-unshaded-reptilian
+      #  shader: unshaded
       head-dog:
       - state: equipped-head-dog
       - state: equipped-head-unshaded-dog
@@ -196,6 +238,7 @@
     - CorgiWearable
     - WhitelistChameleon
 
+#Goliath Hardsuit
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitGoliath
@@ -222,6 +265,9 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-head-reptilian
+      #  shader: unshaded
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -235,6 +281,10 @@
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
         shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-head-reptilian
+      #- state: equipped-head-unshaded-reptilian
+      #  shader: unshaded
       head-dog:
       - state: equipped-head-dog
       - state: equipped-head-unshaded-dog
@@ -249,6 +299,7 @@
     - CorgiWearable
     - WhitelistChameleon
 
+#Maxim Hardsuit
 - type: entity
   parent: ClothingHeadHardsuitBase
   id: ClothingHeadHelmetHardsuitMaxim
@@ -434,8 +485,6 @@
       - state: off-equipped-HELMET-vox
       head-dog:
       - state: off-equipped-HELMET-dog
-  - type: PointLight
-    color: "#b88ae5"
   # ADT-Tweak-end
   - type: PressureProtection
     highPressureMultiplier: 0.3
@@ -444,6 +493,8 @@
     tags:
     - CorgiWearable
     - WhitelistChameleon
+  - type: PointLight # Corvax-Resprite
+    color: "#AF89D5FF"
 
 #Chief Engineer's Hardsuit
 - type: entity
@@ -473,6 +524,12 @@
       head-vox:
       - state: equipped-head-light-vox
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-head-light-reptilian
+      #  shader: unshaded
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
@@ -486,6 +543,14 @@
       - state: equipped-head-vox
       - state: equipped-head-unshaded-vox
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
+      - state: equipped-head-unshaded-vulpkanin
+        shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-head-reptilian
+      #- state: equipped-head-unshaded-reptilian
+      #  shader: unshaded
       head-dog:
       - state: equipped-head-dog
       - state: equipped-head-unshaded-dog
@@ -834,6 +899,9 @@
       head-vox:
       - state: equipped-HELMET-light-vox
         shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-HELMET-light-reptilian
+      #  shader: unshaded
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/piratecaptainhelm.rsi
     clothingVisuals:
@@ -845,6 +913,10 @@
       - state: equipped-HELMET-vox
       - state: equipped-HELMET-unshaded-vox
         shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-HELMET-reptilian
+      #- state: equipped-HELMET-unshaded-reptilian
+      #  shader: unshaded
   - type: PointLight # Color matches visor colors, radius/energy same as mining hardsuit for the big captain.
     color: "#f3ea9c"
     radius: 7
@@ -865,24 +937,30 @@
 #CENTCOMM / ERT HARDSUITS
 #ERT Leader Hardsuit
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndieCommander ]
+  parent: [ BaseCentcommContraband, ClothingHeadHelmetHardsuitSyndie ]
   id: ClothingHeadHelmetHardsuitERTLeader
   name: ERT leader hardsuit helmet
   description: A special hardsuit helmet worn by members of an emergency response team.
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertleader.rsi
+  - type: ToggleableLightVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+      - state: equipped-HELMET-light
+        shader: unshaded
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/ERThelmets/ertleader.rsi
-  - type: PointLight # Corvax-Resprite
-    color: cyan
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+  - type: PointLight
+    color: "#fff7cd"
 
 #ERT Chaplain Hardsuit
 - type: entity
@@ -907,8 +985,25 @@
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertengineer.rsi
+    layers:
+    - state: icon
+  - type: HandheldLight
+    addPrefix: false
+  - type: ToggleableLightVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+      - state: equipped-HELMET-light
+        shader: unshaded
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/ERThelmets/ertengineer.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
   - type: PointLight
     color: cyan # Corvax-Resprite
   - type: FireProtection
@@ -920,6 +1015,12 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+        Radiation: 0.9
+        Caustic: 0.9
+  - type: PressureProtection
+    highPressureMultiplier: 0.6
+    lowPressureMultiplier: 1000
+  - type: SupermatterImmune  # ADT-Tweak
 
 #ERT Medical Hardsuit
 - type: entity
@@ -930,10 +1031,23 @@
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertmedical.rsi
+  - type: ToggleableLightVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+      - state: equipped-HELMET-light
+        shader: unshaded
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/ERThelmets/ertmedical.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
   - type: PointLight
-    color: "#adffec"
+    color: "#fff7cd"
 
 #ERT Security Hardsuit
 - type: entity
@@ -944,17 +1058,23 @@
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertsecurity.rsi
+  - type: ToggleableLightVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+      - state: equipped-HELMET-light
+        shader: unshaded
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/ERThelmets/ertsecurity.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
   - type: PointLight
-    color: cyan # Corvax-Resprite
-  - type: Armor
-    modifiers:
-      coefficients:
-        Blunt: 0.9
-        Slash: 0.9
-        Piercing: 0.9
-        Heat: 0.9
+    color: "#fff7cd"
 
 #ERT Janitor Hardsuit
 - type: entity
@@ -965,10 +1085,23 @@
   components:
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/ERThelmets/ertjanitor.rsi
+  - type: ToggleableLightVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+      - state: equipped-HELMET-light
+        shader: unshaded
   - type: Clothing
-    sprite: Clothing/Head/Hardsuits/ERThelmets/ertjanitor.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
   - type: PointLight
-    color: "#cbadff"
+    color: "#fff7cd"
 
 
 #ADT ert's end
@@ -995,6 +1128,14 @@
       - state: equipped-head
       - state: equipped-head-unshaded
         shader: unshaded
+      head-vox:
+      - state: equipped-head-vox
+      - state: equipped-head-unshaded-vox
+        shader: unshaded
+      #head-reptilian: # Corvax resprite
+      #- state: equipped-head-reptilian
+      #- state: equipped-head-unshaded-reptilian
+      #  shader: unshaded
   - type: PointLight
     color: orange # Corvax-Resprite
   - type: PressureProtection
@@ -1042,9 +1183,6 @@
         Radiation: 0.80
         Caustic: 0.95
   - type: SupermatterImmune  # ADT-Tweak
-  - type: FlashImmunity
-  - type: EyeProtection
-    protectionTime: 10
 
 #MISC. HARDSUITS
 #Clown Hardsuit

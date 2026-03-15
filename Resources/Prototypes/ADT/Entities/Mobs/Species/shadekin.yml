@@ -35,10 +35,10 @@
       0: Alive
       80: Critical
       160: Dead
-  # - type: SlowOnDamage
-  #   speedModifierThresholds:
-  #     42: 0.7
-  #     58: 0.5
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      42: 0.7
+      58: 0.5
   - type: Damageable
     damageContainer: Biological # Shadekin
     damageModifierSet: Shadekin

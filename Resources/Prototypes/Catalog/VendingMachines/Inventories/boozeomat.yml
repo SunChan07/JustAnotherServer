@@ -9,7 +9,7 @@
     DrinkFlaskBar: 5
     DrinkShaker: 5
     DrinkJigger: 5
-    DrinkIceBucket: 5 # SD-tweak
+    DrinkIceBucket: 2
     BarSpoon: 3
     CustomDrinkJug: 2 #to allow for custom drinks in the soda/booze dispensers
     ADTTeabox: 1 # ADT Tweak
@@ -46,7 +46,6 @@
     DrinkVodkaBottleFull: 5
     DrinkWhiskeyBottleFull: 5
     DrinkWineBottleFull: 5
-    DrinkKvasBottleFull: 4
     DrinkChampagneBottleFull: 2 #because the premium drink
     ADTDrinkAppleLiqueurBottleFull: 2 #ADT_Tweak
     DrinkSakeBottleFull: 3

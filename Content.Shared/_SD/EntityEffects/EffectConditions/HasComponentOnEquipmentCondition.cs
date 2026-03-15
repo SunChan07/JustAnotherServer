@@ -1,37 +1,58 @@
-using Content.Shared.EntityEffects;
+using Content.Shared.EntityConditions;
 using Content.Shared.Inventory;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.Manager.Attributes;
+using Robust.Shared.GameObjects;
 
-namespace Content.Server.EntityEffects.EffectConditions;
+namespace Content.Server.EntityConditions;
 
-public sealed partial class HasComponentOnEquipmentCondition : EntityEffectCondition
+public sealed partial class HasComponentOnEquipmentCondition : EntityConditionBase<HasComponentOnEquipmentCondition>
 {
     [DataField(required: true)]
     public ComponentRegistry Components = default!;
 
-    [DataField]
-    public bool Invert = false;
-
-    public override bool Condition(EntityEffectBaseArgs args)
+    public override string EntityConditionGuidebookText(IPrototypeManager prototype)
     {
-        if (Components.Count == 0)
-            return Invert;
-
-        if (args.EntityManager.TryGetComponent<InventoryComponent>(args.TargetEntity, out var inv))
-            if (args.EntityManager.System<InventorySystem>().TryGetContainerSlotEnumerator(args.TargetEntity, out var containerSlotEnumerator, SlotFlags.WITHOUT_POCKET))
-                while (containerSlotEnumerator.NextItem(out var item))
-                    foreach (var comp in Components)
-                        if (args.EntityManager.HasComponent(item, comp.Value.Component.GetType()))
-                            return !Invert;
-
-        return Invert;
+        return "Проверяет наличие компонентов на экипировке";
     }
+}
 
-    public override string GuidebookExplanation(IPrototypeManager prototype)
+public sealed partial class HasComponentOnEquipmentConditionSystem :
+    EntityConditionSystem<InventoryComponent, HasComponentOnEquipmentCondition>
+{
+    [Dependency] private readonly InventorySystem _inventory = default!;
+    [Dependency] private readonly IEntityManager _entMan = default!;
+
+    protected override void Condition(
+        Entity<InventoryComponent> ent,
+        ref EntityConditionEvent<HasComponentOnEquipmentCondition> args)
     {
-        // This condition should be only used on reactive things and not on metabolisable chemicals
-        // since equipment doesn't affect your internal metabolism. Additionally, components don't have
-        // user-friendly, or even user-understandable names.
-        return "TODO";
+        var condition = args.Condition;
+
+        if (condition.Components.Count == 0)
+        {
+            args.Result = condition.Inverted;
+            return;
+        }
+
+        bool found = false;
+
+        if (_inventory.TryGetContainerSlotEnumerator(ent.Owner, out var enumerator, SlotFlags.WITHOUT_POCKET))
+        {
+            while (enumerator.NextItem(out var item))
+            {
+                foreach (var comp in condition.Components)
+                {
+                    if (_entMan.HasComponent(item, comp.Value.Component.GetType()))
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+                if (found) break;
+            }
+        }
+
+        args.Result = condition.Inverted ? !found : found;
     }
 }

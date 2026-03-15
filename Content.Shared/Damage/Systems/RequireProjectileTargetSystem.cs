@@ -1,13 +1,14 @@
+using Content.Shared.Damage.Components;
 using Content.Shared.Projectiles;
-using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Standing;
-using Robust.Shared.Physics.Events;
+using Content.Shared.Weapons.Ranged.Components;
 using Robust.Shared.Containers;
 using Content.Shared.ADT.Crawling; // ADT Anti-Lying-Warrior
 using Content.Shared.Mobs.Systems; // ADT Anti-Lying-Warrior
 using Content.Shared.ADT.Crawling.Components; // ADT Anti-Lying-Warrior
+using Robust.Shared.Physics.Events;
 
-namespace Content.Shared.Damage.Components;
+namespace Content.Shared.Damage.Systems;
 
 public sealed class RequireProjectileTargetSystem : EntitySystem
 {
@@ -47,7 +48,13 @@ public sealed class RequireProjectileTargetSystem : EntitySystem
                 }
                 // ADT Crawling abuse fix end
 
+                // ADT ALW Tweak
+                var weapon = projectile.Weapon;
+                var alwTarget = targeted.Target;
+                if (weapon.HasValue && HasComp<AntiLyingWarriorComponent>(weapon) && _mobState.IsDead(alwTarget))
+                    return;
             }
+            // ADT ALW Tweak
 
             // Prevents shooting out of while inside of crates
             var shooter = projectile.Shooter;

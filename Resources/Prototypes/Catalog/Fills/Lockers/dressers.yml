@@ -12,14 +12,6 @@
       - id: ClothingHandsGlovesCaptain
       - id: ClothingOuterWinterCap
       - id: ClothingNeckCloakCap
-      # SD tweak start
-      - id: ADTClothingUnderwearBottomBoxersCap
-      - id: ADTClothingUnderwearBottomPantiesCap
-      - id: ADTClothingUnderwearTopBraCap
-      - id: ADTClothingUnderwearSocksCaptain
-      - id: ADTClothingUnderwearSocksKneeCaptain
-      - id: ADTClothingUnderwearSocksThighCaptain
-      # SD tweak end
 
 - type: entity
   id: DresserChiefEngineerFilled
@@ -33,11 +25,6 @@
       - id: ADTClothingHeadHatBeretCEngineer # ADT tweak
       - id: ClothingOuterWinterCE
       - id: ClothingNeckCloakCe
-      # SD tweak start
-      - id: ADTClothingUnderwearBottomBoxersCE
-      - id: ADTClothingUnderwearBottomPantiesCE
-      - id: ADTClothingUnderwearTopBraCE
-      # SD tweak end
 
 - type: entity
   id: DresserChiefMedicalOfficerFilled
@@ -54,11 +41,6 @@
       - id: ClothingEyesGlasses
       - id: ClothingOuterWinterCMO
       - id: ClothingCloakCmo
-      # SD tweak start
-      - id: ADTClothingUnderwearBottomBoxersCMO
-      - id: ADTClothingUnderwearBottomPantiesCMO
-      - id: ADTClothingUnderwearTopBraCMO
-      # SD tweak end
 
 - type: entity
   id: DresserHeadOfPersonnelFilled
@@ -71,14 +53,6 @@
       - id: ClothingOuterWinterHoP
       - id: ClothingEyesGlasses
       - id: ClothingNeckCloakHop
-      # SD tweak start
-      - id: ADTClothingUnderwearBottomBoxersHOP
-      - id: ADTClothingUnderwearBottomPantiesHOP
-      - id: ADTClothingUnderwearTopBraHOP
-      - id: ADTClothingUnderwearSocksHop
-      - id: ADTClothingUnderwearSocksKneeHop
-      - id: ADTClothingUnderwearSocksThighHop
-      # SD tweak end
 
 - type: entity
   id: DresserHeadOfSecurityFilled
@@ -89,20 +63,13 @@
     contents:
       - id: ClothingHeadHatBeretHoS
       - id: ClothingHeadHatHoshat
+      - id: ClothingMaskNeckGaiter
       - id: ClothingUniformJumpskirtHoSAlt
       - id: ClothingUniformJumpsuitHoSAlt
       - id: ClothingUniformJumpskirtHosFormal
-      # - id: ClothingUniformJumpsuitHosFormal # SD tweak: cleaning space for underwear
+      - id: ClothingUniformJumpsuitHosFormal
       - id: ClothingOuterWinterHoS
       - id: ClothingNeckCloakHos
-      # SD tweak start
-      - id: ADTClothingUnderwearBottomBoxersHOS
-      - id: ADTClothingUnderwearBottomPantiesHOS
-      - id: ADTClothingUnderwearTopBraHOS
-      - id: ADTClothingUnderwearSocksHos
-      - id: ADTClothingUnderwearSocksKneeHos
-      - id: ADTClothingUnderwearSocksThighHos
-      # SD tweak end
 
 - type: entity
   id: DresserQuarterMasterFilled
@@ -118,11 +85,6 @@
       - id: ClothingHandsGlovesColorBrown
       - id: ClothingOuterWinterQM
       - id: ClothingNeckCloakQm
-      # SD tweak start
-      - id: ADTClothingUnderwearBottomBoxersQM
-      - id: ADTClothingUnderwearBottomPantiesQM
-      - id: ADTClothingUnderwearTopBraQM
-      # SD tweak end
 
 - type: entity
   id: DresserResearchDirectorFilled
@@ -137,11 +99,6 @@
       - id: ClothingOuterWinterRD
       - id: ClothingOuterCoatRD
       - id: ClothingNeckCloakRd
-      # SD tweak start
-      - id: ADTClothingUnderwearBottomBoxersRD
-      - id: ADTClothingUnderwearBottomPantiesRD
-      - id: ADTClothingUnderwearTopBraRD
-      # SD tweak end
 
 - type: entity
   id: DresserWardenFilled

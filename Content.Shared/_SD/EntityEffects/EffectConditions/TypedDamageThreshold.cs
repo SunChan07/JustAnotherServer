@@ -1,78 +1,30 @@
 using Content.Shared.Damage;
+using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
-using Content.Shared.EntityEffects;
+using Content.Shared.EntityConditions;
 using Content.Shared.FixedPoint;
 using Content.Shared.Localizations;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.Manager.Attributes;
+using Robust.Shared.GameObjects;
+using Robust.Shared.IoC;
+using Robust.Shared.Localization;
+using System;
+using System.Collections.Generic;
 
-namespace Content.Server.EntityEffects.EffectConditions;
+namespace Content.Server.EntityConditions;
 
-/// <summary>
-/// Checking for at least this amount of damage, but only for specified types/groups
-/// If we have less, this condition is false. Inverse flips the output boolean
-/// </summary>
-/// <remarks>
-/// DamageSpecifier splits damage groups across types, we greedily revert that split to create
-/// behaviour closer to what user expects; any damage in specified group contributes to that
-/// group total. Use multiple conditions if you want to explicitly avoid that behaviour,
-/// or don't use damage types within a group when specifying prototypes.
-/// </remarks>
-public sealed partial class TypedDamageThreshold : EntityEffectCondition
+public sealed partial class TypedDamageThreshold : EntityConditionBase<TypedDamageThreshold>
 {
     [DataField(required: true)]
     public DamageSpecifier Damage = default!;
 
-    [DataField]
-    public bool Inverse = false;
-
-    public override bool Condition(EntityEffectBaseArgs args)
-    {
-        if (args.EntityManager.TryGetComponent<DamageableComponent>(args.TargetEntity, out var damage))
-        {
-            var protoManager = IoCManager.Resolve<IPrototypeManager>();
-            var comparison = new DamageSpecifier(Damage);
-            foreach (var group in protoManager.EnumeratePrototypes<DamageGroupPrototype>())
-            {
-                // Calculate requested threshold for this group as a sum of requested types within it
-                var requestedGroup = FixedPoint2.Zero;
-                foreach (var damageType in group.DamageTypes)
-                {
-                    if (comparison.DamageDict.TryGetValue(damageType, out var value) && value > FixedPoint2.Zero)
-                        requestedGroup += value;
-                }
-                if (requestedGroup == FixedPoint2.Zero)
-                    continue;
-
-                if (damage.Damage.TryGetDamageInGroup(group, out var total) && total >= requestedGroup)
-                    return !Inverse;
-
-                // Remove this group's requested values from further consideration
-                foreach (var damageType in group.DamageTypes)
-                {
-                    if (!comparison.DamageDict.TryGetValue(damageType, out var value) || value == FixedPoint2.Zero)
-                        continue;
-
-                    comparison.DamageDict[damageType] -= value;
-                    if (MathF.Abs(comparison.DamageDict[damageType].Float() - MathF.Round(comparison.DamageDict[damageType].Float())) < 0.02)
-                        comparison.DamageDict[damageType] = MathF.Round(comparison.DamageDict[damageType].Float());
-                }
-                comparison.ClampMin(0);
-                comparison.TrimZeros();
-            }
-            comparison.ExclusiveAdd(-damage.Damage);
-            comparison = -comparison;
-            return comparison.AnyPositive() ^ Inverse;
-        }
-        return false;
-    }
-
-    public override string GuidebookExplanation(IPrototypeManager prototype)
+    public override string EntityConditionGuidebookText(IPrototypeManager prototype)
     {
         var damages = new List<string>();
         var comparison = new DamageSpecifier(Damage);
         foreach (var group in prototype.EnumeratePrototypes<DamageGroupPrototype>())
         {
-            // Sum requested amounts for types within this group
             var requestedGroup = FixedPoint2.Zero;
             foreach (var damageType in group.DamageTypes)
             {
@@ -113,8 +65,57 @@ public sealed partial class TypedDamageThreshold : EntityEffectCondition
         }
 
         return Loc.GetString("reagent-effect-condition-guidebook-typed-damage-threshold",
-                ("inverse", Inverse),
+                ("inverse", Inverted),
                 ("changes", ContentLocalizationManager.FormatList(damages))
                 );
+    }
+}
+
+public sealed partial class TypedDamageThresholdSystem :
+    EntityConditionSystem<DamageableComponent, TypedDamageThreshold>
+{
+    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private readonly IEntityManager _entMan = default!;
+
+    protected override void Condition(
+        Entity<DamageableComponent> ent,
+        ref EntityConditionEvent<TypedDamageThreshold> args)
+    {
+        var condition = args.Condition;
+        var damage = ent.Comp;
+
+        var comparison = new DamageSpecifier(condition.Damage);
+        foreach (var group in _proto.EnumeratePrototypes<DamageGroupPrototype>())
+        {
+            var requestedGroup = FixedPoint2.Zero;
+            foreach (var damageType in group.DamageTypes)
+            {
+                if (comparison.DamageDict.TryGetValue(damageType, out var value) && value > FixedPoint2.Zero)
+                    requestedGroup += value;
+            }
+            if (requestedGroup == FixedPoint2.Zero)
+                continue;
+
+            if (damage.Damage.TryGetDamageInGroup(group, out var total) && total >= requestedGroup)
+            {
+                args.Result = !condition.Inverted;
+                return;
+            }
+
+            foreach (var damageType in group.DamageTypes)
+            {
+                if (!comparison.DamageDict.TryGetValue(damageType, out var value) || value == FixedPoint2.Zero)
+                    continue;
+
+                comparison.DamageDict[damageType] -= value;
+                if (MathF.Abs(comparison.DamageDict[damageType].Float() - MathF.Round(comparison.DamageDict[damageType].Float())) < 0.02)
+                    comparison.DamageDict[damageType] = MathF.Round(comparison.DamageDict[damageType].Float());
+            }
+            comparison.ClampMin(0);
+            comparison.TrimZeros();
+        }
+        comparison.ExclusiveAdd(-damage.Damage);
+        comparison = -comparison;
+        args.Result = comparison.AnyPositive() ^ condition.Inverted;
     }
 }

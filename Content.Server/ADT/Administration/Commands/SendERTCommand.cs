@@ -40,7 +40,7 @@ public sealed class SendERTCommand : IConsoleCommand
     {
         #region Setup vars
         string audioPath = "";
-        string defaultGridPath = "/Maps/SDMaps/SDShuttles/ERT", defaultAudioPath = "/Audio/Corvax/Adminbuse";
+        string defaultGridPath = "/Maps/_SDMaps/SDShuttles/ERT", defaultAudioPath = "/Audio/Corvax/Adminbuse";
         string alertLevelCode = "gamma";
         int volume = 0;
         bool isLoadGrid = false, isAnnounce = true, isPlayAudio = true, isSetAlertLevel = true, playAuidoFromAnnouncement = false;
@@ -229,7 +229,7 @@ public sealed class SendERTCommand : IConsoleCommand
         ╔════════════════════════════════════╗
         ║   Schrödinger's Cat Code   🐾      ║
         ║   /\_/\\                           ║
-        ║  ( o.o )  Meow! тут был Шут        ║
+        ║  ( o.o )  Meow!                    ║
         ║   > ^ <                            ║
         ╚════════════════════════════════════╝
 

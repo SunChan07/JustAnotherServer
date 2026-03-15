@@ -173,18 +173,15 @@
     - id: RCDAmmo
     - id: ADTBookSRPeng
     - id: ADTBookAtmosSupermatter
-    # ADT-WikiBooks-End
-    - id: SD_ClothingHandsGlovesAtmos # Helix-Tweak
+    # ADT-Tweak-End
 
 - type: entityTable
   id: FillAtmosphericsHardsuit
   table: !type:AllSelector
     children:
-    - id: ADTClothingModsuitBackAtmos # Helix-Tweak
-    - id: ClothingShoesBootsMagAtmos  # Helix-Tweak
+    #- id: ClothingOuterHardsuitAtmos #ADT-Tweak
     - id: OxygenTankFilled
     - id: ClothingMaskBreath
-    # - id: ClothingMaskBreath # Helix-Tweak
 
 - type: entity
   id: LockerEngineerFilledHardsuit

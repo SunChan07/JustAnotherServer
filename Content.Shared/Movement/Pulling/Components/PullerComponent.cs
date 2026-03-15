@@ -1,4 +1,4 @@
-﻿using Content.Shared.ADT.Grab;
+using Content.Shared.ADT.Grab;
 using Content.Shared.Alert;
 using Content.Shared.DoAfter;
 using Content.Shared.Hands.EntitySystems;
@@ -48,6 +48,7 @@ public sealed partial class PullerComponent : Component
     [DataField]
     public ProtoId<AlertPrototype> PullingAlert = "ADTPulling"; // ADT Grab
 
+
     // ADT Grab start
     [ViewVariables]
     public GrabStage Stage
@@ -64,11 +65,11 @@ public sealed partial class PullerComponent : Component
     /// </summary>
     [DataField]
     public Dictionary<GrabStage, GrabStageStats> GrabStats = new()
-    { 
-        {GrabStage.None, new() { RequiredHands = 1, DoaftersToEscape = 0, MovementSpeedModifier = 0.95f, EscapeAttemptTime = 0f, SetStageTime = 0f }},
-        {GrabStage.Soft, new() { RequiredHands = 1, DoaftersToEscape = 1, MovementSpeedModifier = 0.9f, EscapeAttemptTime = 0.7f, SetStageTime = 0f }}, // SD numbers tweak
-        {GrabStage.Hard, new() { RequiredHands = 1, DoaftersToEscape = 2, MovementSpeedModifier = 0.8f, EscapeAttemptTime = 1.0f, SetStageTime = 1.0f }}, // SD numbers tweak
-        {GrabStage.Choke, new() { RequiredHands = 2, DoaftersToEscape = 4, MovementSpeedModifier = 0.25f, EscapeAttemptTime = 1.5f, SetStageTime = 1.5f }} // SD numbers tweak
+    {
+        {GrabStage.None, new() { RequiredHands = 1, DoaftersToEscape = 0, MovementSpeedModifier = 0.9f, EscapeAttemptTime = 0f, SetStageTime = 0f }},
+        {GrabStage.Soft, new() { RequiredHands = 1, DoaftersToEscape = 0, MovementSpeedModifier = 0.9f, EscapeAttemptTime = 0f, SetStageTime = 0f }},
+        {GrabStage.Hard, new() { RequiredHands = 1, DoaftersToEscape = 0, MovementSpeedModifier = 0.8f, EscapeAttemptTime = 0f, SetStageTime = 0f }},
+        {GrabStage.Choke, new() { RequiredHands = 2, DoaftersToEscape = 2, MovementSpeedModifier = 0.75f, EscapeAttemptTime = 1f, SetStageTime = 1f }}
     };
 
     /// <summary>

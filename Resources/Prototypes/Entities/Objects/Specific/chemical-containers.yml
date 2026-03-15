@@ -26,6 +26,7 @@
       solution: beaker
     - type: ExaminableSolution
       solution: beaker
+      exactVolume: true
     - type: DrawableSolution
       solution: beaker
     - type: InjectableSolution
@@ -38,8 +39,11 @@
       interfaces:
         enum.TransferAmountUiKey.Key:
           type: TransferAmountBoundUserInterface
-    - type: Drink
+    - type: Edible
+      edible: Drink
       solution: beaker
+      destroyOnEmpty: false
+      utensil: Spoon
     - type: Spillable
       solution: beaker
     - type: Appearance
@@ -50,36 +54,34 @@
       inHandsFillBaseName: -fill-
     - type: StaticPrice
       price: 60
-    # SD-tweak-start Кувшины вместо абуза ведёрок для льда
-    # - type: Damageable
-    #   damageContainer: Inorganic
-    # - type: Destructible
-    #   thresholds:
-    #   - trigger:
-    #       !type:DamageTrigger
-    #       damage: 200
-    #     behaviors:
-    #       - !type:DoActsBehavior
-    #         acts: [ "Destruction" ]
-    #   - trigger:
-    #       !type:DamageTrigger
-    #       damage: 20
-    #     behaviors:
-    #     - !type:PlaySoundBehavior
-    #       sound:
-    #         collection: MetalBreak
-    #         params:
-    #           volume: -4
-    #     - !type:SpillBehavior { }
-    #     - !type:SpawnEntitiesBehavior
-    #       spawn:
-    #         SheetPlastic1:
-    #           min: 0
-    #           max: 1
-    #       transferForensics: true
-    #     - !type:DoActsBehavior
-    #       acts: [ "Destruction" ]
-    # SD-tweak-end
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 20
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+            params:
+              volume: -4
+        - !type:SpillBehavior { }
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            SheetPlastic1:
+              min: 0
+              max: 1
+          transferForensics: true
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
     - type: Label
     - type: Tag
       tags:
