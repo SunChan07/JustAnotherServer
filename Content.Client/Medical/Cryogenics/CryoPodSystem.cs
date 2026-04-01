@@ -47,7 +47,7 @@ public sealed class CryoPodSystem : SharedCryoPodSystem
         }
 
         if (!_appearance.TryGetData<bool>(uid, CryoPodVisuals.ContainsEntity, out var isOpen, args.Component)
-            || !_appearance.TryGetData<bool>(uid, CryoPodVisuals.IsOn, out var isOn, args.Component)) // Sunrise edit
+            || !_appearance.TryGetData<bool>(uid, CryoPodVisuals.IsOn, out var isOn, args.Component)) // SpaceDream edit
         {
             return;
         }

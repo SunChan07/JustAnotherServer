@@ -70,7 +70,7 @@ public sealed partial class CryoPodSystem : SharedCryoPodSystem
         var health = _healthAnalyzerSystem.GetHealthAnalyzerUiState(patient);
         health.ScanMode = true;
 
-        // Sunrise edit
+        // SpaceDream edit
         var hasDamage = patient.HasValue
                         && TryComp<DamageableComponent>(patient.Value, out var damageable)
                         && damageable.TotalDamage > FixedPoint2.Zero;
