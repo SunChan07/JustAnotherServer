@@ -1,4 +1,3 @@
-﻿using Content.Shared.FixedPoint;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.MedicalScanner;
@@ -29,9 +28,6 @@ public struct HealthAnalyzerUiState
     public bool? ScanMode;
     public bool? Bleeding;
     public bool? Unrevivable;
-    public List<(string ReagentId, FixedPoint2 Quantity)>? MetabolizingReagents;
-    public HealthAnalyzerScannedUserMessage(NetEntity? targetEntity, float temperature, float bloodLevel, bool? scanMode, bool? bleeding, bool? unrevivable, List<(string ReagentId, FixedPoint2 Quantity)>? metabolizingReagents = null); /// Starlight - added metabolizingReagents parameter
-
 
     public HealthAnalyzerUiState() {}
 
@@ -43,6 +39,5 @@ public struct HealthAnalyzerUiState
         ScanMode = scanMode;
         Bleeding = bleeding;
         Unrevivable = unrevivable;
-        MetabolizingReagents = metabolizingReagents;
     }
 }
