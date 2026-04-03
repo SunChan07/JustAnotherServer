@@ -9,6 +9,8 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 namespace Content.Shared.Medical.Cryogenics;
+using static Content.Shared.Atmos.Components.GasAnalyzerComponent;
+using Direction = Robust.Shared.Maths.Direction;
 
 /// <summary>
 /// Component for medical cryo pods.
