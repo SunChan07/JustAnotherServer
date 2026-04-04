@@ -74,7 +74,7 @@ public sealed partial class CryoPodWindow : FancyWindow
 
             foreach (var gasEntry in msg.GasMix.Gases)
             {
-                var gasProto = _atmosphere.GetGas(gasEntry.Gas);
+                var gasProto = _atmosphere.GetGas(gasEntry.Moles);
                 var percent = gasEntry.Amount / totalGasAmount * 100;
                 var localizedName = Loc.GetString(gasProto.Name);
                 var tooltip = Loc.GetString("gas-analyzer-window-molarity-percentage-text",

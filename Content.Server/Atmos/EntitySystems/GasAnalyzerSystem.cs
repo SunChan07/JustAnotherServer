@@ -9,6 +9,7 @@ using Content.Shared.NodeContainer;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using static Content.Shared.Atmos.Components.GasAnalyzerComponent;
+using Robust.Shared.GameObjects;
 
 namespace Content.Server.Atmos.EntitySystems;
 
@@ -20,6 +21,7 @@ public sealed class GasAnalyzerSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
     [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
+	[Dependency] private readonly EntityUid _entityuid = default!;
 
     /// <summary>
     /// Minimum moles of a gas to be sent to the client.
