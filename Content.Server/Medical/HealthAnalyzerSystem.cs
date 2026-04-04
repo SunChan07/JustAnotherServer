@@ -20,7 +20,6 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 using Content.Server.Body.Systems;
-using Content.Client.Body.Systems;
 
 namespace Content.Server.Medical;
 
