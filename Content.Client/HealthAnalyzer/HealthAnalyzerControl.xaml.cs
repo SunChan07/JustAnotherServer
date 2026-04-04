@@ -248,3 +248,4 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
 
         return rootContainer;
     }
+}
